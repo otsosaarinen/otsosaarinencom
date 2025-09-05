@@ -1,4 +1,7 @@
 import "./App.css";
+import { Github } from "lucide-react";
+import { Linkedin } from "lucide-react";
+import { Mail } from "lucide-react";
 
 function App() {
 	return (
@@ -62,6 +65,20 @@ function App() {
 							Internship at 2M-IT's Service Desk. Solved IT issues
 							for employees in the wellbeing services counties of
 							Southwest Finland and Kanta-Häme.
+						</div>
+					</div>
+				</div>
+				<div className="flex flex-col items-center justify-center gap-5">
+					<div className="text-2xl">Contact me</div>
+					<div className="flex flex-row gap-3">
+						<div className="rounded-full bg-blue-950 p-4 transition-all duration-150 ease-in hover:cursor-pointer hover:bg-blue-900">
+							<Linkedin size={25} />
+						</div>
+						<div className="rounded-full bg-blue-950 p-4 transition-all duration-150 ease-in hover:cursor-pointer hover:bg-blue-900">
+							<Github size={25} />
+						</div>
+						<div className="rounded-full bg-blue-950 p-4 transition-all duration-150 ease-in hover:cursor-pointer hover:bg-blue-900">
+							<Mail size={25} />
 						</div>
 					</div>
 				</div>
