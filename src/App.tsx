@@ -7,7 +7,7 @@ function App() {
 				<div className="text-6xl text-white">Otso Saarinen</div>
 				<div className="flex flex-col items-center justify-center gap-5">
 					<div className="text-2xl">Experience</div>
-					<div className="flex flex-col items-start justify-center gap-3 overflow-hidden rounded-2xl border-1 border-blue-900 bg-blue-950 p-5 hover:cursor-pointer">
+					<div className="flex flex-col items-start justify-center gap-3 overflow-hidden rounded-2xl border-1 border-blue-900 bg-blue-950 p-5 transition-all duration-150 ease-in hover:cursor-pointer hover:bg-blue-900">
 						<div className="w-full">
 							<div className="flex w-full flex-row items-center justify-between">
 								<div className="text-lg">
@@ -26,7 +26,7 @@ function App() {
 							integrations.
 						</div>
 					</div>
-					<div className="flex flex-col items-start justify-center gap-3 rounded-2xl border-1 border-blue-900 bg-blue-950 p-5 hover:cursor-pointer">
+					<div className="flex flex-col items-start justify-center gap-3 rounded-2xl border-1 border-blue-900 bg-blue-950 p-5 transition-all duration-150 ease-in hover:cursor-pointer hover:bg-blue-900">
 						<div className="w-full">
 							<div className="flex w-full flex-row items-center justify-between">
 								<div className="text-lg">Exchange study</div>
@@ -43,7 +43,7 @@ function App() {
 							its impact on human cells.
 						</div>
 					</div>
-					<div className="flex flex-col items-start justify-center gap-3 rounded-2xl border-1 border-blue-900 bg-blue-950 p-5 hover:cursor-pointer">
+					<div className="flex flex-col items-start justify-center gap-3 rounded-2xl border-1 border-blue-900 bg-blue-950 p-5 transition-all duration-150 ease-in hover:cursor-pointer hover:bg-blue-900">
 						<div className="w-full">
 							<div className="flex w-full flex-row items-center justify-between">
 								<div className="text-lg">
