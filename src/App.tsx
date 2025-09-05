@@ -4,7 +4,12 @@ function App() {
 	return (
 		<>
 			<div className="font-inter flex h-screen w-screen flex-col items-center justify-center gap-10 bg-neutral-950 text-white">
-				<div className="text-6xl text-white">Otso Saarinen</div>
+				<div className="flex flex-col items-center justify-center gap-1">
+					<h1 className="text-6xl font-semibold">Otso Saarinen</h1>
+					<h2 className="text-lg">
+						Integration Analyst & Software Developer
+					</h2>
+				</div>
 				<div className="flex flex-col items-center justify-center gap-5">
 					<div className="text-2xl">Experience</div>
 					<div className="flex flex-col items-start justify-center gap-3 overflow-hidden rounded-2xl border-1 border-blue-900 bg-blue-950 p-5 transition-all duration-150 ease-in hover:cursor-pointer hover:bg-blue-900">
