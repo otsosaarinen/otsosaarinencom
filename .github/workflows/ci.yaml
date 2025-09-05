@@ -1,4 +1,4 @@
-name: continuous-integration
+name: Continuous Integration
 run-name: ${{ github.actor }} has triggered continuous integration workflow
 
 on:
@@ -9,6 +9,7 @@ on:
 
 jobs:
   continuous-integration:
+    name: Continuous Integration
     runs-on: ubuntu-latest
 
     steps:
