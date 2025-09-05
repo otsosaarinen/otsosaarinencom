@@ -2,27 +2,27 @@ name: Continuous Integration
 run-name: ${{ github.actor }} has triggered continuous integration workflow
 
 on:
-  push:
-    branches: [main]
-  pull_request:
-    branches: [main]
+    push:
+        branches: [main]
+    pull_request:
+        branches: [main]
 
 jobs:
-  continuous-integration:
-    name: Continuous Integration
-    runs-on: ubuntu-latest
+    continuous-integration:
+        name: Continuous Integration
+        runs-on: ubuntu-latest
 
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v4
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: "22"
+            - name: Setup Node.js
+              uses: actions/setup-node@v4
+              with:
+                  node-version: "22"
 
-      - name: Clean install
-        run: npm ci
+            - name: Clean install
+              run: npm ci
 
-      - name: Run ESLint
-        run: npm run lint
+            - name: Run ESLint
+              run: npm run lint
