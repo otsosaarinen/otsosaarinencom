@@ -6,7 +6,7 @@ import { Mail } from "lucide-react";
 function App() {
 	return (
 		<>
-			<div className="font-inter flex h-screen w-screen flex-col items-center justify-center gap-10 bg-neutral-950 text-white">
+			<div className="font-inter flex h-screen w-screen flex-col items-center justify-center gap-10 bg-neutral-900 text-white">
 				<div className="flex flex-col items-center justify-center gap-1">
 					<h1 className="text-6xl font-semibold">Otso Saarinen</h1>
 					<h2 className="text-lg">
@@ -71,10 +71,26 @@ function App() {
 				<div className="flex flex-col items-center justify-center gap-5">
 					<div className="text-2xl">Contact me</div>
 					<div className="flex flex-row gap-3">
-						<div className="rounded-full bg-blue-950 p-4 transition-all duration-150 ease-in hover:cursor-pointer hover:bg-blue-900">
+						<div
+							className="rounded-full bg-blue-950 p-4 transition-all duration-150 ease-in hover:cursor-pointer hover:bg-blue-900"
+							onClick={() =>
+								window.open(
+									"https://www.linkedin.com/in/otsosaarinen/",
+									"_blank",
+								)
+							}
+						>
 							<Linkedin size={25} />
 						</div>
-						<div className="rounded-full bg-blue-950 p-4 transition-all duration-150 ease-in hover:cursor-pointer hover:bg-blue-900">
+						<div
+							className="rounded-full bg-blue-950 p-4 transition-all duration-150 ease-in hover:cursor-pointer hover:bg-blue-900"
+							onClick={() =>
+								window.open(
+									"https://github.com/otsosaarinen",
+									"_blank",
+								)
+							}
+						>
 							<Github size={25} />
 						</div>
 						<div className="rounded-full bg-blue-950 p-4 transition-all duration-150 ease-in hover:cursor-pointer hover:bg-blue-900">
