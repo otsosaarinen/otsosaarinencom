@@ -7,9 +7,14 @@ function App() {
 				<div className="text-6xl text-white">Otso Saarinen</div>
 				<div className="flex flex-col items-center justify-center gap-5">
 					<div className="text-2xl">Experience</div>
-					<div className="flex flex-col items-start justify-center gap-3 rounded-2xl border-1 border-blue-900 bg-blue-950 p-5">
-						<div>
-							<div className="text-lg">Integration Analyst</div>
+					<div className="flex flex-col items-start justify-center gap-3 overflow-hidden rounded-2xl border-1 border-blue-900 bg-blue-950 p-5 hover:cursor-pointer">
+						<div className="w-full">
+							<div className="flex w-full flex-row items-center justify-between">
+								<div className="text-lg">
+									Integration Analyst
+								</div>
+								<div>7/2025 - Present</div>
+							</div>
 							<div className="text-neutral-300">
 								Lowell Suomi Oy
 							</div>
@@ -21,22 +26,12 @@ function App() {
 							integrations.
 						</div>
 					</div>
-					<div className="flex flex-col items-start justify-center gap-3 rounded-2xl border-1 border-blue-900 bg-blue-950 p-5">
-						<div>
-							<div className="text-lg">
-								Application Specialist
+					<div className="flex flex-col items-start justify-center gap-3 rounded-2xl border-1 border-blue-900 bg-blue-950 p-5 hover:cursor-pointer">
+						<div className="w-full">
+							<div className="flex w-full flex-row items-center justify-between">
+								<div className="text-lg">Exchange study</div>
+								<div>4/2024 - 7/2024</div>
 							</div>
-							<div className="text-neutral-300">2M-IT Oy</div>
-						</div>
-						<div className="max-w-150 text-sm text-neutral-300">
-							Internship at 2M-IT's Service Desk. Solved IT issues
-							for employees in the wellbeing services counties of
-							Southwest Finland and Kanta-Häme.
-						</div>
-					</div>
-					<div className="flex flex-col items-start justify-center gap-3 rounded-2xl border-1 border-blue-900 bg-blue-950 p-5">
-						<div>
-							<div className="text-lg">Internship</div>
 							<div className="text-neutral-300">
 								National Institute of Technology, Hachinohe
 								College (八戸高専)
@@ -46,6 +41,22 @@ function App() {
 							Exchange student in Hachinohe, Japan. Researched
 							radiofrequency ablation (RFA) cancer treatment and
 							its impact on human cells.
+						</div>
+					</div>
+					<div className="flex flex-col items-start justify-center gap-3 rounded-2xl border-1 border-blue-900 bg-blue-950 p-5 hover:cursor-pointer">
+						<div className="w-full">
+							<div className="flex w-full flex-row items-center justify-between">
+								<div className="text-lg">
+									Application Specialist
+								</div>
+								<div>11/2023 - 4/2024</div>
+							</div>
+							<div className="text-neutral-300">2M-IT Oy</div>
+						</div>
+						<div className="max-w-150 text-sm text-neutral-300">
+							Internship at 2M-IT's Service Desk. Solved IT issues
+							for employees in the wellbeing services counties of
+							Southwest Finland and Kanta-Häme.
 						</div>
 					</div>
 				</div>
