@@ -11,17 +11,15 @@ function ExperienceButton({
 }) {
 	return (
 		<>
-			<div className="flex flex-col items-start justify-center gap-3 overflow-hidden rounded-2xl border-1 border-blue-800 bg-blue-700 p-5 transition-all duration-150 ease-in hover:cursor-pointer hover:bg-blue-900">
+			<div className="flex max-w-175 flex-col items-start justify-center gap-3 overflow-hidden rounded-2xl border border-neutral-700 bg-neutral-800 p-5 text-white">
 				<div className="w-full">
 					<div className="flex w-full flex-row items-center justify-between">
-						<div className="text-lg">{title}</div>
-						<div>{date}</div>
+						<div className="text-lg font-medium">{title}</div>
+						<div className="text-sm font-light">{date}</div>
 					</div>
-					<div className="text-neutral-300">{company}</div>
+					<div className="text-gray-300">{company}</div>
 				</div>
-				<div className="max-w-150 text-sm text-neutral-300">
-					{description}
-				</div>
+				<div className="text-sm font-light">{description}</div>
 			</div>
 		</>
 	);
