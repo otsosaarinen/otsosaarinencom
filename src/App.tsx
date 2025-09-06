@@ -11,27 +11,38 @@ function App() {
 	return (
 		<>
 			<div className="font-inter flex min-h-screen flex-col items-center justify-center bg-white text-neutral-900">
-				<div className="flex h-180 w-full flex-col items-center justify-center gap-3 py-25">
-					<h1 className="text-8xl font-bold">
+				<div className="flex h-screen w-full flex-col items-center justify-center gap-3">
+					<h1 className="text-9xl font-bold">
 						Otso <span className="text-blue-600">Saarinen</span>
 					</h1>
 					<h2 className="text-2xl">
 						Integration Analyst & Software Developer
 					</h2>
 				</div>
-				<div className="relative flex h-180 w-full flex-row items-center justify-center gap-5 bg-blue-600 py-25 text-white">
+				<div className="relative flex h-screen w-full flex-row items-center justify-center gap-5 bg-blue-600 text-white">
 					<img
 						src="src/assets/kuva.jpg"
 						alt="Profile"
-						className="h-75 rounded-2xl"
+						className="h-80 rounded-2xl"
 					/>
 
-					<div className="flex h-75 flex-col gap-3">
+					<div className="flex h-80 flex-col gap-3">
 						<div className="text-4xl font-bold">About me</div>
-						<div className="w-100">I'm </div>
+						<div className="w-140 text-2xl">
+							<p>
+								<span className="font-extrabold">“ </span>
+								I'm Otso, an Integration Analyst ja Software
+								Developer from Finland. I'm currently working
+								fulltime at Lowell and doing hobby programming
+								on my free time with TS/JS & .NET/C#. I
+								specialize in building web apps and love working
+								with both frontend and backend tech.{" "}
+								<span className="font-extrabold">”</span>
+							</p>
+						</div>
 					</div>
 				</div>
-				<div className="flex w-full flex-col items-center justify-center gap-5 py-20">
+				<div className="flex h-screen w-full flex-col items-center justify-center gap-5">
 					<div className="text-4xl font-bold">Experience</div>
 					<div className="flex flex-col gap-3">
 						<ExperienceButton
@@ -65,8 +76,10 @@ function App() {
 						/>
 					</div>
 				</div>
-				<div className="flex w-full flex-col items-center justify-center gap-3 py-35">
-					<div className="text-2xl">Contact me</div>
+				<div className="flex w-full flex-col items-center justify-center gap-3 py-25">
+					<div className="text-lg font-bold underline decoration-neutral-900 decoration-1 underline-offset-8">
+						Contact me
+					</div>
 					<div className="flex flex-row gap-3">
 						<ContactButton
 							link_url="https://www.linkedin.com/in/otsosaarinen/"
