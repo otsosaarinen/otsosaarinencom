@@ -11,7 +11,7 @@ function ExperienceButton({
 }) {
 	return (
 		<>
-			<div className="group relative flex max-w-175 flex-col items-start justify-center gap-3 overflow-hidden rounded-2xl border border-neutral-800 p-5 text-neutral-900">
+			<div className="group relative flex max-w-100 flex-col items-start justify-center gap-3 overflow-hidden rounded-2xl border border-neutral-800 p-5 text-neutral-900 sm:max-w-125 md:max-w-150 lg:max-w-175">
 				<div className="transition-color absolute left-0 z-0 h-full w-full duration-150 ease-in group-hover:bg-rose-100"></div>
 				<div className="absolute -right-12 -bottom-12 h-30 w-30 rounded-full bg-rose-200 transition-all duration-150 ease-in group-hover:scale-115 group-hover:bg-rose-300"></div>
 				<div className="z-10 w-full">
