@@ -13,7 +13,7 @@ function App() {
 			<div className="font-inter flex flex-col items-center justify-center bg-white text-neutral-900">
 				<div className="flex min-h-screen w-full flex-col items-center justify-center gap-3 text-center">
 					<div className="flex flex-row">
-						<h1 className="text-6xl font-bold sm:text-7xl md:text-8xl lg:text-9xl">
+						<h1 className="w-75 text-6xl font-bold sm:w-auto sm:text-7xl md:text-8xl lg:text-9xl">
 							Otso <span className="text-blue-600">Saarinen</span>
 						</h1>
 					</div>
