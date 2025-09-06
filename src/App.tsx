@@ -1,4 +1,6 @@
 import "./App.css";
+import ContactButton from "./components/ContactButton";
+
 import { Github } from "lucide-react";
 import { Linkedin } from "lucide-react";
 import { Mail } from "lucide-react";
@@ -6,7 +8,7 @@ import { Mail } from "lucide-react";
 function App() {
 	return (
 		<>
-			<div className="font-inter flex h-screen w-screen flex-col items-center justify-center gap-10 bg-neutral-900 text-white">
+			<div className="font-inter flex min-h-screen min-w-screen flex-col items-center justify-center gap-10 bg-neutral-900 text-white">
 				<div className="flex flex-col items-center justify-center gap-1">
 					<h1 className="text-6xl font-semibold">Otso Saarinen</h1>
 					<h2 className="text-lg">
@@ -71,31 +73,15 @@ function App() {
 				<div className="flex flex-col items-center justify-center gap-5">
 					<div className="text-2xl">Contact me</div>
 					<div className="flex flex-row gap-3">
-						<div
-							className="rounded-full bg-blue-950 p-4 transition-all duration-150 ease-in hover:cursor-pointer hover:bg-blue-900"
-							onClick={() =>
-								window.open(
-									"https://www.linkedin.com/in/otsosaarinen/",
-									"_blank",
-								)
-							}
-						>
-							<Linkedin size={25} />
-						</div>
-						<div
-							className="rounded-full bg-blue-950 p-4 transition-all duration-150 ease-in hover:cursor-pointer hover:bg-blue-900"
-							onClick={() =>
-								window.open(
-									"https://github.com/otsosaarinen",
-									"_blank",
-								)
-							}
-						>
-							<Github size={25} />
-						</div>
-						<div className="rounded-full bg-blue-950 p-4 transition-all duration-150 ease-in hover:cursor-pointer hover:bg-blue-900">
-							<Mail size={25} />
-						</div>
+						<ContactButton
+							link_url="https://www.linkedin.com/in/otsosaarinen/"
+							icon={Linkedin}
+						/>
+						<ContactButton
+							link_url="https://github.com/otsosaarinen"
+							icon={Github}
+						/>
+						<ContactButton link_url="" icon={Mail} />
 					</div>
 				</div>
 			</div>
