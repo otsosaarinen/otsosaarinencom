@@ -82,7 +82,7 @@ function App() {
 						/>
 					</div>
 				</div>
-				<div className="mb-50 flex w-full flex-col items-center justify-center gap-5 py-25">
+				<div className="flex w-full flex-col items-center justify-center gap-5 py-25">
 					<div className="relative z-10 text-4xl font-bold">
 						Contact me
 						<div className="absolute bottom-0 left-0 -z-10 h-3 w-49 bg-rose-400"></div>
