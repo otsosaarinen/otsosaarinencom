@@ -17,7 +17,7 @@ function ExperienceButton({
 						<div className="text-lg font-medium">{title}</div>
 						<div className="text-sm font-light">{date}</div>
 					</div>
-					<div className="text-gray-300">{company}</div>
+					<div className="text-neutral-300">{company}</div>
 				</div>
 				<div className="text-sm font-light">{description}</div>
 			</div>
