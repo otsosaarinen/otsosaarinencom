@@ -23,7 +23,7 @@ function App() {
 				</div>
 				<div className="relative flex h-screen w-full flex-col items-center justify-center gap-5 bg-blue-600 text-white lg:flex-row">
 					<img
-						src="src/assets/kuva.jpg"
+						src="/kuva.jpg"
 						alt="Profile"
 						className="h-80 rounded-2xl"
 					/>
