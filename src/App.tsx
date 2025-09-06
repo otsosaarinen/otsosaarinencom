@@ -33,7 +33,7 @@ function App() {
 							About me
 							<div className="absolute bottom-0 left-0 -z-10 h-3 w-41 bg-rose-400"></div>
 						</div>
-						<div className="w-140 text-center text-2xl lg:text-left">
+						<div className="w-90 text-center text-2xl sm:w-140 lg:text-left">
 							<span className="font-extrabold">“ </span>
 							I'm Otso, an Integration Analyst ja Software
 							Developer from Turku, Finland. I'm currently working
