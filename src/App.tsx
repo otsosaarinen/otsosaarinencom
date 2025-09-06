@@ -11,17 +11,13 @@ function App() {
 	return (
 		<>
 			<div className="font-inter flex min-h-screen flex-col items-center justify-center bg-white text-neutral-900">
-				<div className="flex h-screen w-full flex-col items-center justify-center gap-3">
-					<div className="relative z-10 flex flex-row">
-						<h1 className="text-9xl font-bold">
-							Otso{" "}
-							<span className="text-blue-600">
-								Saarinen
-								<div className="absolute bottom-2 left-0 -z-10 h-5 w-209 bg-rose-400"></div>
-							</span>
+				<div className="flex h-screen w-full flex-col items-center justify-center gap-3 text-center">
+					<div className="flex flex-row">
+						<h1 className="text-6xl font-bold sm:text-7xl md:text-8xl lg:text-9xl">
+							Otso <span className="text-blue-600">Saarinen</span>
 						</h1>
 					</div>
-					<h2 className="text-2xl">
+					<h2 className="text-xl md:text-2xl">
 						Integration Analyst & Software Developer
 					</h2>
 				</div>
