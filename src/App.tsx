@@ -12,9 +12,15 @@ function App() {
 		<>
 			<div className="font-inter flex min-h-screen flex-col items-center justify-center bg-white text-neutral-900">
 				<div className="flex h-screen w-full flex-col items-center justify-center gap-3">
-					<h1 className="text-9xl font-bold">
-						Otso <span className="text-blue-600">Saarinen</span>
-					</h1>
+					<div className="relative z-10 flex flex-row">
+						<h1 className="text-9xl font-bold">
+							Otso{" "}
+							<span className="text-blue-600">
+								Saarinen
+								<div className="absolute bottom-2 left-0 -z-10 h-5 w-209 bg-rose-400"></div>
+							</span>
+						</h1>
+					</div>
 					<h2 className="text-2xl">
 						Integration Analyst & Software Developer
 					</h2>
@@ -27,7 +33,10 @@ function App() {
 					/>
 
 					<div className="flex h-80 flex-col gap-3">
-						<div className="text-4xl font-bold">About me</div>
+						<div className="relative z-10 text-4xl font-bold">
+							About me
+							<div className="absolute bottom-0 left-0 -z-10 h-3 w-41 bg-rose-400"></div>
+						</div>
 						<div className="w-140 text-2xl">
 							<p>
 								<span className="font-extrabold">“ </span>
@@ -43,7 +52,10 @@ function App() {
 					</div>
 				</div>
 				<div className="flex h-screen w-full flex-col items-center justify-center gap-5">
-					<div className="text-4xl font-bold">Experience</div>
+					<div className="relative z-10 text-4xl font-bold">
+						Experience
+						<div className="absolute bottom-0 left-0 -z-10 h-3 w-47 bg-rose-400"></div>
+					</div>
 					<div className="flex flex-col gap-3">
 						<ExperienceButton
 							title="Integration Analyst"
@@ -76,9 +88,10 @@ function App() {
 						/>
 					</div>
 				</div>
-				<div className="flex w-full flex-col items-center justify-center gap-3 py-25">
-					<div className="text-lg font-bold underline decoration-neutral-900 decoration-1 underline-offset-8">
+				<div className="mb-50 flex w-full flex-col items-center justify-center gap-3 py-25">
+					<div className="relative z-10 text-4xl font-bold">
 						Contact me
+						<div className="absolute bottom-0 left-0 -z-10 h-3 w-49 bg-rose-400"></div>
 					</div>
 					<div className="flex flex-row gap-3">
 						<ContactButton
