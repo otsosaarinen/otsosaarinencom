@@ -21,29 +21,27 @@ function App() {
 						Integration Analyst & Software Developer
 					</h2>
 				</div>
-				<div className="relative flex h-screen w-full flex-row items-center justify-center gap-5 bg-blue-600 text-white">
+				<div className="relative flex h-screen w-full flex-col items-center justify-center gap-5 bg-blue-600 text-white lg:flex-row">
 					<img
 						src="src/assets/kuva.jpg"
 						alt="Profile"
 						className="h-80 rounded-2xl"
 					/>
 
-					<div className="flex h-80 flex-col gap-3">
+					<div className="flex h-80 flex-col items-center justify-center gap-3 lg:items-start lg:justify-start">
 						<div className="relative z-10 text-4xl font-bold">
 							About me
 							<div className="absolute bottom-0 left-0 -z-10 h-3 w-41 bg-rose-400"></div>
 						</div>
-						<div className="w-140 text-2xl">
-							<p>
-								<span className="font-extrabold">“ </span>
-								I'm Otso, an Integration Analyst ja Software
-								Developer from Finland. I'm currently working
-								fulltime at Lowell and doing hobby programming
-								on my free time with TS/JS & .NET/C#. I
-								specialize in building web apps and love working
-								with both frontend and backend tech.{" "}
-								<span className="font-extrabold">”</span>
-							</p>
+						<div className="w-140 text-center text-2xl lg:text-left">
+							<span className="font-extrabold">“ </span>
+							I'm Otso, an Integration Analyst ja Software
+							Developer from Finland. I'm currently working
+							fulltime at Lowell and doing hobby programming on my
+							free time with TS/JS & .NET/C#. I specialize in
+							building web apps and love working with both
+							frontend and backend tech.{" "}
+							<span className="font-extrabold">”</span>
 						</div>
 					</div>
 				</div>
@@ -84,7 +82,7 @@ function App() {
 						/>
 					</div>
 				</div>
-				<div className="mb-50 flex w-full flex-col items-center justify-center gap-3 py-25">
+				<div className="mb-50 flex w-full flex-col items-center justify-center gap-5 py-25">
 					<div className="relative z-10 text-4xl font-bold">
 						Contact me
 						<div className="absolute bottom-0 left-0 -z-10 h-3 w-49 bg-rose-400"></div>
