@@ -36,7 +36,7 @@ function App() {
 						<div className="w-140 text-center text-2xl lg:text-left">
 							<span className="font-extrabold">“ </span>
 							I'm Otso, an Integration Analyst ja Software
-							Developer from Finland. I'm currently working
+							Developer from Turku, Finland. I'm currently working
 							fulltime at Lowell and doing hobby programming on my
 							free time with TS/JS & .NET/C#. I specialize in
 							building web apps and love working with both
