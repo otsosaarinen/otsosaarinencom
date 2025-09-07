@@ -11,7 +11,7 @@ function App() {
 	return (
 		<>
 			<div className="font-inter relative flex flex-col items-center justify-center bg-white text-neutral-900">
-				<div className="animate-cover-slide-out fixed top-0 left-0 z-20 flex h-full w-full items-center justify-center rounded-xl bg-blue-600">
+				<div className="animate-mobile-cover-slide-out lg:animate-cover-slide-out fixed top-0 left-0 z-20 flex h-full w-full items-center justify-center bg-blue-600">
 					<div className="animate-close-loading-bar h-2 w-60 rounded-full bg-blue-800">
 						<div className="animate-loading-bar h-full w-0 rounded-full bg-white"></div>
 					</div>
