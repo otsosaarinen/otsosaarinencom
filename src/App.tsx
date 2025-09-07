@@ -10,7 +10,12 @@ import { Mail } from "lucide-react";
 function App() {
 	return (
 		<>
-			<div className="font-inter flex flex-col items-center justify-center bg-white text-neutral-900">
+			<div className="font-inter relative flex flex-col items-center justify-center bg-white text-neutral-900">
+				<div className="animate-cover-slide-out fixed top-0 left-0 z-20 flex h-full w-full items-center justify-center rounded-xl bg-blue-600">
+					<div className="animate-close-loading-bar h-2 w-60 rounded-full bg-blue-800">
+						<div className="animate-loading-bar h-full w-0 rounded-full bg-white"></div>
+					</div>
+				</div>
 				<div className="flex min-h-screen w-full flex-col items-center justify-center gap-3 text-center">
 					<div className="flex flex-row">
 						<h1 className="w-75 text-6xl font-bold sm:w-auto sm:text-7xl md:text-8xl lg:text-9xl">
