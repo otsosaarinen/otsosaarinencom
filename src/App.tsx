@@ -41,7 +41,7 @@ function App() {
 						</div>
 					</div>
 				</div>
-				<div className="flex min-h-screen w-full flex-col items-center justify-center gap-5 pt-15">
+				<div className="flex min-h-screen w-full flex-col items-center justify-center gap-5 p-15">
 					<Highlight color="bg-rose-400">Experience</Highlight>
 					<div className="flex flex-col gap-3">
 						<ExperienceButton
@@ -77,7 +77,7 @@ function App() {
 				</div>
 				<div className="flex min-h-screen w-full flex-col items-center justify-center gap-5 bg-blue-600 text-white">
 					<Highlight color="bg-rose-400">Technical skills</Highlight>
-					<div className="flex w-125 flex-row flex-wrap items-center justify-center gap-3">
+					<div className="flex w-90 flex-row flex-wrap items-center justify-center gap-3 sm:w-125">
 						<SkillButton text="TypeScript" />
 						<SkillButton text="JavaScript" />
 						<SkillButton text="React" />
