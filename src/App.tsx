@@ -11,18 +11,16 @@ import { Mail } from "lucide-react";
 function App() {
 	return (
 		<>
-			<div className="font-inter relative flex flex-col items-center justify-center bg-white text-neutral-900">
+			<div className="font-inter flex flex-col items-center justify-center bg-white text-neutral-900">
 				<div className="flex min-h-screen w-full flex-col items-center justify-center gap-5 text-center">
-					<div className="flex flex-row">
-						<h1 className="text-6xl font-bold sm:text-7xl md:text-8xl lg:text-9xl">
-							Otso <span className="text-blue-600">Saarinen</span>
-						</h1>
-					</div>
+					<h1 className="text-6xl font-bold sm:text-7xl md:text-8xl lg:text-9xl">
+						Otso <span className="text-blue-600">Saarinen</span>
+					</h1>
 					<h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl">
 						Integration Analyst & Software Developer
 					</h2>
 				</div>
-				<div className="relative flex min-h-screen w-full flex-col items-center justify-center gap-5 bg-blue-600 text-white lg:flex-row">
+				<div className="flex min-h-screen w-full flex-col items-center justify-center gap-5 bg-blue-600 text-white lg:flex-row">
 					<img
 						src="/kuva.jpg"
 						alt="Profile"
