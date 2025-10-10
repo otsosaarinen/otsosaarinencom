@@ -3,6 +3,7 @@ import "./App.css";
 import ContactButton from "./components/ContactButton";
 import ExperienceButton from "./components/ExperienceButton";
 import Highlight from "./components/Highlight";
+import SkillButton from "./components/SkillButton";
 
 import { Github } from "lucide-react";
 import { Linkedin } from "lucide-react";
@@ -74,8 +75,23 @@ function App() {
 						/>
 					</div>
 				</div>
-				<div className="flex min-h-screen w-full flex-col items-center justify-center bg-blue-600 text-white">
+				<div className="flex min-h-screen w-full flex-col items-center justify-center gap-5 bg-blue-600 text-white">
 					<Highlight color="bg-rose-400">Technical skills</Highlight>
+					<div className="flex w-125 flex-row flex-wrap items-center justify-center gap-3">
+						<SkillButton text="TypeScript" />
+						<SkillButton text="JavaScript" />
+						<SkillButton text="React" />
+						<SkillButton text="Node.js" />
+						<SkillButton text="Express.js" />
+						<SkillButton text="Tailwind CSS" />
+						<SkillButton text="Python" />
+						<SkillButton text="Microsoft Azure" />
+						<SkillButton text="Apache Kafka" />
+						<SkillButton text="REST API" />
+						<SkillButton text="SQL" />
+						<SkillButton text="Docker" />
+						<SkillButton text="GitHub" />
+					</div>
 				</div>
 				<div className="flex w-full flex-col items-center justify-center gap-5 p-40">
 					<Highlight color="bg-rose-400">Contact me</Highlight>
