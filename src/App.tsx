@@ -13,7 +13,7 @@ function App() {
 	return (
 		<>
 			<div className="font-inter flex flex-col items-center justify-center bg-white text-neutral-900">
-				<div className="flex min-h-screen w-full flex-col items-center justify-center gap-5 text-center">
+				<div className="flex min-h-screen w-full flex-col items-center justify-center gap-5 px-3 text-center">
 					<h1 className="text-6xl font-bold sm:text-7xl md:text-8xl lg:text-9xl">
 						Otso <span className="text-blue-600">Saarinen</span>
 					</h1>
@@ -77,7 +77,7 @@ function App() {
 				</div>
 				<div className="flex min-h-screen w-full flex-col items-center justify-center gap-5 bg-blue-600 text-white">
 					<Highlight color="bg-rose-400">Technical skills</Highlight>
-					<div className="flex w-90 flex-row flex-wrap items-center justify-center gap-3 sm:w-125">
+					<div className="flex w-[90%] flex-row flex-wrap items-center justify-center gap-3 sm:w-125">
 						<SkillButton text="TypeScript" />
 						<SkillButton text="JavaScript" />
 						<SkillButton text="React" />
