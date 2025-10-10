@@ -46,7 +46,7 @@ function App() {
 						<ExperienceButton
 							title="Integration Analyst"
 							company="Lowell Suomi Oy"
-							description="Worked in the data transfer team and handled data transfers between Lowell and client companies. Managed SFTP servers, configured file transfers (e.g. with MOVEit and BizTalk)"
+							description="Worked in the data transfer team and handled data transfers between Lowell and client companies. Managed SFTP servers and configured file transfers (e.g. with MOVEit and BizTalk)."
 							date="7/2025 - Present"
 						/>
 						<ExperienceButton
