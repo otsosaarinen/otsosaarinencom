@@ -46,7 +46,7 @@ function App() {
 						<ExperienceButton
 							title="Integration Analyst"
 							company="Lowell Suomi Oy"
-							description="Worked in the data transfer team and handled daily data transfer tasks. Solved issues and helped improve existing customer integrations."
+							description="Worked in the data transfer team and handled data transfers between Lowell and client companies. Managed SFTP servers, configured file transfers (e.g. with MOVEit and BizTalk)"
 							date="7/2025 - Present"
 						/>
 						<ExperienceButton
@@ -74,7 +74,10 @@ function App() {
 						/>
 					</div>
 				</div>
-				<div className="flex w-full flex-col items-center justify-center gap-5 pt-25 pb-50">
+				<div className="flex min-h-screen w-full flex-col items-center justify-center bg-blue-600 text-white">
+					<Highlight color="bg-rose-400">Technical skills</Highlight>
+				</div>
+				<div className="flex w-full flex-col items-center justify-center gap-5 p-40">
 					<Highlight color="bg-rose-400">Contact me</Highlight>
 					<div className="flex flex-row gap-3">
 						<ContactButton
