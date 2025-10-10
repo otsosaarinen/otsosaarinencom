@@ -2,6 +2,7 @@ import "./App.css";
 
 import ContactButton from "./components/ContactButton";
 import ExperienceButton from "./components/ExperienceButton";
+import Highlight from "./components/Highlight";
 
 import { Github } from "lucide-react";
 import { Linkedin } from "lucide-react";
@@ -29,10 +30,7 @@ function App() {
 					/>
 
 					<div className="flex h-80 flex-col items-center justify-center gap-3 lg:items-start lg:justify-start">
-						<div className="relative z-10 text-4xl font-bold">
-							About me
-							<div className="absolute bottom-0 left-0 -z-10 h-3 w-41 bg-rose-400"></div>
-						</div>
+						<Highlight>About me</Highlight>
 						<div className="w-90 text-center text-2xl sm:w-140 lg:text-left">
 							<span className="font-extrabold">“ </span>
 							I'm Otso, an Integration Analyst ja Software
@@ -46,10 +44,8 @@ function App() {
 					</div>
 				</div>
 				<div className="flex min-h-screen w-full flex-col items-center justify-center gap-5 pt-15">
-					<div className="relative z-10 text-4xl font-bold">
-						Experience
-						<div className="absolute bottom-0 left-0 -z-10 h-3 w-47 bg-rose-400"></div>
-					</div>
+					<Highlight>Experience</Highlight>
+
 					<div className="flex flex-col gap-3">
 						<ExperienceButton
 							title="Integration Analyst"
@@ -83,10 +79,7 @@ function App() {
 					</div>
 				</div>
 				<div className="flex w-full flex-col items-center justify-center gap-5 pt-25 pb-50">
-					<div className="relative z-10 text-4xl font-bold">
-						Contact me
-						<div className="absolute bottom-0 left-0 -z-10 h-3 w-49 bg-rose-400"></div>
-					</div>
+					<Highlight>Contact me</Highlight>
 					<div className="flex flex-row gap-3">
 						<ContactButton
 							link_url="https://www.linkedin.com/in/otsosaarinen/"
