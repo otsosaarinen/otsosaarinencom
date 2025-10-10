@@ -8,7 +8,7 @@ function Highlight({
 	return (
 		<>
 			<div className="relative inline-block">
-				<div className="relative z-20 text-4xl font-bold">
+				<div className="relative z-20 text-4xl font-bold whitespace-nowrap">
 					{children}
 				</div>
 				<div
