@@ -12,13 +12,13 @@ function App() {
 	return (
 		<>
 			<div className="font-inter relative flex flex-col items-center justify-center bg-white text-neutral-900">
-				<div className="flex min-h-screen w-full flex-col items-center justify-center gap-3 text-center">
+				<div className="flex min-h-screen w-full flex-col items-center justify-center gap-5 text-center">
 					<div className="flex flex-row">
 						<h1 className="text-6xl font-bold sm:text-7xl md:text-8xl lg:text-9xl">
 							Otso <span className="text-blue-600">Saarinen</span>
 						</h1>
 					</div>
-					<h2 className="text-lg sm:text-2xl">
+					<h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl">
 						Integration Analyst & Software Developer
 					</h2>
 				</div>
@@ -28,8 +28,7 @@ function App() {
 						alt="Profile"
 						className="h-80 rounded-2xl"
 					/>
-
-					<div className="flex h-80 flex-col items-center justify-center gap-3 lg:items-start lg:justify-start">
+					<div className="flex h-80 flex-col items-center justify-center gap-5 lg:items-start lg:justify-start">
 						<Highlight color="bg-rose-400">About me</Highlight>
 						<div className="w-90 text-center text-2xl sm:w-140 lg:text-left">
 							<span className="font-extrabold">“ </span>
@@ -45,7 +44,6 @@ function App() {
 				</div>
 				<div className="flex min-h-screen w-full flex-col items-center justify-center gap-5 pt-15">
 					<Highlight color="bg-rose-400">Experience</Highlight>
-
 					<div className="flex flex-col gap-3">
 						<ExperienceButton
 							title="Integration Analyst"
