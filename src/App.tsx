@@ -14,7 +14,7 @@ function App() {
 			<div className="font-inter relative flex flex-col items-center justify-center bg-white text-neutral-900">
 				<div className="flex min-h-screen w-full flex-col items-center justify-center gap-3 text-center">
 					<div className="flex flex-row">
-						<h1 className="w-75 text-6xl font-bold sm:w-auto sm:text-7xl md:text-8xl lg:text-9xl">
+						<h1 className="text-6xl font-bold sm:text-7xl md:text-8xl lg:text-9xl">
 							Otso <span className="text-blue-600">Saarinen</span>
 						</h1>
 					</div>
@@ -30,7 +30,7 @@ function App() {
 					/>
 
 					<div className="flex h-80 flex-col items-center justify-center gap-3 lg:items-start lg:justify-start">
-						<Highlight>About me</Highlight>
+						<Highlight color="bg-rose-400">About me</Highlight>
 						<div className="w-90 text-center text-2xl sm:w-140 lg:text-left">
 							<span className="font-extrabold">“ </span>
 							I'm Otso, an Integration Analyst ja Software
@@ -44,7 +44,7 @@ function App() {
 					</div>
 				</div>
 				<div className="flex min-h-screen w-full flex-col items-center justify-center gap-5 pt-15">
-					<Highlight>Experience</Highlight>
+					<Highlight color="bg-rose-400">Experience</Highlight>
 
 					<div className="flex flex-col gap-3">
 						<ExperienceButton
@@ -79,7 +79,7 @@ function App() {
 					</div>
 				</div>
 				<div className="flex w-full flex-col items-center justify-center gap-5 pt-25 pb-50">
-					<Highlight>Contact me</Highlight>
+					<Highlight color="bg-rose-400">Contact me</Highlight>
 					<div className="flex flex-row gap-3">
 						<ContactButton
 							link_url="https://www.linkedin.com/in/otsosaarinen/"
