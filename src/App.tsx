@@ -2,6 +2,8 @@ import "./App.css";
 
 import ContactButton from "./components/ContactButton";
 import ExperienceButton from "./components/ExperienceButton";
+import Highlight from "./components/Highlight";
+import SkillButton from "./components/SkillButton";
 
 import { Github } from "lucide-react";
 import { Linkedin } from "lucide-react";
@@ -10,34 +12,23 @@ import { Mail } from "lucide-react";
 function App() {
 	return (
 		<>
-			<div className="font-inter relative flex flex-col items-center justify-center bg-white text-neutral-900">
-				<div className="animate-mobile-cover-slide-out lg:animate-cover-slide-out fixed top-0 left-0 z-20 flex h-full w-full items-center justify-center bg-blue-600">
-					<div className="animate-close-loading-bar h-2 w-60 rounded-full bg-blue-800">
-						<div className="animate-loading-bar h-full w-0 rounded-full bg-white"></div>
-					</div>
-				</div>
-				<div className="flex min-h-screen w-full flex-col items-center justify-center gap-3 text-center">
-					<div className="flex flex-row">
-						<h1 className="w-75 text-6xl font-bold sm:w-auto sm:text-7xl md:text-8xl lg:text-9xl">
-							Otso <span className="text-blue-600">Saarinen</span>
-						</h1>
-					</div>
-					<h2 className="text-lg sm:text-2xl">
+			<div className="font-inter flex flex-col items-center justify-center bg-white text-neutral-900">
+				<div className="flex min-h-screen w-full flex-col items-center justify-center gap-5 text-center">
+					<h1 className="text-6xl font-bold sm:text-7xl md:text-8xl lg:text-9xl">
+						Otso <span className="text-blue-600">Saarinen</span>
+					</h1>
+					<h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl">
 						Integration Analyst & Software Developer
 					</h2>
 				</div>
-				<div className="relative flex min-h-screen w-full flex-col items-center justify-center gap-5 bg-blue-600 text-white lg:flex-row">
+				<div className="flex min-h-screen w-full flex-col items-center justify-center gap-5 bg-blue-600 text-white lg:flex-row">
 					<img
 						src="/kuva.jpg"
 						alt="Profile"
 						className="h-80 rounded-2xl"
 					/>
-
-					<div className="flex h-80 flex-col items-center justify-center gap-3 lg:items-start lg:justify-start">
-						<div className="relative z-10 text-4xl font-bold">
-							About me
-							<div className="absolute bottom-0 left-0 -z-10 h-3 w-41 bg-rose-400"></div>
-						</div>
+					<div className="flex h-80 flex-col items-center justify-center gap-5 lg:items-start lg:justify-start">
+						<Highlight color="bg-rose-400">About me</Highlight>
 						<div className="w-90 text-center text-2xl sm:w-140 lg:text-left">
 							<span className="font-extrabold">“ </span>
 							I'm Otso, an Integration Analyst ja Software
@@ -50,16 +41,13 @@ function App() {
 						</div>
 					</div>
 				</div>
-				<div className="flex min-h-screen w-full flex-col items-center justify-center gap-5 pt-15">
-					<div className="relative z-10 text-4xl font-bold">
-						Experience
-						<div className="absolute bottom-0 left-0 -z-10 h-3 w-47 bg-rose-400"></div>
-					</div>
+				<div className="flex min-h-screen w-full flex-col items-center justify-center gap-5 p-15">
+					<Highlight color="bg-rose-400">Experience</Highlight>
 					<div className="flex flex-col gap-3">
 						<ExperienceButton
 							title="Integration Analyst"
 							company="Lowell Suomi Oy"
-							description="Worked in the data transfer team and handled daily data transfer tasks. Solved issues and helped improve existing customer integrations."
+							description="Worked in the data transfer team and handled data transfers between Lowell and client companies. Managed SFTP servers and configured file transfers (e.g. with MOVEit and BizTalk)."
 							date="7/2025 - Present"
 						/>
 						<ExperienceButton
@@ -87,11 +75,26 @@ function App() {
 						/>
 					</div>
 				</div>
-				<div className="flex w-full flex-col items-center justify-center gap-5 pt-25 pb-50">
-					<div className="relative z-10 text-4xl font-bold">
-						Contact me
-						<div className="absolute bottom-0 left-0 -z-10 h-3 w-49 bg-rose-400"></div>
+				<div className="flex min-h-screen w-full flex-col items-center justify-center gap-5 bg-blue-600 text-white">
+					<Highlight color="bg-rose-400">Technical skills</Highlight>
+					<div className="flex w-90 flex-row flex-wrap items-center justify-center gap-3 sm:w-125">
+						<SkillButton text="TypeScript" />
+						<SkillButton text="JavaScript" />
+						<SkillButton text="React" />
+						<SkillButton text="Node.js" />
+						<SkillButton text="Express.js" />
+						<SkillButton text="Tailwind CSS" />
+						<SkillButton text="Python" />
+						<SkillButton text="Microsoft Azure" />
+						<SkillButton text="Apache Kafka" />
+						<SkillButton text="REST API" />
+						<SkillButton text="SQL" />
+						<SkillButton text="Docker" />
+						<SkillButton text="GitHub" />
 					</div>
+				</div>
+				<div className="flex w-full flex-col items-center justify-center gap-5 p-40">
+					<Highlight color="bg-rose-400">Contact me</Highlight>
 					<div className="flex flex-row gap-3">
 						<ContactButton
 							link_url="https://www.linkedin.com/in/otsosaarinen/"
