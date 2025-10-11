@@ -39,14 +39,14 @@ function App() {
 						<div className="flex h-80 flex-col items-center justify-center gap-5 lg:items-start lg:justify-start">
 							<Highlight color="bg-rose-400">About me</Highlight>
 							<div className="w-90 text-center text-2xl sm:w-140 lg:text-left">
-								<span className="font-extrabold">“ </span>
+								<span className="font-black">“ </span>
 								I'm Otso, an Integration Analyst ja Software
 								Developer from Turku, Finland. I'm currently
 								working fulltime at Lowell and doing hobby
 								programming on my free time with TS/JS &
 								.NET/C#. I specialize in building web apps and
 								love working with both frontend and backend
-								tech. <span className="font-extrabold">”</span>
+								tech. <span className="font-black">”</span>
 							</div>
 						</div>
 					</div>
