@@ -102,6 +102,10 @@ function App() {
 							<SkillButton text="SQL" />
 							<SkillButton text="Docker" />
 							<SkillButton text="GitHub" />
+							<SkillButton text="Grafana" />
+						</div>
+						<div className="text-lg italic">
+							and various other things
 						</div>
 					</div>
 					<div className="flex w-full flex-col items-center justify-center gap-5 p-40">
