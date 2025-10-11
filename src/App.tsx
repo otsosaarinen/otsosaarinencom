@@ -1,4 +1,5 @@
 import "./App.css";
+import { useEffect } from "react";
 
 import ContactButton from "./components/ContactButton";
 import ExperienceButton from "./components/ExperienceButton";
@@ -10,6 +11,15 @@ import { Linkedin } from "lucide-react";
 import { Mail } from "lucide-react";
 
 function App() {
+	useEffect(() => {
+		document.body.style.overflow = "hidden";
+		const timer = setTimeout(() => {
+			document.body.style.overflow = "auto";
+		}, 4000);
+
+		return () => clearTimeout(timer);
+	}, []);
+
 	return (
 		<>
 			<div className="font-inter">
@@ -103,6 +113,7 @@ function App() {
 							<SkillButton text="Docker" />
 							<SkillButton text="GitHub" />
 							<SkillButton text="Grafana" />
+							<SkillButton text="Jira" />
 						</div>
 						<div className="text-lg italic">
 							and various other things
