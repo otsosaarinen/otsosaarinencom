@@ -3,4 +3,37 @@
 
 @theme {
 	--font-inter: "Inter", sans-serif;
+
+	--animate-loading-bar: loading-bar 2s linear forwards;
+
+	@keyframes loading-bar {
+		0% {
+			width: 0%;
+		}
+		100% {
+			width: 100%;
+		}
+	}
+
+	--animate-close-loading-bar: close-loading-bar 3s ease-out forwards;
+
+	@keyframes close-loading-bar {
+		75% {
+			width: 300px;
+		}
+		100% {
+			width: 0%;
+		}
+	}
+
+	--animate-hide-loading-screen: hide-loading-screen 4s ease-out forwards;
+
+	@keyframes hide-loading-screen {
+		75% {
+			transform: translateY(0%);
+		}
+		100% {
+			transform: translateY(-100%);
+		}
+	}
 }
