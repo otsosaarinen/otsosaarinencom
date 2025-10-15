@@ -37,10 +37,10 @@ function App() {
 						onMouseEnter={nameScramble.replay}
 					></h1>
 				</div>
-				<div className="flex grow items-center justify-center bg-neutral-900/90 py-10">
-					<div className="grid grid-cols-1 justify-items-center gap-15 xl:grid-cols-2">
+				<div className="flex grow items-center justify-center bg-neutral-900/90 py-15">
+					<div className="grid w-[70%] grid-cols-1 justify-items-start gap-15 xl:grid-cols-2">
 						<div
-							className={`w-[85%] max-w-120 opacity-0 ${showContent ? "animate-show-content-blocks" : ""}`}
+							className={`w-full opacity-0 ${showContent ? "animate-show-content-blocks" : ""}`}
 						>
 							<h3 className="font-bold">EXPERIENCE</h3>
 							<div className="my-3 h-[0.5px] w-full bg-neutral-500"></div>
@@ -69,12 +69,12 @@ function App() {
 								company="Turun ammattikorkeakoulu Oy"
 								date="5/2022 - 6/2025"
 								description="Assisted applicants with IT issues during the Turku UAS entrance exam. Helped applicants connect to the exam network and supervised them during the exam."
-								tags="IT support, Problem solving, VPN"
+								tags="IT support, Problem solving"
 							/>
 							<div className="my-3 h-[0.5px] w-full bg-neutral-500"></div>
 						</div>
 						<div
-							className={`w-[85%] max-w-120 opacity-0 ${showContent ? "animate-show-content-blocks" : ""}`}
+							className={`w-full opacity-0 ${showContent ? "animate-show-content-blocks" : ""}`}
 						>
 							<h3 className="font-bold">EDUCATION</h3>
 							<div className="my-3 h-[0.5px] w-full bg-neutral-500"></div>
@@ -83,7 +83,7 @@ function App() {
 								company="Turku University of Applied Sciences"
 								date="8/2021 - 4/2025"
 								description="Completed health technology specialization studies and took courses in software development, medical regulations and AI."
-								tags="TypeScript, JavaScript, Python, React, Azure, AI, RAG"
+								tags="TypeScript, JavaScript, Python, React, Azure, AI, RAG, Databases"
 							/>
 							<div className="my-3 h-[0.5px] w-full bg-neutral-500"></div>
 							<ExperienceButton
@@ -91,12 +91,12 @@ function App() {
 								company="National Institute of Technology, Hachinohe College (八戸高専)"
 								date="4/2024 - 7/2024"
 								description="Exchange student in Hachinohe, Japan. Researched radiofrequency ablation (RFA) cancer treatment and its impact on human cells."
-								tags="Medical engineering, Radiofrequence ablation, FEM, 3D modeling"
+								tags="Medical engineering, ElmerGUI, SALOME, FEM, 3D modeling"
 							/>
 							<div className="my-3 h-[0.5px] w-full bg-neutral-500"></div>
 						</div>
 						<div
-							className={`w-[85%] max-w-120 opacity-0 xl:col-span-2 ${showContent ? "animate-show-content-blocks" : ""}`}
+							className={`w-full opacity-0 xl:col-span-2 ${showContent ? "animate-show-content-blocks" : ""}`}
 						>
 							<h3 className="font-bold">PROJECTS</h3>
 							<div className="my-3 h-[0.5px] w-full bg-neutral-500"></div>
@@ -104,7 +104,7 @@ function App() {
 						</div>
 
 						<div
-							className={`w-[85%] max-w-120 opacity-0 ${showContent ? "animate-show-content-blocks" : ""}`}
+							className={`w-full opacity-0 ${showContent ? "animate-show-content-blocks" : ""}`}
 						>
 							<h3 className="font-bold">CONTACT ME</h3>
 							<div className="my-3 h-[0.5px] w-full bg-neutral-500"></div>
