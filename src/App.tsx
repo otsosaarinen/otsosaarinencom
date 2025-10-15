@@ -3,7 +3,6 @@ import { useState } from "react";
 
 import ContactButton from "./components/ContactButton";
 import ExperienceButton from "./components/ExperienceButton";
-import SkillButton from "./components/SkillButton";
 
 import { useScramble } from "use-scramble";
 
