@@ -40,7 +40,7 @@ function App() {
 						onMouseEnter={nameScramble.replay}
 					></h1>
 				</div>
-				<div className="flex grow flex-col items-center justify-center gap-15 bg-neutral-900/90 pt-10 xl:flex-row xl:items-start">
+				<div className="flex grow flex-col items-center justify-center gap-15 bg-neutral-900/90 py-10 xl:flex-row xl:items-start">
 					<div
 						className={`w-100 opacity-0 sm:w-110 md:w-120 ${showContent ? "animate-show-content-blocks" : ""}`}
 					>
