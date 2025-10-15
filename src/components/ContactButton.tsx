@@ -10,7 +10,7 @@ function ContactButton({
 	return (
 		<>
 			<div
-				className="flex items-center justify-center gap-1 text-sm"
+				className="flex cursor-pointer items-center justify-center gap-1 text-sm"
 				onClick={() => window.open(url, "_blank")}
 			>
 				<Icon size={15} color="#7c86ff" />
