@@ -38,9 +38,9 @@ function App() {
 					></h1>
 				</div>
 				<div className="flex grow items-center justify-center bg-neutral-900/90 py-10">
-					<div className="grid grid-cols-1 gap-15 xl:grid-cols-2">
+					<div className="grid grid-cols-1 justify-items-center gap-15 xl:grid-cols-2">
 						<div
-							className={`w-90 opacity-0 sm:w-120 ${showContent ? "animate-show-content-blocks" : ""}`}
+							className={`w-[85%] max-w-120 opacity-0 ${showContent ? "animate-show-content-blocks" : ""}`}
 						>
 							<h3 className="font-bold">EXPERIENCE</h3>
 							<div className="my-3 h-[0.5px] w-full bg-neutral-500"></div>
@@ -74,7 +74,7 @@ function App() {
 							<div className="my-3 h-[0.5px] w-full bg-neutral-500"></div>
 						</div>
 						<div
-							className={`w-90 opacity-0 sm:w-120 ${showContent ? "animate-show-content-blocks" : ""}`}
+							className={`w-[85%] max-w-120 opacity-0 ${showContent ? "animate-show-content-blocks" : ""}`}
 						>
 							<h3 className="font-bold">EDUCATION</h3>
 							<div className="my-3 h-[0.5px] w-full bg-neutral-500"></div>
@@ -96,7 +96,7 @@ function App() {
 							<div className="my-3 h-[0.5px] w-full bg-neutral-500"></div>
 						</div>
 						<div
-							className={`opacity-0 xl:col-span-2 ${showContent ? "animate-show-content-blocks" : ""}`}
+							className={`w-[85%] max-w-120 opacity-0 xl:col-span-2 ${showContent ? "animate-show-content-blocks" : ""}`}
 						>
 							<h3 className="font-bold">PROJECTS</h3>
 							<div className="my-3 h-[0.5px] w-full bg-neutral-500"></div>
@@ -104,7 +104,7 @@ function App() {
 						</div>
 
 						<div
-							className={`w-90 opacity-0 sm:w-120 ${showContent ? "animate-show-content-blocks" : ""}`}
+							className={`w-[85%] max-w-120 opacity-0 ${showContent ? "animate-show-content-blocks" : ""}`}
 						>
 							<h3 className="font-bold">CONTACT ME</h3>
 							<div className="my-3 h-[0.5px] w-full bg-neutral-500"></div>
