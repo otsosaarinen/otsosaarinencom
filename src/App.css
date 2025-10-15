@@ -3,4 +3,16 @@
 
 @theme {
 	--font-inter: "Inter", sans-serif;
+
+	--animate-show-content-blocks: show-content-blocks 1s ease-out forwards;
+
+	@keyframes show-content-blocks {
+		0% {
+			transform: translateY(40px);
+		}
+		100% {
+			transform: translateY(0);
+			opacity: 1;
+		}
+	}
 }
