@@ -10,10 +10,10 @@ function ContactButton({
 	return (
 		<>
 			<div
-				className="flex items-center justify-center gap-1 text-sm italic"
+				className="flex items-center justify-center gap-1 text-sm"
 				onClick={() => window.open(url, "_blank")}
 			>
-				<Icon size={15} color="#a684ff" />
+				<Icon size={15} color="#7c86ff" />
 				{text}
 			</div>
 		</>

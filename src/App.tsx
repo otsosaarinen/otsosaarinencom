@@ -32,7 +32,7 @@ function App() {
 			<div className="font-inter flex flex-col justify-center overflow-x-hidden bg-linear-to-r from-blue-700 to-indigo-700 text-white">
 				<div className="flex h-75 w-full flex-col items-center justify-center">
 					<h1
-						className="z-10 p-5 text-center text-5xl font-bold tracking-wide sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl"
+						className="z-10 p-5 text-center text-4xl font-bold tracking-wide sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl"
 						ref={nameScramble.ref}
 						onMouseEnter={nameScramble.replay}
 					></h1>
@@ -40,7 +40,7 @@ function App() {
 				<div className="flex grow items-center justify-center bg-neutral-900/90 py-10">
 					<div className="grid grid-cols-1 gap-15 xl:grid-cols-2">
 						<div
-							className={`w-100 opacity-0 sm:w-110 md:w-120 ${showContent ? "animate-show-content-blocks" : ""}`}
+							className={`w-90 opacity-0 sm:w-120 ${showContent ? "animate-show-content-blocks" : ""}`}
 						>
 							<h3 className="font-bold">EXPERIENCE</h3>
 							<div className="my-3 h-[0.5px] w-full bg-neutral-500"></div>
@@ -74,7 +74,7 @@ function App() {
 							<div className="my-3 h-[0.5px] w-full bg-neutral-500"></div>
 						</div>
 						<div
-							className={`w-100 opacity-0 sm:w-110 md:w-120 ${showContent ? "animate-show-content-blocks" : ""}`}
+							className={`w-90 opacity-0 sm:w-120 ${showContent ? "animate-show-content-blocks" : ""}`}
 						>
 							<h3 className="font-bold">EDUCATION</h3>
 							<div className="my-3 h-[0.5px] w-full bg-neutral-500"></div>
@@ -96,21 +96,29 @@ function App() {
 							<div className="my-3 h-[0.5px] w-full bg-neutral-500"></div>
 						</div>
 						<div
-							className={`w-100 opacity-0 sm:w-110 md:w-120 ${showContent ? "animate-show-content-blocks" : ""}`}
+							className={`opacity-0 xl:col-span-2 ${showContent ? "animate-show-content-blocks" : ""}`}
+						>
+							<h3 className="font-bold">PROJECTS</h3>
+							<div className="my-3 h-[0.5px] w-full bg-neutral-500"></div>
+							<div className="text-sm italic">Coming soon</div>
+						</div>
+
+						<div
+							className={`w-90 opacity-0 sm:w-120 ${showContent ? "animate-show-content-blocks" : ""}`}
 						>
 							<h3 className="font-bold">CONTACT ME</h3>
 							<div className="my-3 h-[0.5px] w-full bg-neutral-500"></div>
 							<div className="flex flex-col items-start justify-center gap-3">
 								<ContactButton
-									url="https://www.linkedin.com/in/otsosaarinen/"
-									text="LinkedIn"
-									icon={Linkedin}
-								/>{" "}
-								<ContactButton
 									url="https://github.com/otsosaarinen"
 									text="GitHub"
 									icon={Github}
 								/>
+								<ContactButton
+									url="https://www.linkedin.com/in/otsosaarinen/"
+									text="LinkedIn"
+									icon={Linkedin}
+								/>{" "}
 								<ContactButton
 									url="mailto:saarinenotso@gmail.com"
 									text="Email"

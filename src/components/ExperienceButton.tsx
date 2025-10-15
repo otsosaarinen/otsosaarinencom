@@ -25,7 +25,7 @@ function ExperienceButton({
 				</div>
 				<p className="py-3 text-sm">{description}</p>
 				<div className="flex flex-row items-center justify-start gap-1 text-sm italic">
-					<Tags size={15} color="#a684ff" />
+					<Tags size={15} color="#7c86ff" />
 					<p>{tags}</p>
 				</div>
 			</div>
