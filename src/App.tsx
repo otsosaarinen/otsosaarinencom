@@ -65,7 +65,7 @@ function App() {
 							/>
 							<div className="my-3 h-[0.5px] w-full bg-neutral-500"></div>
 							<ExperienceButton
-								title="Student-assistant"
+								title="Student Assistant"
 								company="Turun ammattikorkeakoulu Oy"
 								date="5/2022 - 6/2025"
 								description="Assisted applicants with IT issues during the Turku UAS entrance exam. Helped applicants connect to the exam network and supervised them during the exam."
