@@ -1,5 +1,4 @@
 import "./App.css";
-import { useEffect } from "react";
 
 import ContactButton from "./components/ContactButton";
 import ExperienceButton from "./components/ExperienceButton";
@@ -11,26 +10,9 @@ import { Linkedin } from "lucide-react";
 import { Mail } from "lucide-react";
 
 function App() {
-	useEffect(() => {
-		document.body.style.overflow = "hidden";
-		const timer = setTimeout(() => {
-			document.body.style.overflow = "auto";
-		}, 4000);
-
-		return () => clearTimeout(timer);
-	}, []);
-
 	return (
 		<>
 			<div className="font-inter">
-				{/* Animation interface */}
-				<div className="animate-hide-loading-screen fixed top-0 left-0 z-30 flex h-screen w-full flex-col items-center justify-center gap-3 bg-rose-400 text-white">
-					<div className="animate-close-loading-bar h-2 w-[300px] rounded-full bg-neutral-900">
-						<div className="animate-loading-bar h-2 w-0 rounded-full bg-white"></div>
-					</div>
-				</div>
-
-				{/* Base website interface */}
 				<div className="flex flex-col items-center justify-center bg-white text-neutral-900">
 					<div className="flex min-h-screen w-full flex-col items-center justify-center gap-5 px-3 text-center">
 						<h1 className="text-6xl font-bold sm:text-7xl md:text-8xl lg:text-9xl">
