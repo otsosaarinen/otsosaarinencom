@@ -1,27 +1,33 @@
+import { Tags } from "lucide-react";
+
 function ExperienceButton({
 	title,
 	company,
 	description,
 	date,
+	tags,
 }: {
 	title: string;
 	company: string;
 	description: string;
 	date: string;
+	tags: string;
 }) {
 	return (
 		<>
-			<div className="group relative flex max-w-90 cursor-pointer flex-col items-start justify-center gap-3 overflow-hidden rounded-2xl border border-neutral-800 p-5 text-neutral-900 sm:max-w-125 md:max-w-150 lg:max-w-175">
-				<div className="transition-color absolute left-0 z-0 h-full w-full duration-150 ease-in group-hover:bg-blue-100"></div>
-				<div className="absolute -right-10 -bottom-10 h-25 w-25 rounded-full bg-blue-200 transition-all duration-150 ease-in group-hover:scale-115 group-hover:bg-blue-300"></div>
-				<div className="z-10 w-full">
+			<div className="flex flex-col justify-between">
+				<div className="flex flex-col">
 					<div className="flex w-full flex-row items-center justify-between">
-						<div className="text-lg font-medium">{title}</div>
-						<div className="text-sm font-light">{date}</div>
+						<p className="font-medium">{title}</p>
+						<p className="text-sm italic">{date}</p>
 					</div>
-					<div className="text-blue-600">{company}</div>
+					<p className="text-sm text-white/50">{company}</p>
 				</div>
-				<div className="z-10 text-sm font-light">{description}</div>
+				<p className="py-3 text-sm">{description}</p>
+				<div className="flex flex-row items-center justify-start gap-1 text-sm italic">
+					<Tags size={15} color="#a684ff" />
+					<p>{tags}</p>
+				</div>
 			</div>
 		</>
 	);
