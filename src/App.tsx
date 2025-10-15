@@ -17,10 +17,10 @@ function App() {
 
 	const nameScramble = useScramble({
 		text: "OTSO SAARINEN",
-		speed: 0.6,
-		tick: 1,
+		speed: 0.7,
+		tick: 2,
 		step: 1,
-		scramble: 20,
+		scramble: 10,
 		seed: 5,
 		chance: 1,
 		range: [33, 125],
