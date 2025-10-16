@@ -87,7 +87,7 @@ function App() {
 							/>
 							<div className="my-3 h-[0.5px] w-full bg-neutral-500"></div>
 							<ExperienceButton
-								title="Student exchange program"
+								title="Student Exchange Program"
 								company="National Institute of Technology, Hachinohe College (八戸高専)"
 								date="4/2024 - 7/2024"
 								description="Exchange student in Hachinohe, Japan. Researched radiofrequency ablation (RFA) cancer treatment and its impact on human cells."
