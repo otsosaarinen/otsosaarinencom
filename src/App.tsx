@@ -102,7 +102,6 @@ function App() {
 							<div className="my-3 h-[0.5px] w-full bg-neutral-500"></div>
 							<div className="text-sm italic">Coming soon</div>
 						</div>
-
 						<div
 							className={`w-full opacity-0 ${showContent ? "animate-show-content-blocks" : ""}`}
 						>
