@@ -41,7 +41,7 @@ function App() {
 	return (
 		<>
 			<div className="font-inter flex min-h-screen flex-col items-center justify-start bg-neutral-900 py-15 text-white">
-				<div className="flex w-190 flex-col gap-10">
+				<div className="flex w-190 flex-col gap-15">
 					<div className="flex flex-row items-start justify-between">
 						<div className="flex flex-col items-start justify-center">
 							<h1
