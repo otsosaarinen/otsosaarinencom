@@ -14,7 +14,7 @@ function App() {
 	const [showContent, setShowContent] = useState(false);
 
 	const nameScramble = useScramble({
-		text: "OTSO SAARINEN",
+		text: "otso saarinen",
 		speed: 0.7,
 		tick: 2,
 		step: 1,
@@ -42,85 +42,85 @@ function App() {
 						<div
 							className={`w-full opacity-0 ${showContent ? "animate-show-content-blocks" : ""}`}
 						>
-							<h3 className="font-bold">EXPERIENCE</h3>
+							<h3 className="font-bold">experience</h3>
 							<div className="my-3 h-[0.5px] w-full bg-neutral-500"></div>
 							<ExperienceButton
-								title="Integration Analyst"
-								company="Lowell Suomi Oy"
-								date="7/2025 - Present"
-								description="Worked in the data transfer team and handled
-								data transfers between Lowell and client
-								companies. Managed SFTP servers and configured
-								file transfers (e.g. with MOVEit and BizTalk)."
-								tags="Data integration, SFTP, SSH, BizTalk,
-									MOVEit, SQL, Jira"
+								title="integration analyst"
+								company="lowell suomi oy"
+								date="7/2025 - present"
+								description="worked in the data transfer team and handled
+								data transfers between lowell and client
+								companies. managed sftp servers and configured
+								file transfers (e.g. with moveit and biztalk)."
+								tags="data integration, sftp, ssh, biztalk,
+									moveit, sql, jira"
 							/>
 							<div className="my-3 h-[0.5px] w-full bg-neutral-500"></div>
 							<ExperienceButton
-								title="Application Specialist"
-								company="2M-IT Oy"
+								title="application specialist"
+								company="2m-it oy"
 								date="11/2023 - 4/2024"
-								description="Internship at 2M-IT's Service Desk. Solved IT issues for employees in the wellbeing services counties of Southwest Finland and Kanta-Häme."
-								tags="Azure, Active Directory, Intune, Entra ID, Citrix, VPN"
+								description="internship at 2m-it's service desk. solved it issues for employees in the wellbeing services counties of southwest finland and kanta-häme."
+								tags="azure, active directory, intune, entra id, citrix, vpn"
 							/>
 							<div className="my-3 h-[0.5px] w-full bg-neutral-500"></div>
 							<ExperienceButton
-								title="Student Assistant"
-								company="Turun ammattikorkeakoulu Oy"
+								title="student assistant"
+								company="turun ammattikorkeakoulu oy"
 								date="5/2022 - 6/2025"
-								description="Assisted applicants with IT issues during the Turku UAS entrance exam. Helped applicants connect to the exam network and supervised them during the exam."
-								tags="IT support, Problem solving"
+								description="assisted applicants with it issues during the turku uas entrance exam. helped applicants connect to the exam network and supervised them during the exam."
+								tags="it support, problem solving"
 							/>
 							<div className="my-3 h-[0.5px] w-full bg-neutral-500"></div>
 						</div>
 						<div
 							className={`w-full opacity-0 ${showContent ? "animate-show-content-blocks" : ""}`}
 						>
-							<h3 className="font-bold">EDUCATION</h3>
+							<h3 className="font-bold">education</h3>
 							<div className="my-3 h-[0.5px] w-full bg-neutral-500"></div>
 							<ExperienceButton
-								title="Bachelor of Engineering, ICT"
-								company="Turku University of Applied Sciences"
+								title="bachelor of engineering, ict"
+								company="turku university of applied sciences"
 								date="8/2021 - 4/2025"
-								description="Completed health technology specialization studies and took courses in software development, medical regulations and AI."
-								tags="TypeScript, JavaScript, Python, React, Azure, AI, RAG, Databases"
+								description="completed health technology specialization studies and took courses in software development, medical regulations and ai."
+								tags="typescript, javascript, python, react, azure, ai, rag, databases"
 							/>
 							<div className="my-3 h-[0.5px] w-full bg-neutral-500"></div>
 							<ExperienceButton
-								title="Student Exchange Program"
-								company="National Institute of Technology, Hachinohe College (八戸高専)"
+								title="student exchange program"
+								company="national institute of technology, hachinohe college (八戸高専)"
 								date="4/2024 - 7/2024"
-								description="Exchange student in Hachinohe, Japan. Researched radiofrequency ablation (RFA) cancer treatment and its impact on human cells."
-								tags="Medical engineering, ElmerGUI, SALOME, FEM, 3D modeling"
+								description="exchange student in hachinohe, japan. researched radiofrequency ablation (rfa) cancer treatment and its impact on human cells."
+								tags="medical engineering, elmergui, salome, fem, 3d modeling"
 							/>
 							<div className="my-3 h-[0.5px] w-full bg-neutral-500"></div>
 						</div>
 						<div
 							className={`w-full opacity-0 xl:col-span-2 ${showContent ? "animate-show-content-blocks" : ""}`}
 						>
-							<h3 className="font-bold">PROJECTS</h3>
+							<h3 className="font-bold">projects</h3>
 							<div className="my-3 h-[0.5px] w-full bg-neutral-500"></div>
-							<div className="text-sm italic">Coming soon</div>
+							<div className="text-sm italic">coming soon</div>
 						</div>
 						<div
 							className={`w-full opacity-0 ${showContent ? "animate-show-content-blocks" : ""}`}
 						>
-							<h3 className="font-bold">CONTACT ME</h3>
+							<h3 className="font-bold">contact me</h3>
 							<div className="my-3 h-[0.5px] w-full bg-neutral-500"></div>
 							<div className="flex flex-col items-start justify-center gap-3">
 								<ContactButton
 									url="https://github.com/otsosaarinen"
-									text="GitHub"
+									text="github"
 									icon={Github}
 								/>
 								<ContactButton
 									url="https://www.linkedin.com/in/otsosaarinen/"
-									text="LinkedIn"
+									text="linkedin"
 									icon={Linkedin}
 								/>{" "}
 								<ContactButton
 									url="mailto:saarinenotso@gmail.com"
-									text="Email"
+									text="email"
 									icon={Mail}
 								/>
 							</div>
