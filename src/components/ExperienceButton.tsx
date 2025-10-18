@@ -15,27 +15,24 @@ function ExperienceButton({
 }) {
 	return (
 		<>
-			<div className="flex flex-col justify-between text-sm">
+			<div className="flex flex-col justify-between">
 				<div className="flex flex-col">
 					<div className="flex w-full flex-row items-center justify-between">
-						<p className="font-medium">{title}</p>
+						<p className="text-sm font-medium">{title}</p>
 						<p className="text-xs italic">{date}</p>
 					</div>
-					<p className="text-neutral-400">{company}</p>
+					<p className="text-sm text-neutral-300">{company}</p>
 				</div>
-				<p className="py-3 text-neutral-400">{description}</p>
-				<div className="flex flex-row items-center justify-start gap-1 text-xs text-neutral-400">
+				<p className="py-3 text-sm text-neutral-300">{description}</p>
+				<div className="flex flex-row items-center justify-start gap-0.75 text-xs text-neutral-300">
 					<Tags size={15} color="#7bf1a8" />
-					<p>
+					<div className="flex flex-wrap">
 						{skills.map((skill, index) => (
-							<span
-								key={index}
-								className="duration cursor-pointer rounded-md border-neutral-400 px-0.5 transition-colors duration-250 ease-in-out hover:text-green-300"
-							>
-								{skill}
+							<span key={index} className="rounded-md px-0.75">
+								#{skill}
 							</span>
 						))}
-					</p>
+					</div>
 				</div>
 			</div>
 			<div className="my-3 h-[0.5px] w-full bg-neutral-700"></div>
