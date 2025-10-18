@@ -25,11 +25,11 @@ function ProjectButton({
 					</div>
 				</div>
 				<div className="py-3 text-neutral-300">{description}</div>
-				<div className="flex flex-wrap text-xs">
+				<div className="flex flex-wrap space-x-1.5 text-xs">
 					{tags.map((tag, index) => (
 						<span
 							key={index}
-							className="m-0.75 rounded-sm border-1 border-neutral-300 px-1.5 py-0.5 text-neutral-300"
+							className="mt-1.5 rounded-sm border-1 border-neutral-300 px-1.5 py-0.5 text-neutral-300"
 						>
 							{tag}
 						</span>
