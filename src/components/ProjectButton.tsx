@@ -29,7 +29,7 @@ function ProjectButton({
 					{tags.map((tag, index) => (
 						<span
 							key={index}
-							className="my-0.5 mr-1.5 rounded-sm border-1 border-neutral-300 px-1.5 py-0.5 text-neutral-300"
+							className="m-0.75 rounded-sm border-1 border-neutral-300 px-1.5 py-0.5 text-neutral-300"
 						>
 							{tag}
 						</span>
