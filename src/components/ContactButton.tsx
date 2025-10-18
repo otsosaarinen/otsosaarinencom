@@ -10,11 +10,15 @@ function ContactButton({
 	return (
 		<>
 			<div
-				className="flex cursor-pointer items-center justify-center gap-1 text-sm"
+				className={`group flex cursor-pointer items-center justify-center gap-1 text-sm text-neutral-400 transition-all duration-250 ease-in-out hover:text-white`}
 				onClick={() => window.open(url, "_blank")}
 			>
-				<Icon size={15} color="#7c86ff" />
 				{text}
+				<Icon
+					size={15}
+					color="#7bf1a8"
+					className="transition-transform duration-250 ease-in-out group-hover:rotate-[15deg]"
+				/>
 			</div>
 		</>
 	);

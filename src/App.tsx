@@ -3,6 +3,7 @@ import { useState } from "react";
 
 import ContactButton from "./components/ContactButton";
 import ExperienceButton from "./components/ExperienceButton";
+import ProjectButton from "./components/ProjectButton";
 
 import { useScramble } from "use-scramble";
 
@@ -11,10 +12,22 @@ import { Linkedin } from "lucide-react";
 import { Mail } from "lucide-react";
 
 function App() {
-	const [showContent, setShowContent] = useState(false);
+	const [showFirstBlock, setShowFirstBlock] = useState(false);
+	const [showSecondBlock, setShowSecondBlock] = useState(false);
 
 	const nameScramble = useScramble({
-		text: "OTSO SAARINEN",
+		text: "otso saarinen",
+		speed: 0.7,
+		tick: 2,
+		step: 1,
+		scramble: 10,
+		seed: 5,
+		chance: 1,
+		range: [33, 125],
+	});
+
+	const titleScramble = useScramble({
+		text: "web & integration developer",
 		speed: 0.7,
 		tick: 2,
 		step: 1,
@@ -23,108 +36,225 @@ function App() {
 		chance: 1,
 		range: [33, 125],
 		onAnimationEnd: () => {
-			setShowContent(true);
+			setShowFirstBlock(true);
+
+			setTimeout(() => {
+				setShowSecondBlock(true);
+			}, 1000);
 		},
 	});
 
 	return (
 		<>
-			<div className="font-inter flex flex-col justify-center overflow-x-hidden bg-linear-to-r from-blue-700 to-indigo-700 text-white">
-				<div className="flex h-75 w-full flex-col items-center justify-center">
-					<h1
-						className="z-10 p-5 text-center text-4xl font-bold tracking-wide sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl"
-						ref={nameScramble.ref}
-						onMouseEnter={nameScramble.replay}
-					></h1>
-				</div>
-				<div className="flex grow items-center justify-center bg-neutral-900/90 py-15">
-					<div className="grid w-[70%] grid-cols-1 justify-items-start gap-15 xl:grid-cols-2">
-						<div
-							className={`w-full opacity-0 ${showContent ? "animate-show-content-blocks" : ""}`}
-						>
-							<h3 className="font-bold">EXPERIENCE</h3>
-							<div className="my-3 h-[0.5px] w-full bg-neutral-500"></div>
-							<ExperienceButton
-								title="Integration Analyst"
-								company="Lowell Suomi Oy"
-								date="7/2025 - Present"
-								description="Worked in the data transfer team and handled
-								data transfers between Lowell and client
-								companies. Managed SFTP servers and configured
-								file transfers (e.g. with MOVEit and BizTalk)."
-								tags="Data integration, SFTP, SSH, BizTalk,
-									MOVEit, SQL, Jira"
-							/>
-							<div className="my-3 h-[0.5px] w-full bg-neutral-500"></div>
-							<ExperienceButton
-								title="Application Specialist"
-								company="2M-IT Oy"
-								date="11/2023 - 4/2024"
-								description="Internship at 2M-IT's Service Desk. Solved IT issues for employees in the wellbeing services counties of Southwest Finland and Kanta-Häme."
-								tags="Azure, Active Directory, Intune, Entra ID, Citrix, VPN"
-							/>
-							<div className="my-3 h-[0.5px] w-full bg-neutral-500"></div>
-							<ExperienceButton
-								title="Student Assistant"
-								company="Turun ammattikorkeakoulu Oy"
-								date="5/2022 - 6/2025"
-								description="Assisted applicants with IT issues during the Turku UAS entrance exam. Helped applicants connect to the exam network and supervised them during the exam."
-								tags="IT support, Problem solving"
-							/>
-							<div className="my-3 h-[0.5px] w-full bg-neutral-500"></div>
+			<div className="font-inter flex min-h-screen flex-col items-center justify-start bg-neutral-900 py-15 text-white">
+				<div className="flex w-80 flex-col gap-15 sm:w-120 md:w-160 lg:w-190">
+					<div className="flex flex-row items-start justify-between">
+						<div className="flex flex-col items-start justify-center">
+							<h1
+								className="font-bold"
+								ref={nameScramble.ref}
+								onMouseEnter={nameScramble.replay}
+							></h1>
+							<h2
+								className="text-sm text-neutral-400"
+								ref={titleScramble.ref}
+								onMouseEnter={titleScramble.replay}
+							></h2>
 						</div>
 						<div
-							className={`w-full opacity-0 ${showContent ? "animate-show-content-blocks" : ""}`}
+							className={`flex flex-col items-end justify-center opacity-0 ${showFirstBlock ? "animate-show-first-block" : ""}`}
 						>
-							<h3 className="font-bold">EDUCATION</h3>
-							<div className="my-3 h-[0.5px] w-full bg-neutral-500"></div>
-							<ExperienceButton
-								title="Bachelor of Engineering, ICT"
-								company="Turku University of Applied Sciences"
-								date="8/2021 - 4/2025"
-								description="Completed health technology specialization studies and took courses in software development, medical regulations and AI."
-								tags="TypeScript, JavaScript, Python, React, Azure, AI, RAG, Databases"
+							<ContactButton
+								url="https://github.com/otsosaarinen"
+								text="github"
+								icon={Github}
 							/>
-							<div className="my-3 h-[0.5px] w-full bg-neutral-500"></div>
-							<ExperienceButton
-								title="Student Exchange Program"
-								company="National Institute of Technology, Hachinohe College (八戸高専)"
-								date="4/2024 - 7/2024"
-								description="Exchange student in Hachinohe, Japan. Researched radiofrequency ablation (RFA) cancer treatment and its impact on human cells."
-								tags="Medical engineering, ElmerGUI, SALOME, FEM, 3D modeling"
+							<ContactButton
+								url="https://www.linkedin.com/in/otsosaarinen/"
+								text="linkedin"
+								icon={Linkedin}
+							/>{" "}
+							<ContactButton
+								url="mailto:saarinenotso@gmail.com"
+								text="email"
+								icon={Mail}
 							/>
-							<div className="my-3 h-[0.5px] w-full bg-neutral-500"></div>
 						</div>
-						<div
-							className={`w-full opacity-0 xl:col-span-2 ${showContent ? "animate-show-content-blocks" : ""}`}
-						>
-							<h3 className="font-bold">PROJECTS</h3>
-							<div className="my-3 h-[0.5px] w-full bg-neutral-500"></div>
-							<div className="text-sm italic">Coming soon</div>
-						</div>
-						<div
-							className={`w-full opacity-0 ${showContent ? "animate-show-content-blocks" : ""}`}
-						>
-							<h3 className="font-bold">CONTACT ME</h3>
-							<div className="my-3 h-[0.5px] w-full bg-neutral-500"></div>
-							<div className="flex flex-col items-start justify-center gap-3">
-								<ContactButton
-									url="https://github.com/otsosaarinen"
-									text="GitHub"
-									icon={Github}
-								/>
-								<ContactButton
-									url="https://www.linkedin.com/in/otsosaarinen/"
-									text="LinkedIn"
-									icon={Linkedin}
-								/>{" "}
-								<ContactButton
-									url="mailto:saarinenotso@gmail.com"
-									text="Email"
-									icon={Mail}
-								/>
-							</div>
-						</div>
+					</div>
+					<div
+						className={`w-80 text-sm text-neutral-400 opacity-0 sm:w-100 ${showFirstBlock ? "animate-show-first-block" : ""}`}
+					>
+						portfolio website showcasing my recent experiences and
+						personal projects
+					</div>
+					<div
+						className={`w-full opacity-0 ${showSecondBlock ? "animate-show-second-block" : ""}`}
+					>
+						<h3 className="mb-3 text-right text-lg font-semibold text-green-300 italic">
+							experience
+						</h3>
+						<ExperienceButton
+							title="integration analyst"
+							company="lowell suomi oy"
+							date="7/2025 - present"
+							description="worked in the data transfer team and solved daily data transfer issues within sftp servers and api integrations"
+							skills={[
+								"integration",
+								"api",
+								"sftp",
+								"ssh",
+								"biztalk",
+								"moveit",
+								"sql",
+								"jira",
+							]}
+						/>
+						<ExperienceButton
+							title="service desk"
+							company="2m-it oy"
+							date="11/2023 - 4/2024"
+							description="resolved it issues for employees in the wellbeing services counties of southwest finland and kanta-häme"
+							skills={[
+								"azure",
+								"activedirectory",
+								"intune",
+								"entraid",
+								"citrix",
+								"vpn",
+							]}
+						/>
+						<ExperienceButton
+							title="student assistant"
+							company="turun ammattikorkeakoulu oy"
+							date="5/2022 - 6/2025"
+							description="assisted applicants with it-related issues during the turku uas entrance exams"
+							skills={["itsupport", "problemsolving", "vpn"]}
+						/>
+					</div>
+					<div
+						className={`w-full opacity-0 xl:col-span-2 ${showSecondBlock ? "animate-show-second-block" : ""}`}
+					>
+						<h3 className="mb-3 text-right text-lg font-semibold text-green-300 italic">
+							projects
+						</h3>
+						<ProjectButton
+							title="föli-api"
+							description="api wrapper for tsjl data interface"
+							tags={[
+								"typescript",
+								"react",
+								"rest api",
+								"tailwind",
+								"swagger",
+							]}
+							github_link="https://github.com/otsosaarinen/foli-api"
+						/>
+						<ProjectButton
+							title="spotify-web-controller"
+							description="web application for controlling spotify music playback"
+							tags={[
+								"typescript",
+								"react",
+								"rest api",
+								"tailwind",
+							]}
+							github_link="https://github.com/otsosaarinen/spotify-web-controller"
+						/>
+						<ProjectButton
+							title="bachelor's thesis"
+							description="real-time patient data collection and analysis using apache kafka"
+							tags={[
+								"apache kafka",
+								"python",
+								"influxdb",
+								"grafana",
+							]}
+							github_link="https://github.com/otsosaarinen/Thesis"
+						/>
+						<ProjectButton
+							title="klemmari"
+							description="website featuring a rag-ai chatbot"
+							tags={[
+								"azure",
+								"ai",
+								"rag",
+								"python",
+								"react",
+								"javascript",
+							]}
+							github_link="https://github.com/otsosaarinen/Klemmari"
+						/>
+					</div>
+					<div
+						className={`w-full opacity-0 ${showSecondBlock ? "animate-show-second-block" : ""}`}
+					>
+						<h3 className="mb-3 text-right text-lg font-semibold text-green-300 italic">
+							education
+						</h3>
+						<ExperienceButton
+							title="bachelor of engineering, ict"
+							company="turku university of applied sciences"
+							date="8/2021 - 4/2025"
+							description="specialized in health technology and took courses in software development"
+							skills={[
+								"typescript",
+								"javascript",
+								"python",
+								"react",
+								"azure",
+								"ai",
+								"rag",
+								"databases",
+							]}
+						/>
+						<ExperienceButton
+							title="student exchange program"
+							company="national institute of technology, hachinohe college (八戸高専)"
+							date="4/2024 - 7/2024"
+							description="three-month student exchange in japan researching radiofrequency ablation"
+							skills={[
+								"research",
+								"3d-modeling",
+								"rfa",
+								"elmergui",
+								"salome",
+								"fem",
+							]}
+						/>
+					</div>
+					<div
+						className={`w-full text-sm text-neutral-400 opacity-0 ${showSecondBlock ? "animate-show-second-block" : ""}`}
+					>
+						<p>
+							built using{" "}
+							<span className="text-blue-300 italic">
+								typescript
+							</span>
+							,{" "}
+							<span className="text-blue-300 italic">react</span>{" "}
+							and{" "}
+							<span className="text-blue-300 italic">
+								tailwind
+							</span>
+						</p>
+						<p>
+							hosted on{" "}
+							<span className="text-orange-300 italic">
+								cloudflare
+							</span>
+						</p>
+						<p>
+							icons from{" "}
+							<span className="text-red-300 italic">
+								lucide.dev
+							</span>
+						</p>
+						<p>
+							updated on{" "}
+							<span className="text-white italic">
+								18.10.2025
+							</span>
+						</p>
 					</div>
 				</div>
 			</div>
