@@ -145,7 +145,7 @@ function App() {
 								"react",
 								"rest api",
 								"tailwind",
-								"swagger",
+								"cloudflare",
 							]}
 							github_link="https://github.com/otsosaarinen/foli-api"
 						/>
