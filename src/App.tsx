@@ -227,31 +227,33 @@ function App() {
 					>
 						<p>
 							built using{" "}
-							<span className="text-blue-300 italic">
+							<span className="font-medium text-blue-300 italic">
 								typescript
 							</span>
 							,{" "}
-							<span className="text-blue-300 italic">react</span>{" "}
+							<span className="font-medium text-blue-300 italic">
+								react
+							</span>{" "}
 							and{" "}
-							<span className="text-blue-300 italic">
+							<span className="font-medium text-blue-300 italic">
 								tailwind
 							</span>
 						</p>
 						<p>
 							hosted on{" "}
-							<span className="text-orange-300 italic">
+							<span className="font-medium text-orange-300 italic">
 								cloudflare
 							</span>
 						</p>
 						<p>
 							icons from{" "}
-							<span className="text-red-300 italic">
+							<span className="font-medium text-red-300 italic">
 								lucide.dev
 							</span>
 						</p>
 						<p>
 							updated on{" "}
-							<span className="text-white italic">
+							<span className="font-medium text-white italic">
 								18.10.2025
 							</span>
 						</p>
