@@ -15,18 +15,18 @@ function ExperienceButton({
 }) {
 	return (
 		<>
-			<div className="flex flex-col justify-between">
+			<div className="group flex cursor-pointer flex-col justify-between pt-3 pr-1 pb-1 pl-1 text-sm transition-colors duration-250 ease-in-out hover:bg-neutral-700">
 				<div className="flex flex-col">
 					<div className="flex w-full flex-row items-center justify-between">
-						<p className="text-sm font-medium text-green-300">
-							{title}
-						</p>
+						<p className="font-medium text-green-300">{title}</p>
 						<p className="text-xs italic">{date}</p>
 					</div>
-					<p className="text-sm text-white">{company}</p>
+					<p className="">{company}</p>
 				</div>
-				<p className="py-3 text-sm text-neutral-300">{description}</p>
-				<div className="flex flex-row items-center justify-start gap-0.75 text-xs text-neutral-300">
+				<p className="py-3 text-neutral-400 group-hover:text-white">
+					{description}
+				</p>
+				<div className="mb-3 flex flex-row items-center justify-start gap-0.75 text-xs text-neutral-400">
 					<Tags size={15} color="#7bf1a8" />
 					<div className="flex flex-wrap">
 						{skills.map((skill, index) => (
@@ -37,7 +37,7 @@ function ExperienceButton({
 					</div>
 				</div>
 			</div>
-			<div className="my-3 h-[0.5px] w-full bg-neutral-700"></div>
+			<div className="h-[0.5px] w-full bg-neutral-700"></div>
 		</>
 	);
 }
