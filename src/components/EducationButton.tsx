@@ -13,7 +13,7 @@ function EducationButton({
 }) {
 	return (
 		<>
-			<div className="group flex cursor-pointer flex-col justify-between p-3 text-sm transition-colors duration-250 ease-in-out hover:bg-neutral-800">
+			<div className="group my-2 flex cursor-pointer flex-col justify-between border-l-1 border-red-300 bg-neutral-800 p-3 text-sm transition-colors duration-250 ease-in-out hover:bg-neutral-700">
 				<div className="flex flex-col">
 					<div className="flex w-full flex-row items-center justify-between">
 						<p className="font-medium text-red-300">{title}</p>
@@ -33,14 +33,13 @@ function EducationButton({
 					{skills.map((skill, index) => (
 						<span
 							key={index}
-							className="rounded-sm border-1 border-red-300 px-1.5 py-0.5 text-white"
+							className="rounded-sm border-1 border-red-300 px-1.5 py-0.5 text-white transition-colors duration-250 ease-out group-hover:bg-red-300 group-hover:text-neutral-900"
 						>
 							{skill}
 						</span>
 					))}
 				</div>
 			</div>
-			<div className="h-[0.5px] w-full bg-neutral-700"></div>
 		</>
 	);
 }
