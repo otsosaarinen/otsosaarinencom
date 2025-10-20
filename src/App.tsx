@@ -104,7 +104,7 @@ function App() {
 							description="worked in the data transfer team and solved daily data transfer issues within sftp servers and api integrations"
 							skills={[
 								"integration",
-								"api",
+								"rest api",
 								"sftp",
 								"ssh",
 								"biztalk",
