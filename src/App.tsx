@@ -94,7 +94,7 @@ function App() {
 					<div
 						className={`w-full opacity-0 ${showSecondBlock ? "animate-show-second-block" : ""}`}
 					>
-						<h3 className="mr-3 mb-3 text-right text-lg font-semibold text-blue-300 italic">
+						<h3 className="mr-3 text-right text-lg font-semibold text-blue-300 italic">
 							experience
 						</h3>
 						<ExperienceButton
@@ -138,7 +138,7 @@ function App() {
 					<div
 						className={`w-full opacity-0 ${showSecondBlock ? "animate-show-second-block" : ""}`}
 					>
-						<h3 className="mr-3 mb-3 text-right text-lg font-semibold text-orange-300 italic">
+						<h3 className="mr-3 text-right text-lg font-semibold text-orange-300 italic">
 							projects
 						</h3>
 						<ProjectButton
@@ -192,7 +192,7 @@ function App() {
 					<div
 						className={`w-full opacity-0 ${showSecondBlock ? "animate-show-second-block" : ""}`}
 					>
-						<h3 className="mr-3 mb-3 text-right text-lg font-semibold text-red-300 italic">
+						<h3 className="mr-3 text-right text-lg font-semibold text-red-300 italic">
 							education
 						</h3>
 						<EducationButton
