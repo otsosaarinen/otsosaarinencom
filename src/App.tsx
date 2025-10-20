@@ -50,7 +50,7 @@ function App() {
 			<div className="font-inter flex min-h-screen flex-col items-center justify-start bg-neutral-900 py-15 text-white">
 				<div className="flex w-80 flex-col gap-15 sm:w-120 md:w-160 lg:w-190">
 					<div className="flex flex-row items-start justify-between">
-						<div className="flex flex-col items-start justify-center">
+						<div className="ml-3 flex flex-col items-start justify-center">
 							<h1
 								className="font-bold"
 								ref={nameScramble.ref}
@@ -86,7 +86,7 @@ function App() {
 						</div>
 					</div>
 					<div
-						className={`w-80 text-sm text-neutral-400 opacity-0 sm:w-100 ${showFirstBlock ? "animate-show-first-block" : ""}`}
+						className={`ml-3 w-80 text-sm text-neutral-400 opacity-0 sm:w-100 ${showFirstBlock ? "animate-show-first-block" : ""}`}
 					>
 						portfolio website showcasing my recent experiences and
 						personal projects
@@ -94,7 +94,7 @@ function App() {
 					<div
 						className={`w-full opacity-0 ${showSecondBlock ? "animate-show-second-block" : ""}`}
 					>
-						<h3 className="mb-3 text-right text-lg font-semibold text-blue-300 italic">
+						<h3 className="mr-3 mb-3 text-right text-lg font-semibold text-blue-300 italic">
 							experience
 						</h3>
 						<ExperienceButton
@@ -138,7 +138,7 @@ function App() {
 					<div
 						className={`w-full opacity-0 ${showSecondBlock ? "animate-show-second-block" : ""}`}
 					>
-						<h3 className="mb-3 text-right text-lg font-semibold text-orange-300 italic">
+						<h3 className="mr-3 mb-3 text-right text-lg font-semibold text-orange-300 italic">
 							projects
 						</h3>
 						<ProjectButton
@@ -192,7 +192,7 @@ function App() {
 					<div
 						className={`w-full opacity-0 ${showSecondBlock ? "animate-show-second-block" : ""}`}
 					>
-						<h3 className="mb-3 text-right text-lg font-semibold text-red-300 italic">
+						<h3 className="mr-3 mb-3 text-right text-lg font-semibold text-red-300 italic">
 							education
 						</h3>
 						<EducationButton
@@ -227,7 +227,7 @@ function App() {
 						/>
 					</div>
 					<div
-						className={`w-full text-sm text-neutral-400 opacity-0 ${showSecondBlock ? "animate-show-second-block" : ""}`}
+						className={`ml-3 w-full text-sm text-neutral-400 opacity-0 ${showSecondBlock ? "animate-show-second-block" : ""}`}
 					>
 						<p>
 							built using{" "}
