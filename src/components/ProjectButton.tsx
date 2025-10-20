@@ -30,7 +30,7 @@ function ProjectButton({
 					{tags.map((tag, index) => (
 						<span
 							key={index}
-							className="rounded-sm border-1 border-neutral-400 px-1.5 py-0.5 text-neutral-400 group-hover:border-orange-300 group-hover:text-white"
+							className="rounded-sm border-1 border-orange-300 px-1.5 py-0.5 text-white"
 						>
 							{tag}
 						</span>
