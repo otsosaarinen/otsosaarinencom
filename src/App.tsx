@@ -4,6 +4,7 @@ import { useState } from "react";
 import ContactButton from "./components/ContactButton";
 import ExperienceButton from "./components/ExperienceButton";
 import ProjectButton from "./components/ProjectButton";
+import EducationButton from "./components/EducationButton";
 
 import { useScramble } from "use-scramble";
 
@@ -68,16 +69,19 @@ function App() {
 								url="https://github.com/otsosaarinen"
 								text="github"
 								icon={Github}
+								color="#8ec5ff"
 							/>
 							<ContactButton
 								url="https://www.linkedin.com/in/otsosaarinen/"
 								text="linkedin"
 								icon={Linkedin}
+								color="#ffb86a"
 							/>{" "}
 							<ContactButton
 								url="mailto:saarinenotso@gmail.com"
 								text="email"
 								icon={Mail}
+								color="#ffa2a2"
 							/>
 						</div>
 					</div>
@@ -90,7 +94,7 @@ function App() {
 					<div
 						className={`w-full opacity-0 ${showSecondBlock ? "animate-show-second-block" : ""}`}
 					>
-						<h3 className="mb-3 text-right text-lg font-semibold text-green-300 italic">
+						<h3 className="mb-3 text-right text-lg font-semibold text-blue-300 italic">
 							experience
 						</h3>
 						<ExperienceButton
@@ -116,9 +120,9 @@ function App() {
 							description="resolved it issues for employees in the wellbeing services counties of southwest finland and kanta-häme"
 							skills={[
 								"azure",
-								"activedirectory",
+								"active directory",
 								"intune",
-								"entraid",
+								"entra id",
 								"citrix",
 								"vpn",
 							]}
@@ -128,13 +132,13 @@ function App() {
 							company="turun ammattikorkeakoulu oy"
 							date="5/2022 - 6/2025"
 							description="assisted applicants with it-related issues during the turku uas entrance exams"
-							skills={["itsupport", "problemsolving", "vpn"]}
+							skills={["it support", "problem solving", "vpn"]}
 						/>
 					</div>
 					<div
-						className={`w-full opacity-0 xl:col-span-2 ${showSecondBlock ? "animate-show-second-block" : ""}`}
+						className={`w-full opacity-0 ${showSecondBlock ? "animate-show-second-block" : ""}`}
 					>
-						<h3 className="mb-3 text-right text-lg font-semibold text-green-300 italic">
+						<h3 className="mb-3 text-right text-lg font-semibold text-orange-300 italic">
 							projects
 						</h3>
 						<ProjectButton
@@ -188,12 +192,12 @@ function App() {
 					<div
 						className={`w-full opacity-0 ${showSecondBlock ? "animate-show-second-block" : ""}`}
 					>
-						<h3 className="mb-3 text-right text-lg font-semibold text-green-300 italic">
+						<h3 className="mb-3 text-right text-lg font-semibold text-red-300 italic">
 							education
 						</h3>
-						<ExperienceButton
+						<EducationButton
 							title="bachelor of engineering, ict"
-							company="turku university of applied sciences"
+							school="turku university of applied sciences"
 							date="8/2021 - 4/2025"
 							description="specialized in health technology and took courses in software development"
 							skills={[
@@ -207,14 +211,14 @@ function App() {
 								"databases",
 							]}
 						/>
-						<ExperienceButton
+						<EducationButton
 							title="student exchange program"
-							company="national institute of technology, hachinohe college (八戸高専)"
+							school="national institute of technology, hachinohe college (八戸高専)"
 							date="4/2024 - 7/2024"
 							description="three-month student exchange in japan researching radiofrequency ablation"
 							skills={[
-								"research",
-								"3d-modeling",
+								"medical engineering",
+								"3d modeling",
 								"rfa",
 								"elmergui",
 								"salome",
@@ -254,7 +258,7 @@ function App() {
 						<p>
 							updated on{" "}
 							<span className="font-medium text-white italic">
-								18.10.2025
+								20.10.2025
 							</span>
 						</p>
 					</div>
