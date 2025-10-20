@@ -2,10 +2,12 @@ function ContactButton({
 	url,
 	text,
 	icon: Icon,
+	color,
 }: {
 	url: string;
 	text: string;
 	icon: React.ElementType;
+	color: string;
 }) {
 	return (
 		<>
@@ -16,7 +18,7 @@ function ContactButton({
 				{text}
 				<Icon
 					size={15}
-					color="#7bf1a8"
+					color={color}
 					className="transition-transform duration-250 ease-in-out group-hover:rotate-[15deg]"
 				/>
 			</div>
