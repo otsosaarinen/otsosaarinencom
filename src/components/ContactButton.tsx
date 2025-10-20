@@ -12,7 +12,7 @@ function ContactButton({
 	return (
 		<>
 			<div
-				className={`group flex cursor-pointer items-center justify-center gap-1 text-sm text-neutral-400 transition-all duration-250 ease-in-out hover:text-white`}
+				className={`group mr-3 flex cursor-pointer items-center justify-center gap-1 text-sm text-neutral-400 transition-all duration-250 ease-in-out hover:text-white`}
 				onClick={() => window.open(url, "_blank")}
 			>
 				{text}
