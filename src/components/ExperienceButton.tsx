@@ -13,7 +13,7 @@ function ExperienceButton({
 }) {
 	return (
 		<>
-			<div className="group flex cursor-pointer flex-col justify-between px-1 py-3 text-sm transition-colors duration-250 ease-in-out hover:bg-neutral-800">
+			<div className="group flex cursor-pointer flex-col justify-between p-3 text-sm transition-colors duration-250 ease-in-out hover:bg-neutral-800">
 				<div className="flex flex-col">
 					<div className="flex w-full flex-row items-center justify-between">
 						<p className="font-medium text-blue-300">{title}</p>

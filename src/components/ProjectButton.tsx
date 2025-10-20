@@ -13,7 +13,7 @@ function ProjectButton({
 }) {
 	return (
 		<>
-			<div className="group cursor-pointer px-1 py-3 text-sm transition-colors duration-250 ease-in-out hover:bg-neutral-800">
+			<div className="group flex cursor-pointer flex-col justify-between p-3 text-sm transition-colors duration-250 ease-in-out hover:bg-neutral-800">
 				<div className="flex flex-row items-center justify-between">
 					<div className="font-medium text-orange-300">{title}</div>
 					<div className="flex flex-row items-center justify-center gap-1 text-neutral-400 group-hover:text-white hover:underline">
