@@ -13,16 +13,15 @@ import { Linkedin } from "lucide-react";
 import { Mail } from "lucide-react";
 
 function App() {
-	const [showFirstBlock, setShowFirstBlock] = useState(false);
-	const [showSecondBlock, setShowSecondBlock] = useState(false);
+	const [showBlock, setShowBlock] = useState(false);
 
 	const nameScramble = useScramble({
 		text: "otso saarinen",
 		speed: 0.7,
 		tick: 2,
 		step: 1,
-		scramble: 10,
-		seed: 5,
+		scramble: 6,
+		seed: 4,
 		chance: 1,
 		range: [33, 125],
 	});
@@ -32,16 +31,12 @@ function App() {
 		speed: 0.7,
 		tick: 2,
 		step: 1,
-		scramble: 10,
-		seed: 5,
+		scramble: 6,
+		seed: 4,
 		chance: 1,
 		range: [33, 125],
 		onAnimationEnd: () => {
-			setShowFirstBlock(true);
-
-			setTimeout(() => {
-				setShowSecondBlock(true);
-			}, 1000);
+			setShowBlock(true);
 		},
 	});
 
@@ -63,7 +58,7 @@ function App() {
 							></h2>
 						</div>
 						<div
-							className={`flex flex-col items-end justify-center opacity-0 ${showFirstBlock ? "animate-show-first-block" : ""}`}
+							className={`flex flex-col items-end justify-center opacity-0 ${showBlock ? "animate-show-content-block" : ""}`}
 						>
 							<ContactButton
 								url="https://github.com/otsosaarinen"
@@ -86,13 +81,13 @@ function App() {
 						</div>
 					</div>
 					<div
-						className={`ml-3 w-80 text-sm text-neutral-400 opacity-0 sm:w-100 ${showFirstBlock ? "animate-show-first-block" : ""}`}
+						className={`ml-3 w-80 text-sm text-neutral-400 opacity-0 sm:w-100 ${showBlock ? "animate-show-content-block" : ""}`}
 					>
 						portfolio website showcasing my recent experiences and
 						personal projects
 					</div>
 					<div
-						className={`w-full opacity-0 ${showSecondBlock ? "animate-show-second-block" : ""}`}
+						className={`w-full opacity-0 ${showBlock ? "animate-show-content-block" : ""}`}
 					>
 						<h3 className="mr-3 text-right text-lg font-semibold text-blue-300 italic">
 							experience
@@ -136,7 +131,7 @@ function App() {
 						/>
 					</div>
 					<div
-						className={`w-full opacity-0 ${showSecondBlock ? "animate-show-second-block" : ""}`}
+						className={`w-full opacity-0 ${showBlock ? "animate-show-content-block" : ""}`}
 					>
 						<h3 className="mr-3 text-right text-lg font-semibold text-orange-300 italic">
 							projects
@@ -191,7 +186,7 @@ function App() {
 						/>
 					</div>
 					<div
-						className={`w-full opacity-0 ${showSecondBlock ? "animate-show-second-block" : ""}`}
+						className={`w-full opacity-0 ${showBlock ? "animate-show-content-block" : ""}`}
 					>
 						<h3 className="mr-3 text-right text-lg font-semibold text-red-300 italic">
 							education
@@ -227,7 +222,7 @@ function App() {
 						/>
 					</div>
 					<div
-						className={`ml-3 w-full text-sm text-neutral-400 opacity-0 ${showSecondBlock ? "animate-show-second-block" : ""}`}
+						className={`ml-3 w-full text-sm text-neutral-400 opacity-0 ${showBlock ? "animate-show-content-block" : ""}`}
 					>
 						<p>
 							built using{" "}
