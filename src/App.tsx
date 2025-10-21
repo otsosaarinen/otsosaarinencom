@@ -101,7 +101,7 @@ function App() {
 							title="integration analyst"
 							company="lowell suomi oy"
 							date="7/2025 - present"
-							description="worked in the data transfer team and solved daily data transfer issues within sftp servers and api integrations"
+							description="handled data transfers between lowell and client companies and resolved issues with sftp server and api integrations"
 							skills={[
 								"integration",
 								"rest api",
@@ -117,7 +117,7 @@ function App() {
 							title="service desk"
 							company="2m-it oy"
 							date="11/2023 - 4/2024"
-							description="resolved it issues for employees in the wellbeing services counties of southwest finland and kanta-häme"
+							description="resolved it issues for employees in the wellbeing services counties of southwest finland and in kanta-häme"
 							skills={[
 								"azure",
 								"active directory",
@@ -143,7 +143,7 @@ function App() {
 						</h3>
 						<ProjectButton
 							title="föli-api"
-							description="api wrapper for tsjl data interface"
+							description="api wrapper for tsjl public transport data interface"
 							tags={[
 								"typescript",
 								"react",
@@ -155,12 +155,13 @@ function App() {
 						/>
 						<ProjectButton
 							title="spotify-web-controller"
-							description="web application for controlling spotify music playback"
+							description="web application for controlling spotify playback"
 							tags={[
 								"typescript",
 								"react",
 								"rest api",
 								"tailwind",
+								"oauth 2.0",
 							]}
 							github_link="https://github.com/otsosaarinen/spotify-web-controller"
 						/>
@@ -177,7 +178,7 @@ function App() {
 						/>
 						<ProjectButton
 							title="klemmari"
-							description="website featuring a rag-ai chatbot"
+							description="ai chatbot built with rag architecture and deployed as a web application"
 							tags={[
 								"azure",
 								"ai",
@@ -199,7 +200,7 @@ function App() {
 							title="bachelor of engineering, ict"
 							school="turku university of applied sciences"
 							date="8/2021 - 4/2025"
-							description="specialized in health technology and took courses in software development"
+							description="completed health technology specialization path and took courses in software development"
 							skills={[
 								"typescript",
 								"javascript",
@@ -215,14 +216,13 @@ function App() {
 							title="student exchange program"
 							school="national institute of technology, hachinohe college (八戸高専)"
 							date="4/2024 - 7/2024"
-							description="three-month student exchange in japan researching radiofrequency ablation"
+							description="student exchange in japan researching radiofrequency ablation techniques"
 							skills={[
 								"medical engineering",
 								"3d modeling",
-								"rfa",
+								"fem",
 								"elmergui",
 								"salome",
-								"fem",
 							]}
 						/>
 					</div>
