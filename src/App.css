@@ -4,21 +4,9 @@
 @theme {
 	--font-inter: "Poppins", sans-serif;
 
-	--animate-show-first-block: show-first-block 1s ease-out forwards;
+	--animate-show-content-block: show-content-block 1s ease-out forwards;
 
-	@keyframes show-first-block {
-		0% {
-			transform: translateY(40px);
-		}
-		100% {
-			transform: translateY(0);
-			opacity: 1;
-		}
-	}
-
-	--animate-show-second-block: show-second-block 1s ease-out forwards;
-
-	@keyframes show-second-block {
+	@keyframes show-content-block {
 		0% {
 			transform: translateY(40px);
 		}
