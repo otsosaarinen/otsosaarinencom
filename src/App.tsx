@@ -57,7 +57,7 @@ function App() {
 								onMouseEnter={nameScramble.replay}
 							></h1>
 							<h2
-								className="text-sm text-neutral-400"
+								className="text-sm whitespace-nowrap text-neutral-400"
 								ref={titleScramble.ref}
 								onMouseEnter={titleScramble.replay}
 							></h2>
