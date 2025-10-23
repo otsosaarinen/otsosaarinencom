@@ -1,9 +1,11 @@
+import { useEffect, useState } from "react";
+
 import { Github, Linkedin, Mail, BadgeCheck } from "lucide-react";
 
 import { ThemeProvider } from "./components/theme-provider";
 import { ModeToggle } from "./components/mode-toggle";
-
 import { Button } from "@/components/ui/button";
+import { Spinner } from "./components/ui/spinner";
 import { Badge } from "./components/ui/badge";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import {
@@ -24,18 +26,47 @@ import {
 } from "@/components/ui/item";
 
 function App() {
+	const [profileVisibility, setProfileVisibility] = useState("hidden");
+	const [loadingBlockVisibility, setLoadingBlockVisibility] =
+		useState("flex");
+
+	useEffect(() => {
+		const timer = setTimeout(() => {
+			setLoadingBlockVisibility("hidden");
+			setProfileVisibility("flex");
+		}, 2500);
+		return () => clearTimeout(timer);
+	});
+
 	return (
 		<>
 			<ThemeProvider defaultTheme="system" storageKey="vite-ui-theme">
 				<div
-					className="bg-background flex h-screen flex-col items-center justify-center"
+					className="bg-background flex h-screen w-full flex-col items-center justify-center"
 					style={{ fontFamily: "var(--font-montserrat)" }}
 				>
 					<div className="absolute top-5 right-5">
 						<ModeToggle />
 					</div>
 
-					<Card className="w-full max-w-md">
+					<div
+						className={`animate-loading-block ${loadingBlockVisibility} flex-col gap-4 [--radius:1rem]`}
+					>
+						<Item variant="muted">
+							<ItemMedia>
+								<Spinner className="text-blue-600" />
+							</ItemMedia>
+							<ItemContent>
+								<ItemTitle className="line-clamp-1">
+									Loading website...
+								</ItemTitle>
+							</ItemContent>
+						</Item>
+					</div>
+
+					<Card
+						className={`${profileVisibility} animate-show-profile w-full max-w-md opacity-0`}
+					>
 						<CardHeader>
 							<Item className="p-0">
 								<ItemMedia>
@@ -62,29 +93,38 @@ function App() {
 						</CardContent>
 						<CardFooter>
 							<div className="flex flex-wrap gap-2">
-								<Badge variant="secondary">
+								<Badge>
 									<BadgeCheck />
 									TypeScript
 								</Badge>
-								<Badge variant="secondary">
+								<Badge>
 									<BadgeCheck />
 									React
 								</Badge>
-								<Badge variant="secondary">
+								<Badge>
 									<BadgeCheck />
 									Tailwind
 								</Badge>
-								<Badge variant="secondary">
+								<Badge>
 									<BadgeCheck />
 									Node.js
 								</Badge>
-								<Badge variant="secondary">
+								<Badge>
+									<BadgeCheck />
+									REST API
+								</Badge>
+
+								<Badge>
 									<BadgeCheck />
 									Python
 								</Badge>
-								<Badge variant="secondary">
+								<Badge>
 									<BadgeCheck />
-									REST API
+									Docker
+								</Badge>
+								<Badge>
+									<BadgeCheck />
+									Git
 								</Badge>
 							</div>
 						</CardFooter>
