@@ -1,6 +1,15 @@
 import { useEffect, useState } from "react";
 
-import { Github, Linkedin, Mail, BadgeCheck } from "lucide-react";
+import {
+	Github,
+	Linkedin,
+	Mail,
+	BadgeCheck,
+	Code2,
+	User,
+	Waypoints,
+	ToolCase,
+} from "lucide-react";
 
 import { ThemeProvider } from "./components/theme-provider";
 import { ModeToggle } from "./components/mode-toggle";
@@ -15,6 +24,7 @@ import {
 	CardDescription,
 	CardContent,
 	CardFooter,
+	CardAction,
 } from "@/components/ui/card";
 import {
 	Item,
@@ -26,17 +36,27 @@ import {
 } from "@/components/ui/item";
 
 function App() {
-	const [profileVisibility, setProfileVisibility] = useState("hidden");
 	const [loadingBlockVisibility, setLoadingBlockVisibility] =
 		useState("flex");
+	const [contentVisibility, setContentVisibility] = useState("hidden");
 
 	useEffect(() => {
-		const timer = setTimeout(() => {
-			setLoadingBlockVisibility("hidden");
-			setProfileVisibility("flex");
-		}, 2500);
-		return () => clearTimeout(timer);
-	});
+		const timers: number[] = [];
+
+		timers.push(
+			setTimeout(() => {
+				setLoadingBlockVisibility("hidden");
+			}, 2500),
+		);
+
+		timers.push(
+			setTimeout(() => {
+				setContentVisibility("flex");
+			}, 2600),
+		);
+
+		return () => timers.forEach(clearTimeout);
+	}, []);
 
 	return (
 		<>
@@ -45,12 +65,16 @@ function App() {
 					className="bg-background flex h-screen w-full flex-col items-center justify-center"
 					style={{ fontFamily: "var(--font-montserrat)" }}
 				>
-					<div className="absolute top-5 right-5">
+					<div className="absolute top-3 right-3">
 						<ModeToggle />
 					</div>
 
+					<div className="absolute bottom-3 text-xs">
+						© 2025 Otso Saarinen. All rights reserved.
+					</div>
+
 					<div
-						className={`animate-loading-block ${loadingBlockVisibility} flex-col gap-4 [--radius:1rem]`}
+						className={`animate-loading-block items-center justify-center ${loadingBlockVisibility} flex-col [--radius:1rem]`}
 					>
 						<Item variant="muted">
 							<ItemMedia>
@@ -64,69 +88,44 @@ function App() {
 						</Item>
 					</div>
 
-					<Card
-						className={`${profileVisibility} animate-show-profile w-full max-w-md opacity-0`}
+					<div
+						className={`${contentVisibility} animate-show-content flex w-full max-w-md flex-col gap-4 opacity-0`}
 					>
-						<CardHeader>
-							<Item className="p-0">
-								<ItemMedia>
-									<Avatar className="size-10">
-										<AvatarImage src="cv_kuva_neliö.jpg"></AvatarImage>
-										<AvatarFallback>OS</AvatarFallback>
-									</Avatar>
-								</ItemMedia>
-								<ItemContent>
-									<ItemTitle>Otso Saarinen</ItemTitle>
-									<ItemDescription>
-										Software Engineer • Integration Analyst
-									</ItemDescription>
-								</ItemContent>
-							</Item>
-						</CardHeader>
-						<CardContent>
-							<div className="text-sm">
-								I'm an ICT engineer from Turku, Finland,
-								currently working as an Integration Analyst at
-								Lowell. I enjoy building web projects and
-								exploring new technologies.
-							</div>
-						</CardContent>
-						<CardFooter>
-							<div className="flex flex-col gap-6">
-								<div className="flex flex-wrap gap-2">
-									<Badge variant="secondary">
-										<BadgeCheck />
-										TypeScript
-									</Badge>
-									<Badge variant="secondary">
-										<BadgeCheck />
-										React
-									</Badge>
-									<Badge variant="secondary">
-										<BadgeCheck />
-										Node.js
-									</Badge>
-									<Badge variant="secondary">
-										<BadgeCheck />
-										Tailwind CSS
-									</Badge>
-									<Badge variant="secondary">
-										<BadgeCheck />
-										REST API
-									</Badge>
-									<Badge variant="secondary">
-										<BadgeCheck />
-										Python
-									</Badge>
-									<Badge variant="secondary">
-										<BadgeCheck />
-										Docker
-									</Badge>
-									<Badge variant="secondary">
-										<BadgeCheck />
-										Git
-									</Badge>
-								</div>
+						<Card>
+							<CardHeader>
+								<Item className="p-0">
+									<ItemMedia>
+										<Avatar className="size-10">
+											<AvatarImage src="cv_kuva_neliö.jpg"></AvatarImage>
+											<AvatarFallback>OS</AvatarFallback>
+										</Avatar>
+									</ItemMedia>
+									<ItemContent>
+										<ItemTitle>Otso Saarinen</ItemTitle>
+										<ItemDescription>
+											Software Engineer • Integration
+											Analyst
+										</ItemDescription>
+									</ItemContent>
+								</Item>
+							</CardHeader>
+						</Card>
+
+						<Card className="w-full max-w-md">
+							<CardHeader>
+								<CardTitle>Profile</CardTitle>
+								<CardDescription>
+									I'm an ICT engineer from Turku, Finland,
+									currently working as an Integration Analyst
+									at Lowell. I enjoy building web projects and
+									exploring new technologies.
+								</CardDescription>
+								<CardAction>
+									<User />
+								</CardAction>
+							</CardHeader>
+							<CardContent></CardContent>
+							<CardFooter>
 								<div className="flex flex-row gap-2">
 									<Button
 										size="icon"
@@ -165,12 +164,71 @@ function App() {
 										</a>
 									</Button>
 								</div>
-							</div>
-						</CardFooter>
-					</Card>
+							</CardFooter>
+						</Card>
 
-					<div className="absolute bottom-3 text-xs">
-						© 2025 Otso Saarinen. All rights reserved.
+						<Card className="w-full max-w-md">
+							<CardHeader>
+								<CardTitle>Skills</CardTitle>
+								<CardAction>
+									<Code2 />
+								</CardAction>
+							</CardHeader>
+							<CardContent>
+								<div className="flex flex-row flex-wrap gap-2">
+									<Badge variant="secondary">
+										<BadgeCheck />
+										TypeScript
+									</Badge>
+									<Badge variant="secondary">
+										<BadgeCheck />
+										React
+									</Badge>
+									<Badge variant="secondary">
+										<BadgeCheck />
+										Node.js
+									</Badge>
+									<Badge variant="secondary">
+										<BadgeCheck />
+										Tailwind CSS
+									</Badge>
+									<Badge variant="secondary">
+										<BadgeCheck />
+										REST API
+									</Badge>
+									<Badge variant="secondary">
+										<BadgeCheck />
+										Python
+									</Badge>
+									<Badge variant="secondary">
+										<BadgeCheck />
+										Docker
+									</Badge>
+									<Badge variant="secondary">
+										<BadgeCheck />
+										Git
+									</Badge>
+								</div>
+							</CardContent>
+						</Card>
+
+						<Card className="w-full max-w-md">
+							<CardHeader>
+								<CardTitle>Experience</CardTitle>
+								<CardAction>
+									<Waypoints />
+								</CardAction>
+							</CardHeader>
+						</Card>
+
+						<Card className="w-full max-w-md">
+							<CardHeader>
+								<CardTitle>Projects</CardTitle>
+								<CardAction>
+									<ToolCase />
+								</CardAction>
+							</CardHeader>
+						</Card>
 					</div>
 				</div>
 			</ThemeProvider>
