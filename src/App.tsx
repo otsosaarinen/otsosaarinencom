@@ -92,39 +92,79 @@ function App() {
 							</div>
 						</CardContent>
 						<CardFooter>
-							<div className="flex flex-wrap gap-2">
-								<Badge variant="secondary">
-									<BadgeCheck />
-									TypeScript
-								</Badge>
-								<Badge variant="secondary">
-									<BadgeCheck />
-									React
-								</Badge>
-								<Badge variant="secondary">
-									<BadgeCheck />
-									Node.js
-								</Badge>
-								<Badge variant="secondary">
-									<BadgeCheck />
-									Tailwind CSS
-								</Badge>
-								<Badge variant="secondary">
-									<BadgeCheck />
-									REST API
-								</Badge>
-								<Badge variant="secondary">
-									<BadgeCheck />
-									Python
-								</Badge>
-								<Badge variant="secondary">
-									<BadgeCheck />
-									Docker
-								</Badge>
-								<Badge variant="secondary">
-									<BadgeCheck />
-									Git
-								</Badge>
+							<div className="flex flex-col gap-6">
+								<div className="flex flex-wrap gap-2">
+									<Badge variant="secondary">
+										<BadgeCheck />
+										TypeScript
+									</Badge>
+									<Badge variant="secondary">
+										<BadgeCheck />
+										React
+									</Badge>
+									<Badge variant="secondary">
+										<BadgeCheck />
+										Node.js
+									</Badge>
+									<Badge variant="secondary">
+										<BadgeCheck />
+										Tailwind CSS
+									</Badge>
+									<Badge variant="secondary">
+										<BadgeCheck />
+										REST API
+									</Badge>
+									<Badge variant="secondary">
+										<BadgeCheck />
+										Python
+									</Badge>
+									<Badge variant="secondary">
+										<BadgeCheck />
+										Docker
+									</Badge>
+									<Badge variant="secondary">
+										<BadgeCheck />
+										Git
+									</Badge>
+								</div>
+								<div className="flex flex-row gap-2">
+									<Button
+										size="icon"
+										variant="secondary"
+										asChild
+									>
+										<a
+											href="https://github.com/otsosaarinen"
+											target="_blank"
+										>
+											<Github />
+										</a>
+									</Button>
+									<Button
+										size="icon"
+										variant="secondary"
+										asChild
+									>
+										<a
+											href="https://www.linkedin.com/in/otsosaarinen/"
+											target="_blank"
+										>
+											<Linkedin />
+										</a>
+									</Button>
+									<Button
+										size="icon"
+										variant="secondary"
+										asChild
+									>
+										<a
+											href="mailto:saarinenotso@gmai.com"
+											target="_blank"
+										>
+											<Mail />
+										</a>
+									</Button>
+								</div>
 							</div>
 						</CardFooter>
 					</Card>
