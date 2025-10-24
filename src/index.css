@@ -145,14 +145,16 @@
 		}
 	}
 
-	--animate-show-profile: show-profile 1s ease-in-out forwards;
+	--animate-show-content: show-content 1s ease-in-out forwards;
 
-	@keyframes show-profile {
+	@keyframes show-content {
 		0% {
 			opacity: 0;
+			transform: translateX(-150px);
 		}
 		100% {
 			opacity: 1;
+			transform: translateX(0px);
 		}
 	}
 }
