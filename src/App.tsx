@@ -93,36 +93,35 @@ function App() {
 						</CardContent>
 						<CardFooter>
 							<div className="flex flex-wrap gap-2">
-								<Badge>
+								<Badge variant="secondary">
 									<BadgeCheck />
 									TypeScript
 								</Badge>
-								<Badge>
+								<Badge variant="secondary">
 									<BadgeCheck />
 									React
 								</Badge>
-								<Badge>
-									<BadgeCheck />
-									Tailwind
-								</Badge>
-								<Badge>
+								<Badge variant="secondary">
 									<BadgeCheck />
 									Node.js
 								</Badge>
-								<Badge>
+								<Badge variant="secondary">
+									<BadgeCheck />
+									Tailwind CSS
+								</Badge>
+								<Badge variant="secondary">
 									<BadgeCheck />
 									REST API
 								</Badge>
-
-								<Badge>
+								<Badge variant="secondary">
 									<BadgeCheck />
 									Python
 								</Badge>
-								<Badge>
+								<Badge variant="secondary">
 									<BadgeCheck />
 									Docker
 								</Badge>
-								<Badge>
+								<Badge variant="secondary">
 									<BadgeCheck />
 									Git
 								</Badge>
