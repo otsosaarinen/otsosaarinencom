@@ -83,7 +83,7 @@ function App() {
 					</div>
 
 					<div
-						className={`${contentVisibility} animate-show-content mt-140 flex w-lg flex-col items-center gap-4 opacity-0`}
+						className={`${contentVisibility} animate-show-content mt-175 flex w-lg flex-col items-center gap-4 opacity-0`}
 					>
 						<h1 className="text-foreground text-6xl font-extrabold">
 							Otso Saarinen
