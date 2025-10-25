@@ -63,7 +63,7 @@ function App() {
 					className="bg-background flex h-screen w-full flex-col items-center justify-center"
 					style={{ fontFamily: "var(--font-montserrat)" }}
 				>
-					<div className="fixed top-3 right-3">
+					<div className="fixed top-3 right-3 hidden sm:block">
 						<ModeToggle />
 					</div>
 
@@ -83,9 +83,9 @@ function App() {
 					</div>
 
 					<div
-						className={`${contentVisibility} animate-show-content mt-175 flex w-lg flex-col items-center gap-4 opacity-0`}
+						className={`${contentVisibility} animate-show-content mt-200 flex w-[90%] flex-col items-center gap-4 opacity-0 sm:mt-175 sm:w-lg`}
 					>
-						<h1 className="text-foreground text-6xl font-extrabold">
+						<h1 className="text-foreground text-4xl font-extrabold sm:text-6xl">
 							Otso Saarinen
 						</h1>
 						<h2 className="mb-10">
@@ -162,30 +162,28 @@ function App() {
 								<Item className="p-0">
 									<ItemContent>
 										<ItemTitle>+ 3 years</ItemTitle>
-										<ItemDescription>
-											<div className="flex flex-row flex-wrap gap-2">
-												<Badge variant="secondary">
-													<BadgeCheck />
-													JavaScript
-												</Badge>
-												<Badge variant="secondary">
-													<BadgeCheck />
-													Python
-												</Badge>
-												<Badge variant="secondary">
-													<BadgeCheck />
-													React
-												</Badge>
-												<Badge variant="secondary">
-													<BadgeCheck />
-													Node.js
-												</Badge>
+										<ItemDescription className="flex flex-wrap gap-2">
+											<Badge variant="secondary">
+												<BadgeCheck />
+												JavaScript
+											</Badge>
+											<Badge variant="secondary">
+												<BadgeCheck />
+												Python
+											</Badge>
+											<Badge variant="secondary">
+												<BadgeCheck />
+												React
+											</Badge>
+											<Badge variant="secondary">
+												<BadgeCheck />
+												Node.js
+											</Badge>
 
-												<Badge variant="secondary">
-													<BadgeCheck />
-													Git
-												</Badge>
-											</div>
+											<Badge variant="secondary">
+												<BadgeCheck />
+												Git
+											</Badge>
 										</ItemDescription>
 									</ItemContent>
 								</Item>
@@ -194,42 +192,40 @@ function App() {
 								<Item className="p-0">
 									<ItemContent>
 										<ItemTitle>1 - 2 years</ItemTitle>
-										<ItemDescription>
-											<div className="flex flex-row flex-wrap gap-2">
-												<Badge variant="secondary">
-													<BadgeCheck />
-													TypeScript
-												</Badge>
-												<Badge variant="secondary">
-													<BadgeCheck />
-													REST API
-												</Badge>
-												<Badge variant="secondary">
-													<BadgeCheck />
-													Express.js
-												</Badge>
-												<Badge variant="secondary">
-													<BadgeCheck />
-													Tailwind CSS
-												</Badge>
+										<ItemDescription className="flex flex-wrap gap-2">
+											<Badge variant="secondary">
+												<BadgeCheck />
+												TypeScript
+											</Badge>
+											<Badge variant="secondary">
+												<BadgeCheck />
+												REST API
+											</Badge>
+											<Badge variant="secondary">
+												<BadgeCheck />
+												Express.js
+											</Badge>
+											<Badge variant="secondary">
+												<BadgeCheck />
+												Tailwind CSS
+											</Badge>
 
-												<Badge variant="secondary">
-													<BadgeCheck />
-													SQL
-												</Badge>
-												<Badge variant="secondary">
-													<BadgeCheck />
-													PostgreSQL
-												</Badge>
-												<Badge variant="secondary">
-													<BadgeCheck />
-													Docker
-												</Badge>
-												<Badge variant="secondary">
-													<BadgeCheck />
-													CI/CD
-												</Badge>
-											</div>
+											<Badge variant="secondary">
+												<BadgeCheck />
+												SQL
+											</Badge>
+											<Badge variant="secondary">
+												<BadgeCheck />
+												PostgreSQL
+											</Badge>
+											<Badge variant="secondary">
+												<BadgeCheck />
+												Docker
+											</Badge>
+											<Badge variant="secondary">
+												<BadgeCheck />
+												CI/CD
+											</Badge>
 										</ItemDescription>
 									</ItemContent>
 								</Item>
@@ -238,37 +234,35 @@ function App() {
 								<Item className="p-0">
 									<ItemContent>
 										<ItemTitle>0 - 1 years</ItemTitle>
-										<ItemDescription>
-											<div className="flex flex-row flex-wrap gap-2">
-												<Badge variant="secondary">
-													<BadgeCheck />
-													Apache Kafka
-												</Badge>
-												<Badge variant="secondary">
-													<BadgeCheck />
-													Microsoft Azure
-												</Badge>
-												<Badge variant="secondary">
-													<BadgeCheck />
-													C#
-												</Badge>
-												<Badge variant="secondary">
-													<BadgeCheck />
-													.NET
-												</Badge>
-												<Badge variant="secondary">
-													<BadgeCheck />
-													Next.js
-												</Badge>
-												<Badge variant="secondary">
-													<BadgeCheck />
-													Grafana
-												</Badge>
-												<Badge variant="secondary">
-													<BadgeCheck />
-													Jira
-												</Badge>
-											</div>
+										<ItemDescription className="flex flex-wrap gap-2">
+											<Badge variant="secondary">
+												<BadgeCheck />
+												Apache Kafka
+											</Badge>
+											<Badge variant="secondary">
+												<BadgeCheck />
+												Microsoft Azure
+											</Badge>
+											<Badge variant="secondary">
+												<BadgeCheck />
+												C#
+											</Badge>
+											<Badge variant="secondary">
+												<BadgeCheck />
+												.NET
+											</Badge>
+											<Badge variant="secondary">
+												<BadgeCheck />
+												Next.js
+											</Badge>
+											<Badge variant="secondary">
+												<BadgeCheck />
+												Grafana
+											</Badge>
+											<Badge variant="secondary">
+												<BadgeCheck />
+												Jira
+											</Badge>
 										</ItemDescription>
 									</ItemContent>
 								</Item>
@@ -319,7 +313,7 @@ function App() {
 							<CardContent>
 								<Item className="gap-0 p-0">
 									<ItemHeader>
-										<ItemTitle>Student Assistent</ItemTitle>
+										<ItemTitle>Student Assistant</ItemTitle>
 										<ItemDescription>
 											5/2022 - 6/2025
 										</ItemDescription>
@@ -376,7 +370,7 @@ function App() {
 									<ItemContent>
 										<ItemDescription>
 											.NET WPF application for managing
-											simple filetransfers.
+											filetransfers.
 										</ItemDescription>
 									</ItemContent>
 								</Item>
