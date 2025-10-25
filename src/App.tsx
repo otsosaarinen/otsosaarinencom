@@ -344,6 +344,47 @@ function App() {
 									<ToolCase />
 								</CardAction>
 							</CardHeader>
+							<CardContent>
+								<Item className="gap-0 p-0">
+									<ItemHeader>
+										<ItemTitle>
+											Spotify Web Controller
+										</ItemTitle>
+									</ItemHeader>
+									<ItemContent>
+										<ItemDescription>
+											Web appliation for controlling
+											Spotify music playback.
+										</ItemDescription>
+									</ItemContent>
+								</Item>
+							</CardContent>
+							<CardContent>
+								<Item className="gap-0 p-0">
+									<ItemHeader>
+										<ItemTitle>Klemmari</ItemTitle>
+									</ItemHeader>
+									<ItemContent>
+										<ItemDescription>
+											AI chatbot built with RAG
+											architecture
+										</ItemDescription>
+									</ItemContent>
+								</Item>
+							</CardContent>
+							<CardContent>
+								<Item className="gap-0 p-0">
+									<ItemHeader>
+										<ItemTitle>Pathway</ItemTitle>
+									</ItemHeader>
+									<ItemContent>
+										<ItemDescription>
+											.NET WPF application for managing
+											simple filetransfers.
+										</ItemDescription>
+									</ItemContent>
+								</Item>
+							</CardContent>
 						</Card>
 
 						<div className="mt-15 mb-2 text-xs">
