@@ -60,7 +60,7 @@ function App() {
 		<>
 			<ThemeProvider defaultTheme="system" storageKey="vite-ui-theme">
 				<div
-					className="bg-background flex h-screen w-full flex-col items-center justify-center"
+					className="bg-background flex h-screen w-full flex-col items-center justify-start"
 					style={{ fontFamily: "var(--font-montserrat)" }}
 				>
 					<div className="fixed top-3 right-3 hidden sm:block">
@@ -68,7 +68,7 @@ function App() {
 					</div>
 
 					<div
-						className={`animate-loading-block items-center justify-center ${loadingBlockVisibility} flex-col [--radius:1rem]`}
+						className={`animate-loading-block fixed inset-0 z-50 items-center justify-center ${loadingBlockVisibility} [--radius:1rem]`}
 					>
 						<Item variant="muted">
 							<ItemMedia>
@@ -83,7 +83,7 @@ function App() {
 					</div>
 
 					<div
-						className={`${contentVisibility} animate-show-content mt-225 flex w-[90%] flex-col items-center gap-4 opacity-0 sm:mt-175 sm:w-lg`}
+						className={`${contentVisibility} animate-show-content mt-25 flex w-[90%] flex-col items-center gap-4 opacity-0 sm:w-lg`}
 					>
 						<h1 className="text-foreground text-4xl font-extrabold sm:text-6xl">
 							Otso Saarinen
@@ -141,131 +141,13 @@ function App() {
 										asChild
 									>
 										<a
-											href="mailto:saarinenotso@gmai.com"
+											href="mailto:saarinenotso@gmail.com"
 											target="_blank"
 										>
 											<Mail />
 										</a>
 									</Button>
 								</div>
-							</CardContent>
-						</Card>
-
-						<Card className="w-full">
-							<CardHeader>
-								<CardTitle>Skills</CardTitle>
-								<CardAction>
-									<Code2 />
-								</CardAction>
-							</CardHeader>
-							<CardContent>
-								<Item className="p-0">
-									<ItemContent>
-										<ItemTitle>+ 3 years</ItemTitle>
-										<ItemDescription className="flex flex-wrap gap-2">
-											<Badge variant="secondary">
-												<BadgeCheck />
-												JavaScript
-											</Badge>
-											<Badge variant="secondary">
-												<BadgeCheck />
-												Python
-											</Badge>
-											<Badge variant="secondary">
-												<BadgeCheck />
-												React
-											</Badge>
-											<Badge variant="secondary">
-												<BadgeCheck />
-												Node.js
-											</Badge>
-
-											<Badge variant="secondary">
-												<BadgeCheck />
-												Git
-											</Badge>
-										</ItemDescription>
-									</ItemContent>
-								</Item>
-							</CardContent>
-							<CardContent>
-								<Item className="p-0">
-									<ItemContent>
-										<ItemTitle>1 - 2 years</ItemTitle>
-										<ItemDescription className="flex flex-wrap gap-2">
-											<Badge variant="secondary">
-												<BadgeCheck />
-												TypeScript
-											</Badge>
-											<Badge variant="secondary">
-												<BadgeCheck />
-												REST API
-											</Badge>
-											<Badge variant="secondary">
-												<BadgeCheck />
-												Express.js
-											</Badge>
-											<Badge variant="secondary">
-												<BadgeCheck />
-												Tailwind CSS
-											</Badge>
-
-											<Badge variant="secondary">
-												<BadgeCheck />
-												SQL
-											</Badge>
-											<Badge variant="secondary">
-												<BadgeCheck />
-												PostgreSQL
-											</Badge>
-											<Badge variant="secondary">
-												<BadgeCheck />
-												Docker
-											</Badge>
-											<Badge variant="secondary">
-												<BadgeCheck />
-												CI/CD
-											</Badge>
-										</ItemDescription>
-									</ItemContent>
-								</Item>
-							</CardContent>
-							<CardContent>
-								<Item className="p-0">
-									<ItemContent>
-										<ItemTitle>0 - 1 years</ItemTitle>
-										<ItemDescription className="flex flex-wrap gap-2">
-											<Badge variant="secondary">
-												<BadgeCheck />
-												Apache Kafka
-											</Badge>
-											<Badge variant="secondary">
-												<BadgeCheck />
-												Microsoft Azure
-											</Badge>
-											<Badge variant="secondary">
-												<BadgeCheck />
-												C#
-											</Badge>
-											<Badge variant="secondary">
-												<BadgeCheck />
-												.NET
-											</Badge>
-											<Badge variant="secondary">
-												<BadgeCheck />
-												Next.js
-											</Badge>
-											<Badge variant="secondary">
-												<BadgeCheck />
-												Grafana
-											</Badge>
-											<Badge variant="secondary">
-												<BadgeCheck />
-												Jira
-											</Badge>
-										</ItemDescription>
-									</ItemContent>
-								</Item>
 							</CardContent>
 						</Card>
 
@@ -329,6 +211,155 @@ function App() {
 
 						<Card className="w-full">
 							<CardHeader>
+								<CardTitle>Skills</CardTitle>
+								<CardAction>
+									<Code2 />
+								</CardAction>
+							</CardHeader>
+							<CardContent>
+								<Item className="p-0">
+									<ItemContent>
+										<ItemTitle>
+											Programming Languages
+										</ItemTitle>
+										<ItemDescription className="flex flex-wrap gap-2">
+											<Badge variant="secondary">
+												<BadgeCheck />
+												TypeScript
+											</Badge>
+											<Badge variant="secondary">
+												<BadgeCheck />
+												JavaScript
+											</Badge>
+											<Badge variant="secondary">
+												<BadgeCheck />
+												Python
+											</Badge>
+											<Badge variant="secondary">
+												<BadgeCheck />
+												C#
+											</Badge>
+										</ItemDescription>
+									</ItemContent>
+								</Item>
+							</CardContent>
+							<CardContent>
+								<Item className="p-0">
+									<ItemContent>
+										<ItemTitle>
+											Libraries and Frameworks
+										</ItemTitle>
+										<ItemDescription className="flex flex-wrap gap-2">
+											<Badge variant="secondary">
+												<BadgeCheck />
+												React
+											</Badge>
+											<Badge variant="secondary">
+												<BadgeCheck />
+												Node.js
+											</Badge>
+											<Badge variant="secondary">
+												<BadgeCheck />
+												Next.js
+											</Badge>
+											<Badge variant="secondary">
+												<BadgeCheck />
+												Express.js
+											</Badge>
+											<Badge variant="secondary">
+												<BadgeCheck />
+												Tailwind CSS
+											</Badge>
+											<Badge variant="secondary">
+												<BadgeCheck />
+												.NET
+											</Badge>
+										</ItemDescription>
+									</ItemContent>
+								</Item>
+							</CardContent>
+							<CardContent>
+								<Item className="p-0">
+									<ItemContent>
+										<ItemTitle>Databases</ItemTitle>
+										<ItemDescription className="flex flex-wrap gap-2">
+											<Badge variant="secondary">
+												<BadgeCheck />
+												SQL
+											</Badge>
+											<Badge variant="secondary">
+												<BadgeCheck />
+												PostgreSQL
+											</Badge>
+										</ItemDescription>
+									</ItemContent>
+								</Item>
+							</CardContent>
+							<CardContent>
+								<Item className="p-0">
+									<ItemContent>
+										<ItemTitle>Architecture</ItemTitle>
+										<ItemDescription className="flex flex-wrap gap-2">
+											<Badge variant="secondary">
+												<BadgeCheck />
+												REST API
+											</Badge>
+											<Badge variant="secondary">
+												<BadgeCheck />
+												Apache Kafka
+											</Badge>
+										</ItemDescription>
+									</ItemContent>
+								</Item>
+							</CardContent>
+							<CardContent>
+								<Item className="p-0">
+									<ItemContent>
+										<ItemTitle>
+											DevOps, Cloud and Tools
+										</ItemTitle>
+										<ItemDescription className="flex flex-wrap gap-2">
+											<Badge variant="secondary">
+												<BadgeCheck />
+												Docker
+											</Badge>
+											<Badge variant="secondary">
+												<BadgeCheck />
+												Git
+											</Badge>
+											<Badge variant="secondary">
+												<BadgeCheck />
+												CI/CD
+											</Badge>
+											<Badge variant="secondary">
+												<BadgeCheck />
+												Microsoft Azure
+											</Badge>
+											<Badge variant="secondary">
+												<BadgeCheck />
+												Jira
+											</Badge>
+											<Badge variant="secondary">
+												<BadgeCheck />
+												Grafana
+											</Badge>
+
+											<Badge variant="secondary">
+												<BadgeCheck />
+												SFTP
+											</Badge>
+											<Badge variant="secondary">
+												<BadgeCheck />
+												SSH
+											</Badge>
+										</ItemDescription>
+									</ItemContent>
+								</Item>
+							</CardContent>
+						</Card>
+
+						<Card className="w-full">
+							<CardHeader>
 								<CardTitle>Projects</CardTitle>
 								<CardAction>
 									<ToolCase />
@@ -344,7 +375,20 @@ function App() {
 									<ItemContent>
 										<ItemDescription>
 											Web appliation for controlling
-											Spotify music playback.
+											Spotify music playback
+										</ItemDescription>
+									</ItemContent>
+								</Item>
+							</CardContent>
+							<CardContent>
+								<Item className="gap-0 p-0">
+									<ItemHeader>
+										<ItemTitle>Bachelor's thesis</ItemTitle>
+									</ItemHeader>
+									<ItemContent>
+										<ItemDescription>
+											Real-time patient data collection
+											and analysis using Apache Kafka
 										</ItemDescription>
 									</ItemContent>
 								</Item>
@@ -370,7 +414,7 @@ function App() {
 									<ItemContent>
 										<ItemDescription>
 											.NET WPF application for managing
-											filetransfers.
+											filetransfers
 										</ItemDescription>
 									</ItemContent>
 								</Item>
