@@ -28,6 +28,8 @@ import {
 } from "@/components/ui/card";
 import {
 	Item,
+	ItemHeader,
+	ItemFooter,
 	ItemActions,
 	ItemContent,
 	ItemDescription,
@@ -65,12 +67,8 @@ function App() {
 					className="bg-background flex h-screen w-full flex-col items-center justify-center"
 					style={{ fontFamily: "var(--font-montserrat)" }}
 				>
-					<div className="absolute top-3 right-3">
+					<div className="fixed top-3 right-3">
 						<ModeToggle />
-					</div>
-
-					<div className="absolute bottom-3 text-xs">
-						© 2025 Otso Saarinen. All rights reserved.
 					</div>
 
 					<div
@@ -78,7 +76,7 @@ function App() {
 					>
 						<Item variant="muted">
 							<ItemMedia>
-								<Spinner className="text-blue-600" />
+								<Spinner />
 							</ItemMedia>
 							<ItemContent>
 								<ItemTitle className="line-clamp-1">
@@ -89,43 +87,33 @@ function App() {
 					</div>
 
 					<div
-						className={`${contentVisibility} animate-show-content flex w-full max-w-md flex-col gap-4 opacity-0`}
+						className={`${contentVisibility} animate-show-content mt-140 flex w-lg flex-col items-center gap-4 opacity-0`}
 					>
-						<Card>
-							<CardHeader>
-								<Item className="p-0">
-									<ItemMedia>
-										<Avatar className="size-10">
-											<AvatarImage src="cv_kuva_neliö.jpg"></AvatarImage>
-											<AvatarFallback>OS</AvatarFallback>
-										</Avatar>
-									</ItemMedia>
-									<ItemContent>
-										<ItemTitle>Otso Saarinen</ItemTitle>
-										<ItemDescription>
-											Software Engineer • Integration
-											Analyst
-										</ItemDescription>
-									</ItemContent>
-								</Item>
-							</CardHeader>
-						</Card>
+						<h1 className="text-foreground text-6xl font-extrabold">
+							Otso Saarinen
+						</h1>
+						<h2 className="mb-10">
+							<Badge>Welcome to my portfolio</Badge>
+						</h2>
 
-						<Card className="w-full max-w-md">
+						<Card className="w-full">
 							<CardHeader>
 								<CardTitle>Profile</CardTitle>
 								<CardDescription>
-									I'm an ICT engineer from Turku, Finland,
-									currently working as an Integration Analyst
-									at Lowell. I enjoy building web projects and
-									exploring new technologies.
+									<div>
+										I'm an ICT engineer from Turku, Finland,
+										currently working as an Integration
+										Analyst at Lowell. I enjoy building web
+										projects and exploring new technologies.
+										Currently learning more about .NET
+										Framework.
+									</div>
 								</CardDescription>
 								<CardAction>
 									<User />
 								</CardAction>
 							</CardHeader>
-							<CardContent></CardContent>
-							<CardFooter>
+							<CardContent>
 								<div className="flex flex-row gap-2">
 									<Button
 										size="icon"
@@ -164,10 +152,10 @@ function App() {
 										</a>
 									</Button>
 								</div>
-							</CardFooter>
+							</CardContent>
 						</Card>
 
-						<Card className="w-full max-w-md">
+						<Card className="w-full">
 							<CardHeader>
 								<CardTitle>Skills</CardTitle>
 								<CardAction>
@@ -175,53 +163,181 @@ function App() {
 								</CardAction>
 							</CardHeader>
 							<CardContent>
-								<div className="flex flex-row flex-wrap gap-2">
-									<Badge variant="secondary">
-										<BadgeCheck />
-										TypeScript
-									</Badge>
-									<Badge variant="secondary">
-										<BadgeCheck />
-										React
-									</Badge>
-									<Badge variant="secondary">
-										<BadgeCheck />
-										Node.js
-									</Badge>
-									<Badge variant="secondary">
-										<BadgeCheck />
-										Tailwind CSS
-									</Badge>
-									<Badge variant="secondary">
-										<BadgeCheck />
-										REST API
-									</Badge>
-									<Badge variant="secondary">
-										<BadgeCheck />
-										Python
-									</Badge>
-									<Badge variant="secondary">
-										<BadgeCheck />
-										Docker
-									</Badge>
-									<Badge variant="secondary">
-										<BadgeCheck />
-										Git
-									</Badge>
-								</div>
+								<Item className="p-0">
+									<ItemContent>
+										<ItemTitle>+ 3 years</ItemTitle>
+										<ItemDescription>
+											<div className="flex flex-row flex-wrap gap-2">
+												<Badge variant="secondary">
+													<BadgeCheck />
+													JavaScript
+												</Badge>
+												<Badge variant="secondary">
+													<BadgeCheck />
+													Python
+												</Badge>
+												<Badge variant="secondary">
+													<BadgeCheck />
+													React
+												</Badge>
+												<Badge variant="secondary">
+													<BadgeCheck />
+													Node.js
+												</Badge>
+
+												<Badge variant="secondary">
+													<BadgeCheck />
+													Git
+												</Badge>
+											</div>
+										</ItemDescription>
+									</ItemContent>
+								</Item>
+							</CardContent>
+							<CardContent>
+								<Item className="p-0">
+									<ItemContent>
+										<ItemTitle>1 - 2 years</ItemTitle>
+										<ItemDescription>
+											<div className="flex flex-row flex-wrap gap-2">
+												<Badge variant="secondary">
+													<BadgeCheck />
+													TypeScript
+												</Badge>
+												<Badge variant="secondary">
+													<BadgeCheck />
+													REST API
+												</Badge>
+												<Badge variant="secondary">
+													<BadgeCheck />
+													Express.js
+												</Badge>
+												<Badge variant="secondary">
+													<BadgeCheck />
+													Tailwind CSS
+												</Badge>
+
+												<Badge variant="secondary">
+													<BadgeCheck />
+													SQL
+												</Badge>
+												<Badge variant="secondary">
+													<BadgeCheck />
+													PostgreSQL
+												</Badge>
+												<Badge variant="secondary">
+													<BadgeCheck />
+													Docker
+												</Badge>
+												<Badge variant="secondary">
+													<BadgeCheck />
+													CI/CD
+												</Badge>
+											</div>
+										</ItemDescription>
+									</ItemContent>
+								</Item>
+							</CardContent>
+							<CardContent>
+								<Item className="p-0">
+									<ItemContent>
+										<ItemTitle>0 - 1 years</ItemTitle>
+										<ItemDescription>
+											<div className="flex flex-row flex-wrap gap-2">
+												<Badge variant="secondary">
+													<BadgeCheck />
+													Apache Kafka
+												</Badge>
+												<Badge variant="secondary">
+													<BadgeCheck />
+													Microsoft Azure
+												</Badge>
+												<Badge variant="secondary">
+													<BadgeCheck />
+													C#
+												</Badge>
+												<Badge variant="secondary">
+													<BadgeCheck />
+													.NET
+												</Badge>
+												<Badge variant="secondary">
+													<BadgeCheck />
+													Next.js
+												</Badge>
+												<Badge variant="secondary">
+													<BadgeCheck />
+													Grafana
+												</Badge>
+												<Badge variant="secondary">
+													<BadgeCheck />
+													Jira
+												</Badge>
+											</div>
+										</ItemDescription>
+									</ItemContent>
+								</Item>
 							</CardContent>
 						</Card>
 
-						<Card className="w-full max-w-md">
+						<Card className="w-full">
 							<CardHeader>
 								<CardTitle>Experience</CardTitle>
 								<CardAction>
 									<Waypoints />
 								</CardAction>
 							</CardHeader>
+							<CardContent>
+								<Item className="gap-0 p-0">
+									<ItemHeader>
+										<ItemTitle>
+											Integration Analyst
+										</ItemTitle>
+										<ItemDescription>
+											7/2025 - Present
+										</ItemDescription>
+									</ItemHeader>
+									<ItemContent>
+										<ItemDescription>
+											Lowell Suomi Oy
+										</ItemDescription>
+									</ItemContent>
+								</Item>
+							</CardContent>
+							<CardContent>
+								<Item className="gap-0 p-0">
+									<ItemHeader>
+										<ItemTitle>
+											Application Specialist
+										</ItemTitle>
+										<ItemDescription>
+											11/2023 - 4/2024
+										</ItemDescription>
+									</ItemHeader>
+									<ItemContent>
+										<ItemDescription>
+											2M-IT Oy
+										</ItemDescription>
+									</ItemContent>
+								</Item>
+							</CardContent>
+							<CardContent>
+								<Item className="gap-0 p-0">
+									<ItemHeader>
+										<ItemTitle>Student Assistent</ItemTitle>
+										<ItemDescription>
+											5/2022 - 6/2025
+										</ItemDescription>
+									</ItemHeader>
+									<ItemContent>
+										<ItemDescription>
+											Turun Ammattikorkeakoulu Oy
+										</ItemDescription>
+									</ItemContent>
+								</Item>
+							</CardContent>
 						</Card>
 
-						<Card className="w-full max-w-md">
+						<Card className="w-full">
 							<CardHeader>
 								<CardTitle>Projects</CardTitle>
 								<CardAction>
@@ -229,6 +345,10 @@ function App() {
 								</CardAction>
 							</CardHeader>
 						</Card>
+
+						<div className="mt-15 mb-2 text-xs">
+							© 2025 Otso Saarinen. All rights reserved.
+						</div>
 					</div>
 				</div>
 			</ThemeProvider>
