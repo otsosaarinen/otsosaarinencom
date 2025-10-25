@@ -1,264 +1,388 @@
-import "./App.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
-import ContactButton from "./components/ContactButton";
-import ExperienceButton from "./components/ExperienceButton";
-import ProjectButton from "./components/ProjectButton";
-import EducationButton from "./components/EducationButton";
+import {
+	Github,
+	Linkedin,
+	Mail,
+	BadgeCheck,
+	Code2,
+	User,
+	Waypoints,
+	ToolCase,
+} from "lucide-react";
 
-import { useScramble } from "use-scramble";
-
-import { Github } from "lucide-react";
-import { Linkedin } from "lucide-react";
-import { Mail } from "lucide-react";
+import { ThemeProvider } from "./components/theme-provider";
+import { ModeToggle } from "./components/mode-toggle";
+import { Button } from "@/components/ui/button";
+import { Spinner } from "./components/ui/spinner";
+import { Badge } from "./components/ui/badge";
+import {
+	Card,
+	CardHeader,
+	CardTitle,
+	CardDescription,
+	CardContent,
+	CardAction,
+} from "@/components/ui/card";
+import {
+	Item,
+	ItemHeader,
+	ItemContent,
+	ItemDescription,
+	ItemMedia,
+	ItemTitle,
+} from "@/components/ui/item";
 
 function App() {
-	const [showBlock, setShowBlock] = useState(false);
+	const [loadingBlockVisibility, setLoadingBlockVisibility] =
+		useState("flex");
+	const [contentVisibility, setContentVisibility] = useState("hidden");
 
-	const nameScramble = useScramble({
-		text: "otso saarinen",
-		speed: 0.7,
-		tick: 2,
-		step: 1,
-		scramble: 6,
-		seed: 4,
-		chance: 1,
-		range: [33, 125],
-	});
+	useEffect(() => {
+		const timers: number[] = [];
 
-	const titleScramble = useScramble({
-		text: "web & integration developer",
-		speed: 0.7,
-		tick: 2,
-		step: 1,
-		scramble: 6,
-		seed: 4,
-		chance: 1,
-		range: [33, 125],
-		onAnimationEnd: () => {
-			setShowBlock(true);
-		},
-	});
+		timers.push(
+			setTimeout(() => {
+				setLoadingBlockVisibility("hidden");
+			}, 2500),
+		);
+
+		timers.push(
+			setTimeout(() => {
+				setContentVisibility("flex");
+			}, 2600),
+		);
+
+		return () => timers.forEach(clearTimeout);
+	}, []);
 
 	return (
 		<>
-			<div className="font-inter flex min-h-screen flex-col items-center justify-start bg-neutral-900 py-15 text-white">
-				<div className="flex w-80 flex-col gap-15 sm:w-120 md:w-160 lg:w-190">
-					<div className="flex flex-row items-start justify-between">
-						<div className="ml-3 flex flex-col items-start justify-center">
-							<h1
-								className="font-bold"
-								ref={nameScramble.ref}
-								onMouseEnter={nameScramble.replay}
-							></h1>
-							<h2
-								className="text-sm whitespace-nowrap text-neutral-400"
-								ref={titleScramble.ref}
-								onMouseEnter={titleScramble.replay}
-							></h2>
+			<ThemeProvider defaultTheme="system" storageKey="vite-ui-theme">
+				<div
+					className="bg-background flex h-screen w-full flex-col items-center justify-center"
+					style={{ fontFamily: "var(--font-montserrat)" }}
+				>
+					<div className="fixed top-3 right-3 hidden sm:block">
+						<ModeToggle />
+					</div>
+
+					<div
+						className={`animate-loading-block items-center justify-center ${loadingBlockVisibility} flex-col [--radius:1rem]`}
+					>
+						<Item variant="muted">
+							<ItemMedia>
+								<Spinner />
+							</ItemMedia>
+							<ItemContent>
+								<ItemTitle className="line-clamp-1">
+									Loading website...
+								</ItemTitle>
+							</ItemContent>
+						</Item>
+					</div>
+
+					<div
+						className={`${contentVisibility} animate-show-content mt-200 flex w-[90%] flex-col items-center gap-4 opacity-0 sm:mt-175 sm:w-lg`}
+					>
+						<h1 className="text-foreground text-4xl font-extrabold sm:text-6xl">
+							Otso Saarinen
+						</h1>
+						<h2 className="mb-10">
+							<Badge>Welcome to my portfolio</Badge>
+						</h2>
+
+						<Card className="w-full">
+							<CardHeader>
+								<CardTitle>Profile</CardTitle>
+								<CardDescription>
+									<div>
+										I'm an ICT engineer from Turku, Finland,
+										currently working as an Integration
+										Analyst at Lowell. I enjoy building web
+										projects and exploring new technologies.
+										Currently learning more about .NET
+										Framework.
+									</div>
+								</CardDescription>
+								<CardAction>
+									<User />
+								</CardAction>
+							</CardHeader>
+							<CardContent>
+								<div className="flex flex-row gap-2">
+									<Button
+										size="icon"
+										variant="secondary"
+										asChild
+									>
+										<a
+											href="https://github.com/otsosaarinen"
+											target="_blank"
+										>
+											<Github />
+										</a>
+									</Button>
+									<Button
+										size="icon"
+										variant="secondary"
+										asChild
+									>
+										<a
+											href="https://www.linkedin.com/in/otsosaarinen/"
+											target="_blank"
+										>
+											<Linkedin />
+										</a>
+									</Button>
+									<Button
+										size="icon"
+										variant="secondary"
+										asChild
+									>
+										<a
+											href="mailto:saarinenotso@gmai.com"
+											target="_blank"
+										>
+											<Mail />
+										</a>
+									</Button>
+								</div>
+							</CardContent>
+						</Card>
+
+						<Card className="w-full">
+							<CardHeader>
+								<CardTitle>Skills</CardTitle>
+								<CardAction>
+									<Code2 />
+								</CardAction>
+							</CardHeader>
+							<CardContent>
+								<Item className="p-0">
+									<ItemContent>
+										<ItemTitle>+ 3 years</ItemTitle>
+										<ItemDescription className="flex flex-wrap gap-2">
+											<Badge variant="secondary">
+												<BadgeCheck />
+												JavaScript
+											</Badge>
+											<Badge variant="secondary">
+												<BadgeCheck />
+												Python
+											</Badge>
+											<Badge variant="secondary">
+												<BadgeCheck />
+												React
+											</Badge>
+											<Badge variant="secondary">
+												<BadgeCheck />
+												Node.js
+											</Badge>
+
+											<Badge variant="secondary">
+												<BadgeCheck />
+												Git
+											</Badge>
+										</ItemDescription>
+									</ItemContent>
+								</Item>
+							</CardContent>
+							<CardContent>
+								<Item className="p-0">
+									<ItemContent>
+										<ItemTitle>1 - 2 years</ItemTitle>
+										<ItemDescription className="flex flex-wrap gap-2">
+											<Badge variant="secondary">
+												<BadgeCheck />
+												TypeScript
+											</Badge>
+											<Badge variant="secondary">
+												<BadgeCheck />
+												REST API
+											</Badge>
+											<Badge variant="secondary">
+												<BadgeCheck />
+												Express.js
+											</Badge>
+											<Badge variant="secondary">
+												<BadgeCheck />
+												Tailwind CSS
+											</Badge>
+
+											<Badge variant="secondary">
+												<BadgeCheck />
+												SQL
+											</Badge>
+											<Badge variant="secondary">
+												<BadgeCheck />
+												PostgreSQL
+											</Badge>
+											<Badge variant="secondary">
+												<BadgeCheck />
+												Docker
+											</Badge>
+											<Badge variant="secondary">
+												<BadgeCheck />
+												CI/CD
+											</Badge>
+										</ItemDescription>
+									</ItemContent>
+								</Item>
+							</CardContent>
+							<CardContent>
+								<Item className="p-0">
+									<ItemContent>
+										<ItemTitle>0 - 1 years</ItemTitle>
+										<ItemDescription className="flex flex-wrap gap-2">
+											<Badge variant="secondary">
+												<BadgeCheck />
+												Apache Kafka
+											</Badge>
+											<Badge variant="secondary">
+												<BadgeCheck />
+												Microsoft Azure
+											</Badge>
+											<Badge variant="secondary">
+												<BadgeCheck />
+												C#
+											</Badge>
+											<Badge variant="secondary">
+												<BadgeCheck />
+												.NET
+											</Badge>
+											<Badge variant="secondary">
+												<BadgeCheck />
+												Next.js
+											</Badge>
+											<Badge variant="secondary">
+												<BadgeCheck />
+												Grafana
+											</Badge>
+											<Badge variant="secondary">
+												<BadgeCheck />
+												Jira
+											</Badge>
+										</ItemDescription>
+									</ItemContent>
+								</Item>
+							</CardContent>
+						</Card>
+
+						<Card className="w-full">
+							<CardHeader>
+								<CardTitle>Experience</CardTitle>
+								<CardAction>
+									<Waypoints />
+								</CardAction>
+							</CardHeader>
+							<CardContent>
+								<Item className="gap-0 p-0">
+									<ItemHeader>
+										<ItemTitle>
+											Integration Analyst
+										</ItemTitle>
+										<ItemDescription>
+											7/2025 - Present
+										</ItemDescription>
+									</ItemHeader>
+									<ItemContent>
+										<ItemDescription>
+											Lowell Suomi Oy
+										</ItemDescription>
+									</ItemContent>
+								</Item>
+							</CardContent>
+							<CardContent>
+								<Item className="gap-0 p-0">
+									<ItemHeader>
+										<ItemTitle>
+											Application Specialist
+										</ItemTitle>
+										<ItemDescription>
+											11/2023 - 4/2024
+										</ItemDescription>
+									</ItemHeader>
+									<ItemContent>
+										<ItemDescription>
+											2M-IT Oy
+										</ItemDescription>
+									</ItemContent>
+								</Item>
+							</CardContent>
+							<CardContent>
+								<Item className="gap-0 p-0">
+									<ItemHeader>
+										<ItemTitle>Student Assistant</ItemTitle>
+										<ItemDescription>
+											5/2022 - 6/2025
+										</ItemDescription>
+									</ItemHeader>
+									<ItemContent>
+										<ItemDescription>
+											Turun Ammattikorkeakoulu Oy
+										</ItemDescription>
+									</ItemContent>
+								</Item>
+							</CardContent>
+						</Card>
+
+						<Card className="w-full">
+							<CardHeader>
+								<CardTitle>Projects</CardTitle>
+								<CardAction>
+									<ToolCase />
+								</CardAction>
+							</CardHeader>
+							<CardContent>
+								<Item className="gap-0 p-0">
+									<ItemHeader>
+										<ItemTitle>
+											Spotify Web Controller
+										</ItemTitle>
+									</ItemHeader>
+									<ItemContent>
+										<ItemDescription>
+											Web appliation for controlling
+											Spotify music playback.
+										</ItemDescription>
+									</ItemContent>
+								</Item>
+							</CardContent>
+							<CardContent>
+								<Item className="gap-0 p-0">
+									<ItemHeader>
+										<ItemTitle>Klemmari</ItemTitle>
+									</ItemHeader>
+									<ItemContent>
+										<ItemDescription>
+											AI chatbot built with RAG
+											architecture
+										</ItemDescription>
+									</ItemContent>
+								</Item>
+							</CardContent>
+							<CardContent>
+								<Item className="gap-0 p-0">
+									<ItemHeader>
+										<ItemTitle>Pathway</ItemTitle>
+									</ItemHeader>
+									<ItemContent>
+										<ItemDescription>
+											.NET WPF application for managing
+											filetransfers.
+										</ItemDescription>
+									</ItemContent>
+								</Item>
+							</CardContent>
+						</Card>
+
+						<div className="mt-15 mb-2 text-xs">
+							© 2025 Otso Saarinen. All rights reserved.
 						</div>
-						<div
-							className={`flex flex-col items-end justify-center opacity-0 ${showBlock ? "animate-show-content-block" : ""}`}
-						>
-							<ContactButton
-								url="https://github.com/otsosaarinen"
-								text="github"
-								icon={Github}
-								color="#8ec5ff"
-							/>
-							<ContactButton
-								url="https://www.linkedin.com/in/otsosaarinen/"
-								text="linkedin"
-								icon={Linkedin}
-								color="#ffb86a"
-							/>{" "}
-							<ContactButton
-								url="mailto:saarinenotso@gmail.com"
-								text="email"
-								icon={Mail}
-								color="#ffa2a2"
-							/>
-						</div>
-					</div>
-					<div
-						className={`ml-3 w-80 text-sm text-neutral-400 opacity-0 sm:w-100 ${showBlock ? "animate-show-content-block" : ""}`}
-					>
-						portfolio website showcasing my recent experiences and
-						personal projects
-					</div>
-					<div
-						className={`w-full opacity-0 ${showBlock ? "animate-show-content-block" : ""}`}
-					>
-						<h3 className="mr-3 text-right text-lg font-semibold text-blue-300 italic">
-							experience
-						</h3>
-						<ExperienceButton
-							title="integration analyst"
-							company="lowell suomi oy"
-							date="7/2025 - present"
-							description="handled data transfers between lowell and client companies and resolved issues with sftp server and api integrations"
-							skills={[
-								"integration",
-								"rest api",
-								"sftp",
-								"ssh",
-								"biztalk",
-								"moveit",
-								"sql",
-								"jira",
-							]}
-						/>
-						<ExperienceButton
-							title="service desk"
-							company="2m-it oy"
-							date="11/2023 - 4/2024"
-							description="resolved it issues for employees in the wellbeing services counties of southwest finland and in kanta-häme"
-							skills={[
-								"azure",
-								"active directory",
-								"intune",
-								"entra id",
-								"citrix",
-								"vpn",
-							]}
-						/>
-						<ExperienceButton
-							title="student assistant"
-							company="turun ammattikorkeakoulu oy"
-							date="5/2022 - 6/2025"
-							description="assisted applicants with it-related issues during the turku uas entrance exams"
-							skills={["it support", "problem solving", "vpn"]}
-						/>
-					</div>
-					<div
-						className={`w-full opacity-0 ${showBlock ? "animate-show-content-block" : ""}`}
-					>
-						<h3 className="mr-3 text-right text-lg font-semibold text-orange-300 italic">
-							projects
-						</h3>
-						<ProjectButton
-							title="föli-api"
-							description="api wrapper for tsjl public transport data interface"
-							tags={[
-								"typescript",
-								"react",
-								"rest api",
-								"tailwind",
-								"cloudflare",
-							]}
-							github_link="https://github.com/otsosaarinen/foli-api"
-						/>
-						<ProjectButton
-							title="spotify-web-controller"
-							description="web application for controlling spotify playback"
-							tags={[
-								"typescript",
-								"react",
-								"rest api",
-								"tailwind",
-								"oauth 2.0",
-							]}
-							github_link="https://github.com/otsosaarinen/spotify-web-controller"
-						/>
-						<ProjectButton
-							title="bachelor's thesis"
-							description="real-time patient data collection and analysis using apache kafka"
-							tags={[
-								"apache kafka",
-								"python",
-								"influxdb",
-								"grafana",
-							]}
-							github_link="https://github.com/otsosaarinen/Thesis"
-						/>
-						<ProjectButton
-							title="klemmari"
-							description="ai chatbot built with rag architecture and deployed as a web application"
-							tags={[
-								"azure",
-								"ai",
-								"rag",
-								"python",
-								"react",
-								"javascript",
-							]}
-							github_link="https://github.com/otsosaarinen/Klemmari"
-						/>
-					</div>
-					<div
-						className={`w-full opacity-0 ${showBlock ? "animate-show-content-block" : ""}`}
-					>
-						<h3 className="mr-3 text-right text-lg font-semibold text-red-300 italic">
-							education
-						</h3>
-						<EducationButton
-							title="bachelor of engineering, ict"
-							school="turku university of applied sciences"
-							date="8/2021 - 4/2025"
-							description="completed health technology specialization path and took courses in software development"
-							skills={[
-								"typescript",
-								"javascript",
-								"python",
-								"react",
-								"azure",
-								"ai",
-								"rag",
-								"databases",
-							]}
-						/>
-						<EducationButton
-							title="student exchange program"
-							school="national institute of technology, hachinohe college (八戸高専)"
-							date="4/2024 - 7/2024"
-							description="student exchange in japan researching radiofrequency ablation techniques"
-							skills={[
-								"medical engineering",
-								"3d modeling",
-								"fem",
-								"elmergui",
-								"salome",
-							]}
-						/>
-					</div>
-					<div
-						className={`ml-3 w-full text-sm text-neutral-400 opacity-0 ${showBlock ? "animate-show-content-block" : ""}`}
-					>
-						<p>
-							built using{" "}
-							<span className="font-medium text-blue-300 italic">
-								typescript
-							</span>
-							,{" "}
-							<span className="font-medium text-blue-300 italic">
-								react
-							</span>{" "}
-							and{" "}
-							<span className="font-medium text-blue-300 italic">
-								tailwind
-							</span>
-						</p>
-						<p>
-							hosted on{" "}
-							<span className="font-medium text-orange-300 italic">
-								cloudflare
-							</span>
-						</p>
-						<p>
-							icons from{" "}
-							<span className="font-medium text-red-300 italic">
-								lucide.dev
-							</span>
-						</p>
-						<p>
-							updated on{" "}
-							<span className="font-medium text-white italic">
-								20.10.2025
-							</span>
-						</p>
 					</div>
 				</div>
-			</div>
+			</ThemeProvider>
 		</>
 	);
 }
