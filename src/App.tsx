@@ -176,7 +176,7 @@ function App() {
 										</ItemDescription>
 									</ItemContent>
 									<ItemFooter className="mt-1">
-										<ItemDescription>
+										<ItemDescription className="line-clamp-none">
 											Worked in the data transfer team and
 											solved problems within SFTP servers
 											and API integrations
@@ -200,7 +200,7 @@ function App() {
 										</ItemDescription>
 									</ItemContent>
 									<ItemFooter className="mt-1">
-										<ItemDescription>
+										<ItemDescription className="line-clamp-none">
 											Solved IT issues for employees in
 											the wellbeing services counties of
 											Southwest Finland and Kanta-Häme
@@ -222,7 +222,7 @@ function App() {
 										</ItemDescription>
 									</ItemContent>
 									<ItemFooter className="mt-1">
-										<ItemDescription>
+										<ItemDescription className="line-clamp-none">
 											Assisted applicants with IT issues
 											during the Turku UAS entrance exam
 										</ItemDescription>
