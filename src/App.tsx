@@ -9,6 +9,7 @@ import {
 	User,
 	Waypoints,
 	ToolCase,
+	GraduationCap,
 } from "lucide-react";
 
 import { ThemeProvider } from "./components/theme-provider";
@@ -101,9 +102,9 @@ function App() {
 										I'm an ICT engineer from Turku, Finland,
 										currently working as an Integration
 										Analyst at Lowell. I enjoy building web
-										projects and exploring new technologies.
-										Currently learning more about .NET
-										Framework.
+										projects and exploring new technologies,
+										and I'm currently learning more about
+										.NET framework.
 									</div>
 								</CardDescription>
 								<CardAction>
@@ -176,9 +177,9 @@ function App() {
 									</ItemContent>
 									<ItemFooter className="mt-1">
 										<ItemDescription className="line-clamp-none">
-											Worked in the data transfer team and
-											solved problems within SFTP servers
-											and API integrations
+											Worked in the data transfer team,
+											troubleshooting issues related to
+											SFTP servers and API integrations
 										</ItemDescription>
 									</ItemFooter>
 								</Item>
@@ -200,7 +201,7 @@ function App() {
 									</ItemContent>
 									<ItemFooter className="mt-1">
 										<ItemDescription className="line-clamp-none">
-											Solved IT issues for employees in
+											Resolved IT issues for employees in
 											the wellbeing services counties of
 											Southwest Finland and Kanta-Häme
 										</ItemDescription>
@@ -217,13 +218,71 @@ function App() {
 									</ItemHeader>
 									<ItemContent>
 										<ItemDescription>
-											Turun Ammattikorkeakoulu Oy
+											Turku University of Applied Sciences
 										</ItemDescription>
 									</ItemContent>
 									<ItemFooter className="mt-1">
 										<ItemDescription className="line-clamp-none">
 											Assisted applicants with IT issues
-											during the Turku UAS entrance exam
+											during Turku UAS entrance exams
+										</ItemDescription>
+									</ItemFooter>
+								</Item>
+							</CardContent>
+						</Card>
+
+						<Card className="w-full">
+							<CardHeader>
+								<CardTitle>Education</CardTitle>
+								<CardAction>
+									<User />
+								</CardAction>
+							</CardHeader>
+							<CardContent>
+								<Item className="gap-0 p-0">
+									<ItemHeader>
+										<ItemTitle>
+											Bachelor of Engineering, ICT
+										</ItemTitle>
+										<ItemDescription>
+											8/2021 - 4/2025
+										</ItemDescription>
+									</ItemHeader>
+									<ItemContent>
+										<ItemDescription>
+											Turku University of Applied Sciences
+										</ItemDescription>
+									</ItemContent>
+									<ItemFooter className="mt-1">
+										<ItemDescription className="line-clamp-none">
+											Bachelor of Engineering at
+											Information and Communications
+											Technology
+										</ItemDescription>
+									</ItemFooter>
+								</Item>
+							</CardContent>
+							<CardContent>
+								<Item className="gap-0 p-0">
+									<ItemHeader>
+										<ItemTitle>
+											Student exchange program
+										</ItemTitle>
+										<ItemDescription>
+											4/2024 - 7/2024
+										</ItemDescription>
+									</ItemHeader>
+									<ItemContent>
+										<ItemDescription>
+											NIT Hachinohe (八戸高専)
+										</ItemDescription>
+									</ItemContent>
+									<ItemFooter className="mt-1">
+										<ItemDescription className="line-clamp-none">
+											Completed student exchange in
+											Hachinohe, Japan, where I researched
+											radiofrequency ablation cancer
+											treatment technology
 										</ItemDescription>
 									</ItemFooter>
 								</Item>
@@ -458,7 +517,7 @@ function App() {
 									<ItemContent>
 										<ItemDescription>
 											.NET WPF application for managing
-											filetransfers
+											file transfers
 										</ItemDescription>
 										<div className="flex flex-wrap gap-2">
 											<Badge variant="secondary">
@@ -480,7 +539,7 @@ function App() {
 									</ItemHeader>
 									<ItemContent>
 										<ItemDescription>
-											AI chatbot built with RAG
+											AI chatbot built using RAG
 											architecture
 										</ItemDescription>
 										<div className="flex flex-wrap gap-2">
