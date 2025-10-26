@@ -235,7 +235,7 @@ function App() {
 							<CardHeader>
 								<CardTitle>Education</CardTitle>
 								<CardAction>
-									<User />
+									<GraduationCap />
 								</CardAction>
 							</CardHeader>
 							<CardContent>
