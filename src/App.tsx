@@ -31,6 +31,8 @@ import {
 	ItemDescription,
 	ItemMedia,
 	ItemTitle,
+	ItemFooter,
+	ItemActions,
 } from "@/components/ui/item";
 
 function App() {
@@ -173,6 +175,13 @@ function App() {
 											Lowell Suomi Oy
 										</ItemDescription>
 									</ItemContent>
+									<ItemFooter className="mt-1">
+										<ItemDescription>
+											Worked in the data transfer team and
+											solved problems within SFTP servers
+											and API integrations
+										</ItemDescription>
+									</ItemFooter>
 								</Item>
 							</CardContent>
 							<CardContent>
@@ -190,6 +199,13 @@ function App() {
 											2M-IT Oy
 										</ItemDescription>
 									</ItemContent>
+									<ItemFooter className="mt-1">
+										<ItemDescription>
+											Solved IT issues for employees in
+											the wellbeing services counties of
+											Southwest Finland and Kanta-Häme
+										</ItemDescription>
+									</ItemFooter>
 								</Item>
 							</CardContent>
 							<CardContent>
@@ -205,6 +221,12 @@ function App() {
 											Turun Ammattikorkeakoulu Oy
 										</ItemDescription>
 									</ItemContent>
+									<ItemFooter className="mt-1">
+										<ItemDescription>
+											Assisted applicants with IT issues
+											during the Turku UAS entrance exam
+										</ItemDescription>
+									</ItemFooter>
 								</Item>
 							</CardContent>
 						</Card>
@@ -368,6 +390,37 @@ function App() {
 							<CardContent>
 								<Item className="gap-0 p-0">
 									<ItemHeader>
+										<ItemTitle>Bachelor's thesis</ItemTitle>
+									</ItemHeader>
+									<ItemContent>
+										<ItemDescription>
+											Real-time patient data collection
+											and analysis using Apache Kafka
+										</ItemDescription>
+										<div className="flex flex-wrap gap-2">
+											<Badge variant="secondary">
+												<BadgeCheck />
+												Apache Kafka
+											</Badge>
+											<Badge variant="secondary">
+												<BadgeCheck />
+												Python
+											</Badge>
+											<Badge variant="secondary">
+												<BadgeCheck />
+												InfluxDB
+											</Badge>
+											<Badge variant="secondary">
+												<BadgeCheck />
+												Grafana
+											</Badge>
+										</div>
+									</ItemContent>
+								</Item>
+							</CardContent>
+							<CardContent>
+								<Item className="gap-0 p-0">
+									<ItemHeader>
 										<ItemTitle>
 											Spotify Web Controller
 										</ItemTitle>
@@ -377,32 +430,24 @@ function App() {
 											Web application for controlling
 											Spotify music playback
 										</ItemDescription>
-									</ItemContent>
-								</Item>
-							</CardContent>
-							<CardContent>
-								<Item className="gap-0 p-0">
-									<ItemHeader>
-										<ItemTitle>Bachelor's thesis</ItemTitle>
-									</ItemHeader>
-									<ItemContent>
-										<ItemDescription>
-											Real-time patient data collection
-											and analysis using Apache Kafka
-										</ItemDescription>
-									</ItemContent>
-								</Item>
-							</CardContent>
-							<CardContent>
-								<Item className="gap-0 p-0">
-									<ItemHeader>
-										<ItemTitle>Klemmari</ItemTitle>
-									</ItemHeader>
-									<ItemContent>
-										<ItemDescription>
-											AI chatbot built with RAG
-											architecture
-										</ItemDescription>
+										<div className="flex flex-wrap gap-2">
+											<Badge variant="secondary">
+												<BadgeCheck />
+												TypeScript
+											</Badge>
+											<Badge variant="secondary">
+												<BadgeCheck />
+												React
+											</Badge>
+											<Badge variant="secondary">
+												<BadgeCheck />
+												Tailwind CSS
+											</Badge>
+											<Badge variant="secondary">
+												<BadgeCheck />
+												REST API
+											</Badge>
+										</div>
 									</ItemContent>
 								</Item>
 							</CardContent>
@@ -416,6 +461,51 @@ function App() {
 											.NET WPF application for managing
 											filetransfers
 										</ItemDescription>
+										<div className="flex flex-wrap gap-2">
+											<Badge variant="secondary">
+												<BadgeCheck />
+												C#
+											</Badge>
+											<Badge variant="secondary">
+												<BadgeCheck />
+												.NET
+											</Badge>
+										</div>
+									</ItemContent>
+								</Item>
+							</CardContent>
+							<CardContent>
+								<Item className="gap-0 p-0">
+									<ItemHeader>
+										<ItemTitle>Klemmari</ItemTitle>
+									</ItemHeader>
+									<ItemContent>
+										<ItemDescription>
+											AI chatbot built with RAG
+											architecture
+										</ItemDescription>
+										<div className="flex flex-wrap gap-2">
+											<Badge variant="secondary">
+												<BadgeCheck />
+												Azure
+											</Badge>
+											<Badge variant="secondary">
+												<BadgeCheck />
+												AI
+											</Badge>
+											<Badge variant="secondary">
+												<BadgeCheck />
+												Python
+											</Badge>
+											<Badge variant="secondary">
+												<BadgeCheck />
+												React
+											</Badge>
+											<Badge variant="secondary">
+												<BadgeCheck />
+												JavaScript
+											</Badge>
+										</div>
 									</ItemContent>
 								</Item>
 							</CardContent>
