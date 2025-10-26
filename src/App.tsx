@@ -32,7 +32,6 @@ import {
 	ItemMedia,
 	ItemTitle,
 	ItemFooter,
-	ItemActions,
 } from "@/components/ui/item";
 
 function App() {
