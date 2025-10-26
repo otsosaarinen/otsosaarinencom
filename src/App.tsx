@@ -256,10 +256,6 @@ function App() {
 											</Badge>
 											<Badge variant="secondary">
 												<BadgeCheck />
-												Node.js
-											</Badge>
-											<Badge variant="secondary">
-												<BadgeCheck />
 												Next.js
 											</Badge>
 											<Badge variant="secondary">
@@ -269,6 +265,10 @@ function App() {
 											<Badge variant="secondary">
 												<BadgeCheck />
 												Tailwind CSS
+											</Badge>
+											<Badge variant="secondary">
+												<BadgeCheck />
+												Node.js
 											</Badge>
 											<Badge variant="secondary">
 												<BadgeCheck />
@@ -374,7 +374,7 @@ function App() {
 									</ItemHeader>
 									<ItemContent>
 										<ItemDescription>
-											Web appliation for controlling
+											Web application for controlling
 											Spotify music playback
 										</ItemDescription>
 									</ItemContent>
