@@ -545,7 +545,7 @@ function App() {
 										<div className="flex flex-wrap gap-2">
 											<Badge variant="secondary">
 												<BadgeCheck />
-												Azure
+												Microsoft Azure
 											</Badge>
 											<Badge variant="secondary">
 												<BadgeCheck />
