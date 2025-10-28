@@ -448,7 +448,14 @@ function App() {
 							<CardContent>
 								<Item className="gap-0 p-0">
 									<ItemHeader>
-										<ItemTitle>Bachelor's thesis</ItemTitle>
+										<ItemTitle>
+											<a
+												href="https://www.theseus.fi/handle/10024/881694"
+												target="_blank"
+											>
+												Bachelor's thesis
+											</a>
+										</ItemTitle>
 									</ItemHeader>
 									<ItemContent>
 										<ItemDescription>
@@ -480,7 +487,12 @@ function App() {
 								<Item className="gap-0 p-0">
 									<ItemHeader>
 										<ItemTitle>
-											Spotify Web Controller
+											<a
+												href="https://github.com/otsosaarinen/spotify-web-controller"
+												target="_blank"
+											>
+												Spotify Web Controller
+											</a>
 										</ItemTitle>
 									</ItemHeader>
 									<ItemContent>
@@ -512,7 +524,14 @@ function App() {
 							<CardContent>
 								<Item className="gap-0 p-0">
 									<ItemHeader>
-										<ItemTitle>Pathway</ItemTitle>
+										<ItemTitle>
+											<a
+												href="https://github.com/otsosaarinen/pathway"
+												target="_blank"
+											>
+												Pathway
+											</a>
+										</ItemTitle>
 									</ItemHeader>
 									<ItemContent>
 										<ItemDescription>
@@ -535,7 +554,14 @@ function App() {
 							<CardContent>
 								<Item className="gap-0 p-0">
 									<ItemHeader>
-										<ItemTitle>Klemmari</ItemTitle>
+										<ItemTitle>
+											<a
+												href="https://github.com/otsosaarinen/klemmari"
+												target="_blank"
+											>
+												Klemmari
+											</a>
+										</ItemTitle>
 									</ItemHeader>
 									<ItemContent>
 										<ItemDescription>
