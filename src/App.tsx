@@ -326,9 +326,7 @@ function App() {
 							<CardContent>
 								<Item className="p-0">
 									<ItemContent>
-										<ItemTitle>
-											Libraries and Frameworks
-										</ItemTitle>
+										<ItemTitle>Frontend</ItemTitle>
 										<ItemDescription className="flex flex-wrap gap-2">
 											<Badge variant="secondary">
 												<BadgeCheck />
@@ -340,15 +338,32 @@ function App() {
 											</Badge>
 											<Badge variant="secondary">
 												<BadgeCheck />
+												Tailwind CSS
+											</Badge>
+										</ItemDescription>
+									</ItemContent>
+								</Item>
+							</CardContent>
+							<CardContent>
+								<Item className="p-0">
+									<ItemContent>
+										<ItemTitle>Backend</ItemTitle>
+										<ItemDescription className="flex flex-wrap gap-2">
+											<Badge variant="secondary">
+												<BadgeCheck />
+												Node.js
+											</Badge>
+											<Badge variant="secondary">
+												<BadgeCheck />
 												Express.js
 											</Badge>
 											<Badge variant="secondary">
 												<BadgeCheck />
-												Tailwind CSS
+												Apache Kafka
 											</Badge>
 											<Badge variant="secondary">
 												<BadgeCheck />
-												Node.js
+												REST API
 											</Badge>
 											<Badge variant="secondary">
 												<BadgeCheck />
@@ -371,22 +386,9 @@ function App() {
 												<BadgeCheck />
 												PostgreSQL
 											</Badge>
-										</ItemDescription>
-									</ItemContent>
-								</Item>
-							</CardContent>
-							<CardContent>
-								<Item className="p-0">
-									<ItemContent>
-										<ItemTitle>Architecture</ItemTitle>
-										<ItemDescription className="flex flex-wrap gap-2">
 											<Badge variant="secondary">
 												<BadgeCheck />
-												REST API
-											</Badge>
-											<Badge variant="secondary">
-												<BadgeCheck />
-												Apache Kafka
+												InfluxDB
 											</Badge>
 										</ItemDescription>
 									</ItemContent>
@@ -395,10 +397,12 @@ function App() {
 							<CardContent>
 								<Item className="p-0">
 									<ItemContent>
-										<ItemTitle>
-											DevOps, Cloud and Tools
-										</ItemTitle>
+										<ItemTitle>DevOps and Tools</ItemTitle>
 										<ItemDescription className="flex flex-wrap gap-2">
+											<Badge variant="secondary">
+												<BadgeCheck />
+												Microsoft Azure
+											</Badge>
 											<Badge variant="secondary">
 												<BadgeCheck />
 												Docker
@@ -411,10 +415,7 @@ function App() {
 												<BadgeCheck />
 												CI/CD
 											</Badge>
-											<Badge variant="secondary">
-												<BadgeCheck />
-												Microsoft Azure
-											</Badge>
+
 											<Badge variant="secondary">
 												<BadgeCheck />
 												Jira
@@ -423,7 +424,6 @@ function App() {
 												<BadgeCheck />
 												Grafana
 											</Badge>
-
 											<Badge variant="secondary">
 												<BadgeCheck />
 												SFTP
