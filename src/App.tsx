@@ -46,13 +46,13 @@ function App() {
 		timers.push(
 			setTimeout(() => {
 				setLoadingBlockVisibility("hidden");
-			}, 2500),
+			}, 2000),
 		);
 
 		timers.push(
 			setTimeout(() => {
 				setContentVisibility("flex");
-			}, 2600),
+			}, 2100),
 		);
 
 		return () => timers.forEach(clearTimeout);
