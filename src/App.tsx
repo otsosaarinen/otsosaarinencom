@@ -87,11 +87,13 @@ function App() {
 					<div
 						className={`${contentVisibility} animate-show-content mt-25 flex w-[90%] flex-col items-center gap-4 opacity-0 sm:w-lg`}
 					>
-						<h1 className="text-foreground text-4xl font-extrabold sm:text-6xl">
-							Otso Saarinen
+						<h1 className="text-foreground text-center text-4xl font-extrabold sm:text-6xl">
+							Hi, I'm Otso Saarinen
 						</h1>
 						<h2 className="mb-10">
-							<Badge>Welcome to my portfolio</Badge>
+							<Badge className="bg-blue-500 text-white dark:bg-blue-600">
+								Welcome to my portfolio
+							</Badge>
 						</h2>
 
 						<Card className="w-full">
