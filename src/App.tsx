@@ -1,5 +1,11 @@
 function App() {
-	return <></>;
+	return (
+		<>
+			<div>
+				a <div></div>
+			</div>
+		</>
+	);
 }
 
 export default App;
