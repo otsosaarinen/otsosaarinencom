@@ -12,10 +12,7 @@ import {
 	GraduationCap,
 } from "lucide-react";
 
-import { ThemeProvider } from "./components/theme-provider";
-import { ModeToggle } from "./components/mode-toggle";
 import { Button } from "@/components/ui/button";
-import { Spinner } from "./components/ui/spinner";
 import { Badge } from "./components/ui/badge";
 import {
 	Card,
@@ -30,87 +27,87 @@ import {
 	ItemHeader,
 	ItemContent,
 	ItemDescription,
-	ItemMedia,
 	ItemTitle,
 	ItemFooter,
 } from "@/components/ui/item";
 
+const LOADING_HIDE_DELAY = 1400;
+const CONTENT_SHOW_DELAY = 1500;
+
 function App() {
-	const [loadingBlockVisibility, setLoadingBlockVisibility] =
-		useState("flex");
-	const [contentVisibility, setContentVisibility] = useState("hidden");
+	const [isLoading, setIsLoading] = useState(true);
+	const [isVisible, setIsVisible] = useState(false);
 
 	useEffect(() => {
 		const timers: number[] = [];
 
 		timers.push(
 			setTimeout(() => {
-				setLoadingBlockVisibility("hidden");
-			}, 2000),
+				setIsLoading(false);
+			}, LOADING_HIDE_DELAY),
 		);
 
 		timers.push(
 			setTimeout(() => {
-				setContentVisibility("flex");
-			}, 2100),
+				setIsVisible(true);
+			}, CONTENT_SHOW_DELAY),
 		);
 
 		return () => timers.forEach(clearTimeout);
 	}, []);
 
 	return (
-		<>
-			<ThemeProvider defaultTheme="system" storageKey="vite-ui-theme">
-				<div
-					className="bg-background flex h-screen w-full flex-col items-center justify-start"
-					style={{ fontFamily: "var(--font-montserrat)" }}
-				>
-					<div className="fixed top-3 right-3 hidden sm:block">
-						<ModeToggle />
+		<div className="bg-background flex min-h-screen w-full flex-col items-center justify-start font-sans">
+			<div
+				className={`animate-loading-block fixed inset-0 z-50 flex items-center justify-center ${isLoading ? "flex" : "hidden"}`}
+			>
+				<div className="border-foreground bg-background flex w-52 flex-col gap-3 border-2 px-6 pt-4 pb-4">
+					<span className="text-sm font-semibold tracking-wide">
+						Loading...
+					</span>
+					<div className="bg-muted h-[2px] w-full overflow-hidden">
+						<div className="animate-loading-bar bg-foreground h-full" />
 					</div>
+				</div>
+			</div>
 
-					<div
-						className={`animate-loading-block fixed inset-0 z-50 items-center justify-center ${loadingBlockVisibility} [--radius:1rem]`}
-					>
-						<Item variant="muted">
-							<ItemMedia>
-								<Spinner />
-							</ItemMedia>
-							<ItemContent>
-								<ItemTitle className="line-clamp-1">
-									Loading website...
-								</ItemTitle>
-							</ItemContent>
-						</Item>
-					</div>
-
-					<div
-						className={`${contentVisibility} animate-show-content mt-25 flex w-[90%] flex-col items-center gap-4 opacity-0 sm:w-lg`}
-					>
-						<h1 className="text-foreground text-center text-4xl font-extrabold sm:text-6xl">
-							Hi, I'm Otso Saarinen
+			<div
+				className={`animate-show-content mt-12 w-[90%] max-w-4xl opacity-0 ${isVisible ? "block" : "hidden"}`}
+			>
+				<div className="border-border mb-8 flex flex-col items-center gap-6 border-b pb-8 sm:flex-row sm:items-center">
+					<img
+						src="/cv_kuva_neliö.jpg"
+						alt="Otso Saarinen"
+						className="h-32 w-32 object-cover"
+					/>
+					<div className="flex flex-col gap-1 text-center sm:text-left">
+						<p className="text-muted-foreground text-xs tracking-[0.3em] uppercase">
+							Portfolio
+						</p>
+						<h1 className="text-foreground text-4xl font-extrabold sm:text-5xl">
+							Otso Saarinen
 						</h1>
-						<h2 className="mb-10">
-							<Badge className="bg-blue-500 text-white dark:bg-blue-600">
-								Welcome to my portfolio
-							</Badge>
-						</h2>
+						<p className="text-muted-foreground text-sm tracking-wide">
+							System Specialist · Turku, Finland
+						</p>
+					</div>
+				</div>
 
-						<Card className="w-full">
+				<div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+					{/* Left column */}
+					<div className="flex flex-col gap-4">
+						<Card className="border-2 border-[#8EC5FF]">
 							<CardHeader>
 								<CardTitle>Profile</CardTitle>
 								<CardDescription>
-									<div>
-										I'm an ICT engineer from Turku, Finland,
-										currently working as an Integration
-										Analyst at Lowell. I enjoy building web
-										projects and exploring new technologies,
-										and I'm currently learning more about
-										.NET framework.
-									</div>
+									I'm an ICT engineer from Turku, Finland,
+									currently working as a System Specialist at
+									the University of Turku.
 								</CardDescription>
 								<CardAction>
-									<User />
+									<div className="bg-[#8EC5FF]/20 p-1.5">
+										<User className="h-4 w-4 text-[#8EC5FF]" />
+									</div>
 								</CardAction>
 							</CardHeader>
 							<CardContent>
@@ -123,6 +120,7 @@ function App() {
 										<a
 											href="https://github.com/otsosaarinen"
 											target="_blank"
+											rel="noopener noreferrer"
 										>
 											<Github />
 										</a>
@@ -135,6 +133,7 @@ function App() {
 										<a
 											href="https://www.linkedin.com/in/otsosaarinen/"
 											target="_blank"
+											rel="noopener noreferrer"
 										>
 											<Linkedin />
 										</a>
@@ -147,6 +146,7 @@ function App() {
 										<a
 											href="mailto:saarinenotso@gmail.com"
 											target="_blank"
+											rel="noopener noreferrer"
 										>
 											<Mail />
 										</a>
@@ -155,89 +155,13 @@ function App() {
 							</CardContent>
 						</Card>
 
-						<Card className="w-full">
-							<CardHeader>
-								<CardTitle>Experience</CardTitle>
-								<CardAction>
-									<Waypoints />
-								</CardAction>
-							</CardHeader>
-							<CardContent>
-								<Item className="gap-0 p-0">
-									<ItemHeader>
-										<ItemTitle>
-											Integration Analyst
-										</ItemTitle>
-										<ItemDescription>
-											7/2025 - Present
-										</ItemDescription>
-									</ItemHeader>
-									<ItemContent>
-										<ItemDescription>
-											Lowell Suomi Oy
-										</ItemDescription>
-									</ItemContent>
-									<ItemFooter className="mt-1">
-										<ItemDescription className="line-clamp-none">
-											Worked in the data transfer team,
-											troubleshooting issues related to
-											SFTP servers and API integrations
-										</ItemDescription>
-									</ItemFooter>
-								</Item>
-							</CardContent>
-							<CardContent>
-								<Item className="gap-0 p-0">
-									<ItemHeader>
-										<ItemTitle>
-											Application Specialist
-										</ItemTitle>
-										<ItemDescription>
-											11/2023 - 4/2024
-										</ItemDescription>
-									</ItemHeader>
-									<ItemContent>
-										<ItemDescription>
-											2M-IT Oy
-										</ItemDescription>
-									</ItemContent>
-									<ItemFooter className="mt-1">
-										<ItemDescription className="line-clamp-none">
-											Resolved IT issues for employees in
-											the wellbeing services counties of
-											Southwest Finland and Kanta-Häme
-										</ItemDescription>
-									</ItemFooter>
-								</Item>
-							</CardContent>
-							<CardContent>
-								<Item className="gap-0 p-0">
-									<ItemHeader>
-										<ItemTitle>Student Assistant</ItemTitle>
-										<ItemDescription>
-											5/2022 - 6/2025
-										</ItemDescription>
-									</ItemHeader>
-									<ItemContent>
-										<ItemDescription>
-											Turku University of Applied Sciences
-										</ItemDescription>
-									</ItemContent>
-									<ItemFooter className="mt-1">
-										<ItemDescription className="line-clamp-none">
-											Assisted applicants with IT issues
-											during Turku UAS entrance exams
-										</ItemDescription>
-									</ItemFooter>
-								</Item>
-							</CardContent>
-						</Card>
-
-						<Card className="w-full">
+						<Card className="border-2 border-[#B5EAD7]">
 							<CardHeader>
 								<CardTitle>Education</CardTitle>
 								<CardAction>
-									<GraduationCap />
+									<div className="bg-[#B5EAD7]/20 p-1.5">
+										<GraduationCap className="h-4 w-4 text-[#B5EAD7]" />
+									</div>
 								</CardAction>
 							</CardHeader>
 							<CardContent>
@@ -291,19 +215,19 @@ function App() {
 							</CardContent>
 						</Card>
 
-						<Card className="w-full">
+						<Card className="border-2 border-[#C3B1E1]">
 							<CardHeader>
 								<CardTitle>Skills</CardTitle>
 								<CardAction>
-									<Code2 />
+									<div className="bg-[#C3B1E1]/20 p-1.5">
+										<Code2 className="h-4 w-4 text-[#C3B1E1]" />
+									</div>
 								</CardAction>
 							</CardHeader>
 							<CardContent>
 								<Item className="p-0">
 									<ItemContent>
-										<ItemTitle>
-											Programming Languages
-										</ItemTitle>
+										<ItemTitle>Languages</ItemTitle>
 										<ItemDescription className="flex flex-wrap gap-2">
 											<Badge variant="secondary">
 												<BadgeCheck />
@@ -316,6 +240,10 @@ function App() {
 											<Badge variant="secondary">
 												<BadgeCheck />
 												Python
+											</Badge>
+											<Badge variant="secondary">
+												<BadgeCheck />
+												PowerShell
 											</Badge>
 											<Badge variant="secondary">
 												<BadgeCheck />
@@ -403,7 +331,7 @@ function App() {
 										<ItemDescription className="flex flex-wrap gap-2">
 											<Badge variant="secondary">
 												<BadgeCheck />
-												Microsoft Azure
+												Azure
 											</Badge>
 											<Badge variant="secondary">
 												<BadgeCheck />
@@ -417,7 +345,6 @@ function App() {
 												<BadgeCheck />
 												CI/CD
 											</Badge>
-
 											<Badge variant="secondary">
 												<BadgeCheck />
 												Jira
@@ -430,21 +357,132 @@ function App() {
 												<BadgeCheck />
 												SFTP
 											</Badge>
-											<Badge variant="secondary">
-												<BadgeCheck />
-												SSH
-											</Badge>
 										</ItemDescription>
 									</ItemContent>
 								</Item>
 							</CardContent>
 						</Card>
+					</div>
 
-						<Card className="w-full">
+					{/* Right column */}
+					<div className="flex flex-col gap-4">
+						<Card className="border-2 border-[#FFB86A]">
+							<CardHeader>
+								<CardTitle>Experience</CardTitle>
+								<CardAction>
+									<div className="bg-[#FFB86A]/20 p-1.5">
+										<Waypoints className="h-4 w-4 text-[#FFB86A]" />
+									</div>
+								</CardAction>
+							</CardHeader>
+							<CardContent>
+								<Item className="gap-0 p-0">
+									<ItemHeader>
+										<ItemTitle>Software Engineer</ItemTitle>
+										<ItemDescription>
+											3/2026 - Present
+										</ItemDescription>
+									</ItemHeader>
+									<ItemContent>
+										<ItemDescription>
+											Since AI
+										</ItemDescription>
+									</ItemContent>
+									<ItemFooter className="mt-1">
+										<ItemDescription className="line-clamp-none">
+											Volunteer work developing a
+											registration and voting system for
+											the Since AI hackathon.
+										</ItemDescription>
+									</ItemFooter>
+								</Item>
+							</CardContent>
+							<CardContent>
+								<Item className="gap-0 p-0">
+									<ItemHeader>
+										<ItemTitle>System Specialist</ItemTitle>
+										<ItemDescription>
+											1/2026 - Present
+										</ItemDescription>
+									</ItemHeader>
+									<ItemContent>
+										<ItemDescription>
+											University of Turku
+										</ItemDescription>
+									</ItemContent>
+									<ItemFooter className="mt-1">
+										<ItemDescription className="line-clamp-none">
+											Administered and developed Microsoft
+											365 and Azure environments. Managed
+											identities using Active Directory
+											and Entra ID, and automated tasks
+											with PowerShell scripts.
+										</ItemDescription>
+									</ItemFooter>
+								</Item>
+							</CardContent>
+							<CardContent>
+								<Item className="gap-0 p-0">
+									<ItemHeader>
+										<ItemTitle>
+											Integration Analyst
+										</ItemTitle>
+										<ItemDescription>
+											7/2025 - 1/2026
+										</ItemDescription>
+									</ItemHeader>
+									<ItemContent>
+										<ItemDescription>
+											Lowell Suomi Oy
+										</ItemDescription>
+									</ItemContent>
+									<ItemFooter className="mt-1">
+										<ItemDescription className="line-clamp-none">
+											Managed data transfers between
+											Lowell and client companies.
+											Maintained SFTP servers, configured
+											file transfers with MOVEit and
+											BizTalk, and resolved API
+											integration issues.
+										</ItemDescription>
+									</ItemFooter>
+								</Item>
+							</CardContent>
+							<CardContent>
+								<Item className="gap-0 p-0">
+									<ItemHeader>
+										<ItemTitle>
+											Application Specialist
+										</ItemTitle>
+										<ItemDescription>
+											11/2023 - 4/2024
+										</ItemDescription>
+									</ItemHeader>
+									<ItemContent>
+										<ItemDescription>
+											2M-IT Oy
+										</ItemDescription>
+									</ItemContent>
+									<ItemFooter className="mt-1">
+										<ItemDescription className="line-clamp-none">
+											Internship at 2M-IT's Service Desk.
+											Solved IT issues for employees in
+											Southwest Finland and Kanta-Häme
+											using Active Directory, Azure,
+											Intune, Entra ID and Lifecare.
+										</ItemDescription>
+									</ItemFooter>
+								</Item>
+							</CardContent>
+						</Card>
+
+						<Card className="border-2 border-[#FFA2A2]">
 							<CardHeader>
 								<CardTitle>Projects</CardTitle>
 								<CardAction>
-									<ToolCase />
+									<div className="bg-[#FFA2A2]/20 p-1.5">
+										<ToolCase className="h-4 w-4 text-[#FFA2A2]" />
+									</div>
 								</CardAction>
 							</CardHeader>
 							<CardContent>
@@ -452,46 +490,9 @@ function App() {
 									<ItemHeader>
 										<ItemTitle>
 											<a
-												href="https://www.theseus.fi/handle/10024/881694"
-												target="_blank"
-											>
-												Bachelor's thesis
-											</a>
-										</ItemTitle>
-									</ItemHeader>
-									<ItemContent>
-										<ItemDescription>
-											Real-time patient data collection
-											and analysis using Apache Kafka
-										</ItemDescription>
-										<div className="flex flex-wrap gap-2">
-											<Badge variant="secondary">
-												<BadgeCheck />
-												Apache Kafka
-											</Badge>
-											<Badge variant="secondary">
-												<BadgeCheck />
-												Python
-											</Badge>
-											<Badge variant="secondary">
-												<BadgeCheck />
-												InfluxDB
-											</Badge>
-											<Badge variant="secondary">
-												<BadgeCheck />
-												Grafana
-											</Badge>
-										</div>
-									</ItemContent>
-								</Item>
-							</CardContent>
-							<CardContent>
-								<Item className="gap-0 p-0">
-									<ItemHeader>
-										<ItemTitle>
-											<a
 												href="https://github.com/otsosaarinen/spotify-web-controller"
 												target="_blank"
+												rel="noopener noreferrer"
 											>
 												Spotify Web Controller
 											</a>
@@ -530,6 +531,7 @@ function App() {
 											<a
 												href="https://github.com/otsosaarinen/pathway"
 												target="_blank"
+												rel="noopener noreferrer"
 											>
 												Pathway
 											</a>
@@ -543,11 +545,11 @@ function App() {
 										<div className="flex flex-wrap gap-2">
 											<Badge variant="secondary">
 												<BadgeCheck />
-												C#
+												.NET
 											</Badge>
 											<Badge variant="secondary">
 												<BadgeCheck />
-												.NET
+												C#
 											</Badge>
 										</div>
 									</ItemContent>
@@ -560,6 +562,7 @@ function App() {
 											<a
 												href="https://github.com/otsosaarinen/klemmari"
 												target="_blank"
+												rel="noopener noreferrer"
 											>
 												Klemmari
 											</a>
@@ -573,11 +576,11 @@ function App() {
 										<div className="flex flex-wrap gap-2">
 											<Badge variant="secondary">
 												<BadgeCheck />
-												Microsoft Azure
+												Azure
 											</Badge>
 											<Badge variant="secondary">
 												<BadgeCheck />
-												AI
+												Artificial Intelligence
 											</Badge>
 											<Badge variant="secondary">
 												<BadgeCheck />
@@ -587,23 +590,19 @@ function App() {
 												<BadgeCheck />
 												React
 											</Badge>
-											<Badge variant="secondary">
-												<BadgeCheck />
-												JavaScript
-											</Badge>
 										</div>
 									</ItemContent>
 								</Item>
 							</CardContent>
 						</Card>
-
-						<div className="mt-15 mb-2 text-xs">
-							© 2025 Otso Saarinen. All rights reserved.
-						</div>
 					</div>
 				</div>
-			</ThemeProvider>
-		</>
+
+				<div className="border-border text-muted-foreground mt-8 mb-6 border-t pt-4 text-center text-xs tracking-wide">
+					© 2026 Otso Saarinen
+				</div>
+			</div>
+		</div>
 	);
 }
 
