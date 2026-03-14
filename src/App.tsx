@@ -61,10 +61,12 @@ function App() {
 			<div
 				className={`animate-loading-block fixed inset-0 z-50 flex items-center justify-center ${isLoading ? "flex" : "hidden"}`}
 			>
-				<div className="border-2 border-foreground bg-background flex flex-col gap-3 px-6 pt-4 pb-4 w-52">
-					<span className="text-sm font-semibold tracking-wide">Loading...</span>
-					<div className="h-[2px] w-full bg-muted overflow-hidden">
-						<div className="animate-loading-bar h-full bg-foreground" />
+				<div className="border-foreground bg-background flex w-52 flex-col gap-3 border-2 px-6 pt-4 pb-4">
+					<span className="text-sm font-semibold tracking-wide">
+						Loading...
+					</span>
+					<div className="bg-muted h-[2px] w-full overflow-hidden">
+						<div className="animate-loading-bar bg-foreground h-full" />
 					</div>
 				</div>
 			</div>
@@ -72,16 +74,23 @@ function App() {
 			<div
 				className={`animate-show-content mt-12 w-[90%] max-w-4xl opacity-0 ${isVisible ? "block" : "hidden"}`}
 			>
-				<div className="mb-8 flex flex-col items-center gap-2">
-					<p className="text-muted-foreground mb-1 text-xs tracking-[0.3em] uppercase">
-						Portfolio
-					</p>
-					<h1 className="text-foreground text-center text-4xl font-extrabold sm:text-6xl">
-						Hi, I'm Otso Saarinen
-					</h1>
-					<p className="text-muted-foreground text-sm tracking-wide">
-						System Specialist · Turku, Finland
-					</p>
+				<div className="mb-8 flex flex-col items-center gap-6 border-b border-border pb-8 sm:flex-row sm:items-center">
+					<img
+						src="/cv_kuva_neliö.jpg"
+						alt="Otso Saarinen"
+						className="h-32 w-32 object-cover"
+					/>
+					<div className="flex flex-col gap-1 text-center sm:text-left">
+						<p className="text-muted-foreground text-xs tracking-[0.3em] uppercase">
+							Portfolio
+						</p>
+						<h1 className="text-foreground text-4xl font-extrabold sm:text-5xl">
+							Otso Saarinen
+						</h1>
+						<p className="text-muted-foreground text-sm tracking-wide">
+							System Specialist · Turku, Finland
+						</p>
+					</div>
 				</div>
 
 				<div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
@@ -92,11 +101,8 @@ function App() {
 								<CardTitle>Profile</CardTitle>
 								<CardDescription>
 									I'm an ICT engineer from Turku, Finland,
-									currently working as an Integration Analyst
-									at Lowell. I enjoy building web projects and
-									exploring new technologies, and I'm
-									currently learning more about .NET
-									framework.
+									currently working as a System Specialist at
+									the University of Turku.
 								</CardDescription>
 								<CardAction>
 									<div className="bg-[#8EC5FF]/20 p-1.5">
@@ -221,9 +227,7 @@ function App() {
 							<CardContent>
 								<Item className="p-0">
 									<ItemContent>
-										<ItemTitle>
-											Programming Languages
-										</ItemTitle>
+										<ItemTitle>Languages</ItemTitle>
 										<ItemDescription className="flex flex-wrap gap-2">
 											<Badge variant="secondary">
 												<BadgeCheck />
@@ -236,6 +240,10 @@ function App() {
 											<Badge variant="secondary">
 												<BadgeCheck />
 												Python
+											</Badge>
+											<Badge variant="secondary">
+												<BadgeCheck />
+												PowerShell
 											</Badge>
 											<Badge variant="secondary">
 												<BadgeCheck />
@@ -323,7 +331,7 @@ function App() {
 										<ItemDescription className="flex flex-wrap gap-2">
 											<Badge variant="secondary">
 												<BadgeCheck />
-												Microsoft Azure
+												Azure
 											</Badge>
 											<Badge variant="secondary">
 												<BadgeCheck />
@@ -348,10 +356,6 @@ function App() {
 											<Badge variant="secondary">
 												<BadgeCheck />
 												SFTP
-											</Badge>
-											<Badge variant="secondary">
-												<BadgeCheck />
-												SSH
 											</Badge>
 										</ItemDescription>
 									</ItemContent>
@@ -486,45 +490,6 @@ function App() {
 									<ItemHeader>
 										<ItemTitle>
 											<a
-												href="https://www.theseus.fi/handle/10024/881694"
-												target="_blank"
-												rel="noopener noreferrer"
-											>
-												Bachelor's thesis
-											</a>
-										</ItemTitle>
-									</ItemHeader>
-									<ItemContent>
-										<ItemDescription>
-											Real-time patient data collection
-											and analysis using Apache Kafka
-										</ItemDescription>
-										<div className="flex flex-wrap gap-2">
-											<Badge variant="secondary">
-												<BadgeCheck />
-												Apache Kafka
-											</Badge>
-											<Badge variant="secondary">
-												<BadgeCheck />
-												Python
-											</Badge>
-											<Badge variant="secondary">
-												<BadgeCheck />
-												InfluxDB
-											</Badge>
-											<Badge variant="secondary">
-												<BadgeCheck />
-												Grafana
-											</Badge>
-										</div>
-									</ItemContent>
-								</Item>
-							</CardContent>
-							<CardContent>
-								<Item className="gap-0 p-0">
-									<ItemHeader>
-										<ItemTitle>
-											<a
 												href="https://github.com/otsosaarinen/spotify-web-controller"
 												target="_blank"
 												rel="noopener noreferrer"
@@ -580,11 +545,11 @@ function App() {
 										<div className="flex flex-wrap gap-2">
 											<Badge variant="secondary">
 												<BadgeCheck />
-												C#
+												.NET
 											</Badge>
 											<Badge variant="secondary">
 												<BadgeCheck />
-												.NET
+												C#
 											</Badge>
 										</div>
 									</ItemContent>
@@ -611,11 +576,11 @@ function App() {
 										<div className="flex flex-wrap gap-2">
 											<Badge variant="secondary">
 												<BadgeCheck />
-												Microsoft Azure
+												Azure
 											</Badge>
 											<Badge variant="secondary">
 												<BadgeCheck />
-												AI
+												Artifical Intelligence
 											</Badge>
 											<Badge variant="secondary">
 												<BadgeCheck />
@@ -624,10 +589,6 @@ function App() {
 											<Badge variant="secondary">
 												<BadgeCheck />
 												React
-											</Badge>
-											<Badge variant="secondary">
-												<BadgeCheck />
-												JavaScript
 											</Badge>
 										</div>
 									</ItemContent>
