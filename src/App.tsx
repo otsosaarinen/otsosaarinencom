@@ -12,8 +12,6 @@ import {
 	GraduationCap,
 } from "lucide-react";
 
-import { ThemeProvider } from "./components/theme-provider";
-import { ModeToggle } from "./components/mode-toggle";
 import { Button } from "@/components/ui/button";
 import { Spinner } from "./components/ui/spinner";
 import { Badge } from "./components/ui/badge";
@@ -61,33 +59,27 @@ function App() {
 	}, []);
 
 	return (
-		<>
-			<ThemeProvider defaultTheme="system" storageKey="vite-ui-theme">
-				<div
-					className="bg-background flex h-screen w-full flex-col items-center justify-start font-sans"
-				>
-					<div className="fixed top-3 right-3 hidden sm:block">
-						<ModeToggle />
-					</div>
+		<div
+			className="bg-background flex h-screen w-full flex-col items-center justify-start font-sans"
+		>
+			<div
+				className={`animate-loading-block fixed inset-0 z-50 items-center justify-center [--radius:1rem] ${isLoading ? "flex" : "hidden"}`}
+			>
+				<Item variant="muted">
+					<ItemMedia>
+						<Spinner />
+					</ItemMedia>
+					<ItemContent>
+						<ItemTitle className="line-clamp-1">
+							Loading website...
+						</ItemTitle>
+					</ItemContent>
+				</Item>
+			</div>
 
-					<div
-						className={`animate-loading-block fixed inset-0 z-50 items-center justify-center [--radius:1rem] ${isLoading ? "flex" : "hidden"}`}
-					>
-						<Item variant="muted">
-							<ItemMedia>
-								<Spinner />
-							</ItemMedia>
-							<ItemContent>
-								<ItemTitle className="line-clamp-1">
-									Loading website...
-								</ItemTitle>
-							</ItemContent>
-						</Item>
-					</div>
-
-					<div
-						className={`animate-show-content mt-25 flex w-[90%] flex-col items-center gap-4 opacity-0 sm:w-lg ${isVisible ? "flex" : "hidden"}`}
-					>
+			<div
+				className={`animate-show-content mt-25 flex w-[90%] flex-col items-center gap-4 opacity-0 sm:w-lg ${isVisible ? "flex" : "hidden"}`}
+			>
 						<h1 className="text-foreground text-center text-4xl font-extrabold sm:text-6xl">
 							Hi, I'm Otso Saarinen
 						</h1>
@@ -601,10 +593,8 @@ function App() {
 						<div className="mt-15 mb-2 text-xs">
 							© 2025 Otso Saarinen. All rights reserved.
 						</div>
-					</div>
-				</div>
-			</ThemeProvider>
-		</>
+			</div>
+		</div>
 	);
 }
 
