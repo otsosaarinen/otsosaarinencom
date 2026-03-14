@@ -580,7 +580,7 @@ function App() {
 											</Badge>
 											<Badge variant="secondary">
 												<BadgeCheck />
-												Artifical Intelligence
+												Artificial Intelligence
 											</Badge>
 											<Badge variant="secondary">
 												<BadgeCheck />
