@@ -35,24 +35,26 @@ import {
 	ItemFooter,
 } from "@/components/ui/item";
 
+const LOADING_HIDE_DELAY = 2000;
+const CONTENT_SHOW_DELAY = 2100;
+
 function App() {
-	const [loadingBlockVisibility, setLoadingBlockVisibility] =
-		useState("flex");
-	const [contentVisibility, setContentVisibility] = useState("hidden");
+	const [isLoading, setIsLoading] = useState(true);
+	const [isVisible, setIsVisible] = useState(false);
 
 	useEffect(() => {
 		const timers: number[] = [];
 
 		timers.push(
 			setTimeout(() => {
-				setLoadingBlockVisibility("hidden");
-			}, 2000),
+				setIsLoading(false);
+			}, LOADING_HIDE_DELAY),
 		);
 
 		timers.push(
 			setTimeout(() => {
-				setContentVisibility("flex");
-			}, 2100),
+				setIsVisible(true);
+			}, CONTENT_SHOW_DELAY),
 		);
 
 		return () => timers.forEach(clearTimeout);
@@ -62,15 +64,14 @@ function App() {
 		<>
 			<ThemeProvider defaultTheme="system" storageKey="vite-ui-theme">
 				<div
-					className="bg-background flex h-screen w-full flex-col items-center justify-start"
-					style={{ fontFamily: "var(--font-montserrat)" }}
+					className="bg-background flex h-screen w-full flex-col items-center justify-start font-sans"
 				>
 					<div className="fixed top-3 right-3 hidden sm:block">
 						<ModeToggle />
 					</div>
 
 					<div
-						className={`animate-loading-block fixed inset-0 z-50 items-center justify-center ${loadingBlockVisibility} [--radius:1rem]`}
+						className={`animate-loading-block fixed inset-0 z-50 items-center justify-center [--radius:1rem] ${isLoading ? "flex" : "hidden"}`}
 					>
 						<Item variant="muted">
 							<ItemMedia>
@@ -85,7 +86,7 @@ function App() {
 					</div>
 
 					<div
-						className={`${contentVisibility} animate-show-content mt-25 flex w-[90%] flex-col items-center gap-4 opacity-0 sm:w-lg`}
+						className={`animate-show-content mt-25 flex w-[90%] flex-col items-center gap-4 opacity-0 sm:w-lg ${isVisible ? "flex" : "hidden"}`}
 					>
 						<h1 className="text-foreground text-center text-4xl font-extrabold sm:text-6xl">
 							Hi, I'm Otso Saarinen
@@ -122,7 +123,7 @@ function App() {
 									>
 										<a
 											href="https://github.com/otsosaarinen"
-											target="_blank"
+											target="_blank" rel="noopener noreferrer"
 										>
 											<Github />
 										</a>
@@ -134,7 +135,7 @@ function App() {
 									>
 										<a
 											href="https://www.linkedin.com/in/otsosaarinen/"
-											target="_blank"
+											target="_blank" rel="noopener noreferrer"
 										>
 											<Linkedin />
 										</a>
@@ -146,7 +147,7 @@ function App() {
 									>
 										<a
 											href="mailto:saarinenotso@gmail.com"
-											target="_blank"
+											target="_blank" rel="noopener noreferrer"
 										>
 											<Mail />
 										</a>
@@ -453,7 +454,7 @@ function App() {
 										<ItemTitle>
 											<a
 												href="https://www.theseus.fi/handle/10024/881694"
-												target="_blank"
+												target="_blank" rel="noopener noreferrer"
 											>
 												Bachelor's thesis
 											</a>
@@ -491,7 +492,7 @@ function App() {
 										<ItemTitle>
 											<a
 												href="https://github.com/otsosaarinen/spotify-web-controller"
-												target="_blank"
+												target="_blank" rel="noopener noreferrer"
 											>
 												Spotify Web Controller
 											</a>
@@ -529,7 +530,7 @@ function App() {
 										<ItemTitle>
 											<a
 												href="https://github.com/otsosaarinen/pathway"
-												target="_blank"
+												target="_blank" rel="noopener noreferrer"
 											>
 												Pathway
 											</a>
@@ -559,7 +560,7 @@ function App() {
 										<ItemTitle>
 											<a
 												href="https://github.com/otsosaarinen/klemmari"
-												target="_blank"
+												target="_blank" rel="noopener noreferrer"
 											>
 												Klemmari
 											</a>

@@ -123,6 +123,8 @@
 }
 
 @theme {
+	--font-sans: var(--font-montserrat);
+
 	--animate-loading-block: loading-block 2s ease-in-out forwards;
 
 	@keyframes loading-block {
