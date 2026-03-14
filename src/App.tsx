@@ -74,7 +74,7 @@ function App() {
 			<div
 				className={`animate-show-content mt-12 w-[90%] max-w-4xl opacity-0 ${isVisible ? "block" : "hidden"}`}
 			>
-				<div className="mb-8 flex flex-col items-center gap-6 border-b border-border pb-8 sm:flex-row sm:items-center">
+				<div className="border-border mb-8 flex flex-col items-center gap-6 border-b pb-8 sm:flex-row sm:items-center">
 					<img
 						src="/cv_kuva_neliö.jpg"
 						alt="Otso Saarinen"
@@ -390,7 +390,7 @@ function App() {
 									</ItemContent>
 									<ItemFooter className="mt-1">
 										<ItemDescription className="line-clamp-none">
-											Volunteer work developing an
+											Volunteer work developing a
 											registration and voting system for
 											the Since AI hackathon.
 										</ItemDescription>
