@@ -599,7 +599,7 @@ function App() {
 				</div>
 
 				<div className="border-border text-muted-foreground mt-8 mb-6 border-t pt-4 text-center text-xs tracking-wide">
-					© 2025 Otso Saarinen
+					© 2026 Otso Saarinen
 				</div>
 			</div>
 		</div>
