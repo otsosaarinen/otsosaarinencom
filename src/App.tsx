@@ -10,6 +10,7 @@ import {
 	Waypoints,
 	ToolCase,
 	GraduationCap,
+	Lock,
 } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
@@ -362,7 +363,7 @@ function App() {
 								<Item className="gap-0 p-0">
 									<ItemHeader>
 										<ItemTitle>Software Engineer</ItemTitle>
-										<ItemDescription className="shrink-0 whitespace-nowrap self-start">
+										<ItemDescription className="shrink-0 self-start whitespace-nowrap">
 											3/2026 - Present
 										</ItemDescription>
 									</ItemHeader>
@@ -384,7 +385,7 @@ function App() {
 								<Item className="gap-0 p-0">
 									<ItemHeader>
 										<ItemTitle>System Specialist</ItemTitle>
-										<ItemDescription className="shrink-0 whitespace-nowrap self-start">
+										<ItemDescription className="shrink-0 self-start whitespace-nowrap">
 											1/2026 - Present
 										</ItemDescription>
 									</ItemHeader>
@@ -410,7 +411,7 @@ function App() {
 										<ItemTitle>
 											Integration Analyst
 										</ItemTitle>
-										<ItemDescription className="shrink-0 whitespace-nowrap self-start">
+										<ItemDescription className="shrink-0 self-start whitespace-nowrap">
 											7/2025 - 1/2026
 										</ItemDescription>
 									</ItemHeader>
@@ -437,7 +438,7 @@ function App() {
 										<ItemTitle>
 											Application Specialist
 										</ItemTitle>
-										<ItemDescription className="shrink-0 whitespace-nowrap self-start">
+										<ItemDescription className="shrink-0 self-start whitespace-nowrap">
 											11/2023 - 4/2024
 										</ItemDescription>
 									</ItemHeader>
@@ -472,99 +473,21 @@ function App() {
 							<CardContent>
 								<Item className="gap-0 p-0">
 									<ItemHeader>
-										<ItemTitle>
-											<a
-												href="https://github.com/otsosaarinen/spotify-web-controller"
-												target="_blank"
-												rel="noopener noreferrer"
-											>
-												Spotify Web Controller
-											</a>
-										</ItemTitle>
+										<ItemTitle>AIDA</ItemTitle>
 									</ItemHeader>
 									<ItemContent>
 										<ItemDescription>
-											Web application for controlling
-											Spotify music playback
+											AI-powered job lead sourcing from
+											company career pages
 										</ItemDescription>
 										<div className="flex flex-wrap gap-2">
-											<Badge variant="secondary">
-												<BadgeCheck />
-												TypeScript
-											</Badge>
 											<Badge variant="secondary">
 												<BadgeCheck />
 												React
 											</Badge>
 											<Badge variant="secondary">
 												<BadgeCheck />
-												Tailwind CSS
-											</Badge>
-											<Badge variant="secondary">
-												<BadgeCheck />
-												REST API
-											</Badge>
-										</div>
-									</ItemContent>
-								</Item>
-							</CardContent>
-							<CardContent>
-								<Item className="gap-0 p-0">
-									<ItemHeader>
-										<ItemTitle>
-											<a
-												href="https://github.com/otsosaarinen/pathway"
-												target="_blank"
-												rel="noopener noreferrer"
-											>
-												Pathway
-											</a>
-										</ItemTitle>
-									</ItemHeader>
-									<ItemContent>
-										<ItemDescription>
-											.NET WPF application for managing
-											file transfers
-										</ItemDescription>
-										<div className="flex flex-wrap gap-2">
-											<Badge variant="secondary">
-												<BadgeCheck />
-												.NET
-											</Badge>
-											<Badge variant="secondary">
-												<BadgeCheck />
-												C#
-											</Badge>
-										</div>
-									</ItemContent>
-								</Item>
-							</CardContent>
-							<CardContent>
-								<Item className="gap-0 p-0">
-									<ItemHeader>
-										<ItemTitle>
-											<a
-												href="https://github.com/otsosaarinen/klemmari"
-												target="_blank"
-												rel="noopener noreferrer"
-											>
-												Klemmari
-											</a>
-										</ItemTitle>
-									</ItemHeader>
-									<ItemContent>
-										<ItemDescription>
-											AI chatbot built using RAG
-											architecture
-										</ItemDescription>
-										<div className="flex flex-wrap gap-2">
-											<Badge variant="secondary">
-												<BadgeCheck />
-												Azure
-											</Badge>
-											<Badge variant="secondary">
-												<BadgeCheck />
-												Artificial Intelligence
+												TypeScript
 											</Badge>
 											<Badge variant="secondary">
 												<BadgeCheck />
@@ -572,9 +495,113 @@ function App() {
 											</Badge>
 											<Badge variant="secondary">
 												<BadgeCheck />
-												React
+												FastAPI
+											</Badge>
+											<Badge variant="secondary">
+												<BadgeCheck />
+												LangChain
+											</Badge>
+											<Badge variant="secondary">
+												<BadgeCheck />
+												Llama 3
+											</Badge>
+											<Badge variant="secondary">
+												<BadgeCheck />
+												n8n
 											</Badge>
 										</div>
+										<div className="text-muted-foreground mt-2 flex items-center gap-1.5 text-xs">
+											<Lock className="h-3 w-3" />
+											Private repository
+										</div>
+									</ItemContent>
+								</Item>
+							</CardContent>
+							<CardContent>
+								<Item className="gap-0 p-0">
+									<ItemHeader>
+										<ItemTitle>
+											Bachelor's Thesis
+										</ItemTitle>
+									</ItemHeader>
+									<ItemContent>
+										<ItemDescription>
+											Real-time patient data collection
+											and analysis using Apache Kafka
+										</ItemDescription>
+										<div className="flex flex-wrap gap-2">
+											<Badge variant="secondary">
+												<BadgeCheck />
+												Apache Kafka
+											</Badge>
+											<Badge variant="secondary">
+												<BadgeCheck />
+												Python
+											</Badge>
+											<Badge variant="secondary">
+												<BadgeCheck />
+												InfluxDB
+											</Badge>
+											<Badge variant="secondary">
+												<BadgeCheck />
+												Grafana
+											</Badge>
+										</div>
+										<a
+											href="https://github.com/otsosaarinen/thesis"
+											target="_blank"
+											rel="noopener noreferrer"
+											className="text-muted-foreground hover:text-foreground mt-2 flex items-center gap-1.5 text-xs"
+										>
+											<Github className="h-3 w-3" />
+											View on GitHub
+										</a>
+									</ItemContent>
+								</Item>
+							</CardContent>
+							<CardContent>
+								<Item className="gap-0 p-0">
+									<ItemHeader>
+										<ItemTitle>
+											Klemmari
+										</ItemTitle>
+									</ItemHeader>
+									<ItemContent>
+										<ItemDescription>
+											AI-powered chatbot using RAG
+											architecture
+										</ItemDescription>
+										<div className="flex flex-wrap gap-2">
+											<Badge variant="secondary">
+												<BadgeCheck />
+												React
+											</Badge>
+											<Badge variant="secondary">
+												<BadgeCheck />
+												Python
+											</Badge>
+											<Badge variant="secondary">
+												<BadgeCheck />
+												Azure
+											</Badge>
+											<Badge variant="secondary">
+												<BadgeCheck />
+												GPT-4o
+											</Badge>
+											<Badge variant="secondary">
+												<BadgeCheck />
+												RAG
+											</Badge>
+										</div>
+										<a
+											href="https://github.com/otsosaarinen/klemmari"
+											target="_blank"
+											rel="noopener noreferrer"
+											className="text-muted-foreground hover:text-foreground mt-2 flex items-center gap-1.5 text-xs"
+										>
+											<Github className="h-3 w-3" />
+											View on GitHub
+										</a>
 									</ItemContent>
 								</Item>
 							</CardContent>
