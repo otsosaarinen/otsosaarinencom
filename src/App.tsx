@@ -93,9 +93,9 @@ function App() {
 					</div>
 				</div>
 
-				<div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-					<div className="contents sm:flex sm:flex-col sm:gap-4">
-						<Card className="order-1 border-2 border-[#8EC5FF] sm:order-none">
+				<div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+					<div className="contents md:flex md:flex-col md:gap-4">
+						<Card className="order-1 border-2 border-[#8EC5FF] md:order-none">
 							<CardHeader>
 								<CardTitle>Profile</CardTitle>
 								<CardDescription>
@@ -154,7 +154,7 @@ function App() {
 							</CardContent>
 						</Card>
 
-						<Card className="order-3 border-2 border-[#B5EAD7] sm:order-none">
+						<Card className="order-3 border-2 border-[#B5EAD7] md:order-none">
 							<CardHeader>
 								<CardTitle>Education</CardTitle>
 								<CardAction>
@@ -200,7 +200,7 @@ function App() {
 							</CardContent>
 						</Card>
 
-						<Card className="order-4 border-2 border-[#C3B1E1] sm:order-none">
+						<Card className="order-4 border-2 border-[#C3B1E1] md:order-none">
 							<CardHeader>
 								<CardTitle>Skills</CardTitle>
 								<CardAction>
@@ -348,8 +348,8 @@ function App() {
 							</CardContent>
 						</Card>
 					</div>
-					<div className="contents sm:flex sm:flex-col sm:gap-4">
-						<Card className="order-2 border-2 border-[#FFB86A] sm:order-none">
+					<div className="contents md:flex md:flex-col md:gap-4">
+						<Card className="order-2 border-2 border-[#FFB86A] md:order-none">
 							<CardHeader>
 								<CardTitle>Experience</CardTitle>
 								<CardAction>
@@ -460,7 +460,7 @@ function App() {
 							</CardContent>
 						</Card>
 
-						<Card className="order-5 border-2 border-[#FFA2A2] sm:order-none">
+						<Card className="order-5 border-2 border-[#FFA2A2] md:order-none">
 							<CardHeader>
 								<CardTitle>Projects</CardTitle>
 								<CardAction>
