@@ -467,9 +467,10 @@ function App() {
 										<ItemDescription className="line-clamp-none">
 											Internship at 2M-IT's Service Desk.
 											Solved IT issues for employees in
-											Southwest Finland and Kanta-Häme
-											using Active Directory, Azure,
-											Intune, Entra ID and Lifecare.
+											VARHA and Oma Häme wellbeing
+											services counties using Active
+											Directory, Azure, Intune, Entra ID
+											and Lifecare.
 										</ItemDescription>
 									</ItemFooter>
 								</Item>
