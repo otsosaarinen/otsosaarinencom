@@ -94,7 +94,8 @@ function App() {
 				</div>
 
 				<div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-					<Card className="order-1 sm:col-start-1 sm:row-start-1 border-2 border-[#8EC5FF]">
+					<div className="contents sm:flex sm:flex-col sm:gap-4">
+						<Card className="order-1 border-2 border-[#8EC5FF] sm:order-none">
 							<CardHeader>
 								<CardTitle>Profile</CardTitle>
 								<CardDescription>
@@ -153,7 +154,7 @@ function App() {
 							</CardContent>
 						</Card>
 
-					<Card className="order-3 sm:col-start-1 sm:row-start-2 border-2 border-[#B5EAD7]">
+						<Card className="order-3 border-2 border-[#B5EAD7] sm:order-none">
 							<CardHeader>
 								<CardTitle>Education</CardTitle>
 								<CardAction>
@@ -168,7 +169,7 @@ function App() {
 										<ItemTitle>
 											Turku University of Applied Sciences
 										</ItemTitle>
-										<ItemDescription className="shrink-0 whitespace-nowrap self-start">
+										<ItemDescription className="shrink-0 self-start whitespace-nowrap">
 											8/2021 - 4/2025
 										</ItemDescription>
 									</ItemHeader>
@@ -185,20 +186,21 @@ function App() {
 										<ItemTitle>
 											NIT Hachinohe (八戸高専)
 										</ItemTitle>
-										<ItemDescription>
+										<ItemDescription className="shrink-0 self-start whitespace-nowrap">
 											4/2024 - 7/2024
 										</ItemDescription>
 									</ItemHeader>
 									<ItemContent>
 										<ItemDescription>
-											Medical Engineering Research Exchange
+											Medical Engineering Research
+											Exchange
 										</ItemDescription>
 									</ItemContent>
 								</Item>
 							</CardContent>
 						</Card>
 
-					<Card className="order-4 sm:col-start-1 sm:row-start-3 border-2 border-[#C3B1E1]">
+						<Card className="order-4 border-2 border-[#C3B1E1] sm:order-none">
 							<CardHeader>
 								<CardTitle>Skills</CardTitle>
 								<CardAction>
@@ -345,7 +347,9 @@ function App() {
 								</Item>
 							</CardContent>
 						</Card>
-				<Card className="order-2 sm:col-start-2 sm:row-start-1 border-2 border-[#FFB86A]">
+					</div>
+					<div className="contents sm:flex sm:flex-col sm:gap-4">
+						<Card className="order-2 border-2 border-[#FFB86A] sm:order-none">
 							<CardHeader>
 								<CardTitle>Experience</CardTitle>
 								<CardAction>
@@ -358,7 +362,7 @@ function App() {
 								<Item className="gap-0 p-0">
 									<ItemHeader>
 										<ItemTitle>Software Engineer</ItemTitle>
-										<ItemDescription>
+										<ItemDescription className="shrink-0 whitespace-nowrap self-start">
 											3/2026 - Present
 										</ItemDescription>
 									</ItemHeader>
@@ -380,7 +384,7 @@ function App() {
 								<Item className="gap-0 p-0">
 									<ItemHeader>
 										<ItemTitle>System Specialist</ItemTitle>
-										<ItemDescription>
+										<ItemDescription className="shrink-0 whitespace-nowrap self-start">
 											1/2026 - Present
 										</ItemDescription>
 									</ItemHeader>
@@ -406,7 +410,7 @@ function App() {
 										<ItemTitle>
 											Integration Analyst
 										</ItemTitle>
-										<ItemDescription>
+										<ItemDescription className="shrink-0 whitespace-nowrap self-start">
 											7/2025 - 1/2026
 										</ItemDescription>
 									</ItemHeader>
@@ -433,7 +437,7 @@ function App() {
 										<ItemTitle>
 											Application Specialist
 										</ItemTitle>
-										<ItemDescription>
+										<ItemDescription className="shrink-0 whitespace-nowrap self-start">
 											11/2023 - 4/2024
 										</ItemDescription>
 									</ItemHeader>
@@ -456,7 +460,7 @@ function App() {
 							</CardContent>
 						</Card>
 
-					<Card className="order-5 sm:col-start-2 sm:row-start-2 border-2 border-[#FFA2A2]">
+						<Card className="order-5 border-2 border-[#FFA2A2] sm:order-none">
 							<CardHeader>
 								<CardTitle>Projects</CardTitle>
 								<CardAction>
@@ -575,6 +579,7 @@ function App() {
 								</Item>
 							</CardContent>
 						</Card>
+					</div>
 				</div>
 
 				<div className="border-border text-muted-foreground mt-8 mb-6 border-t pt-4 text-center text-xs tracking-wide">
