@@ -94,9 +94,7 @@ function App() {
 				</div>
 
 				<div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-					{/* Left column */}
-					<div className="flex flex-col gap-4">
-						<Card className="border-2 border-[#8EC5FF]">
+					<Card className="order-1 sm:col-start-1 sm:row-start-1 border-2 border-[#8EC5FF]">
 							<CardHeader>
 								<CardTitle>Profile</CardTitle>
 								<CardDescription>
@@ -155,7 +153,7 @@ function App() {
 							</CardContent>
 						</Card>
 
-						<Card className="border-2 border-[#B5EAD7]">
+					<Card className="order-3 sm:col-start-1 sm:row-start-2 border-2 border-[#B5EAD7]">
 							<CardHeader>
 								<CardTitle>Education</CardTitle>
 								<CardAction>
@@ -200,7 +198,7 @@ function App() {
 							</CardContent>
 						</Card>
 
-						<Card className="border-2 border-[#C3B1E1]">
+					<Card className="order-4 sm:col-start-1 sm:row-start-3 border-2 border-[#C3B1E1]">
 							<CardHeader>
 								<CardTitle>Skills</CardTitle>
 								<CardAction>
@@ -347,11 +345,7 @@ function App() {
 								</Item>
 							</CardContent>
 						</Card>
-					</div>
-
-					{/* Right column */}
-					<div className="flex flex-col gap-4">
-						<Card className="border-2 border-[#FFB86A]">
+				<Card className="order-2 sm:col-start-2 sm:row-start-1 border-2 border-[#FFB86A]">
 							<CardHeader>
 								<CardTitle>Experience</CardTitle>
 								<CardAction>
@@ -462,7 +456,7 @@ function App() {
 							</CardContent>
 						</Card>
 
-						<Card className="border-2 border-[#FFA2A2]">
+					<Card className="order-5 sm:col-start-2 sm:row-start-2 border-2 border-[#FFA2A2]">
 							<CardHeader>
 								<CardTitle>Projects</CardTitle>
 								<CardAction>
@@ -581,7 +575,6 @@ function App() {
 								</Item>
 							</CardContent>
 						</Card>
-					</div>
 				</div>
 
 				<div className="border-border text-muted-foreground mt-8 mb-6 border-t pt-4 text-center text-xs tracking-wide">
