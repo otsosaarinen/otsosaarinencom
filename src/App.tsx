@@ -193,7 +193,7 @@ function App() {
 									</ItemHeader>
 									<ItemContent>
 										<ItemDescription>
-											Student exchange program
+											Medical Engineering Research Exchange
 										</ItemDescription>
 									</ItemContent>
 								</Item>
