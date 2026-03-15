@@ -175,7 +175,7 @@ function App() {
 										</ItemDescription>
 									</ItemHeader>
 									<ItemContent>
-										<ItemDescription>
+										<ItemDescription className="text-xs font-semibold tracking-widest uppercase">
 											Bachelor of Engineering, ICT
 										</ItemDescription>
 									</ItemContent>
@@ -192,9 +192,8 @@ function App() {
 										</ItemDescription>
 									</ItemHeader>
 									<ItemContent>
-										<ItemDescription>
-											Medical Engineering Research
-											Exchange
+										<ItemDescription className="text-xs font-semibold tracking-widest uppercase">
+											Medical Engineering Research Exchange
 										</ItemDescription>
 									</ItemContent>
 								</Item>
@@ -373,7 +372,7 @@ function App() {
 										</ItemDescription>
 									</ItemHeader>
 									<ItemContent>
-										<ItemDescription>
+										<ItemDescription className="text-xs font-semibold tracking-widest uppercase">
 											Since AI
 										</ItemDescription>
 									</ItemContent>
@@ -395,7 +394,7 @@ function App() {
 										</ItemDescription>
 									</ItemHeader>
 									<ItemContent>
-										<ItemDescription>
+										<ItemDescription className="text-xs font-semibold tracking-widest uppercase">
 											University of Turku
 										</ItemDescription>
 									</ItemContent>
@@ -421,7 +420,7 @@ function App() {
 										</ItemDescription>
 									</ItemHeader>
 									<ItemContent>
-										<ItemDescription>
+										<ItemDescription className="text-xs font-semibold tracking-widest uppercase">
 											Lowell Suomi Oy
 										</ItemDescription>
 									</ItemContent>
@@ -448,7 +447,7 @@ function App() {
 										</ItemDescription>
 									</ItemHeader>
 									<ItemContent>
-										<ItemDescription>
+										<ItemDescription className="text-xs font-semibold tracking-widest uppercase">
 											2M-IT Oy
 										</ItemDescription>
 									</ItemContent>
