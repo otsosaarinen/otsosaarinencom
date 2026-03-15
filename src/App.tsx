@@ -213,7 +213,7 @@ function App() {
 							<CardContent>
 								<Item className="p-0">
 									<ItemContent>
-										<ItemTitle>Languages</ItemTitle>
+										<ItemTitle className="text-muted-foreground text-xs font-semibold tracking-widest uppercase">Languages</ItemTitle>
 										<ItemDescription className="flex flex-wrap gap-2">
 											<Badge variant="secondary">
 												<BadgeCheck />
@@ -231,10 +231,6 @@ function App() {
 												<BadgeCheck />
 												PowerShell
 											</Badge>
-											<Badge variant="secondary">
-												<BadgeCheck />
-												C#
-											</Badge>
 										</ItemDescription>
 									</ItemContent>
 								</Item>
@@ -242,7 +238,7 @@ function App() {
 							<CardContent>
 								<Item className="p-0">
 									<ItemContent>
-										<ItemTitle>Frontend</ItemTitle>
+										<ItemTitle className="text-muted-foreground text-xs font-semibold tracking-widest uppercase">Frontend</ItemTitle>
 										<ItemDescription className="flex flex-wrap gap-2">
 											<Badge variant="secondary">
 												<BadgeCheck />
@@ -263,7 +259,7 @@ function App() {
 							<CardContent>
 								<Item className="p-0">
 									<ItemContent>
-										<ItemTitle>Backend</ItemTitle>
+										<ItemTitle className="text-muted-foreground text-xs font-semibold tracking-widest uppercase">Backend</ItemTitle>
 										<ItemDescription className="flex flex-wrap gap-2">
 											<Badge variant="secondary">
 												<BadgeCheck />
@@ -283,7 +279,7 @@ function App() {
 											</Badge>
 											<Badge variant="secondary">
 												<BadgeCheck />
-												.NET
+												FastAPI
 											</Badge>
 										</ItemDescription>
 									</ItemContent>
@@ -292,7 +288,7 @@ function App() {
 							<CardContent>
 								<Item className="p-0">
 									<ItemContent>
-										<ItemTitle>Databases</ItemTitle>
+										<ItemTitle className="text-muted-foreground text-xs font-semibold tracking-widest uppercase">Databases</ItemTitle>
 										<ItemDescription className="flex flex-wrap gap-2">
 											<Badge variant="secondary">
 												<BadgeCheck />
@@ -313,7 +309,7 @@ function App() {
 							<CardContent>
 								<Item className="p-0">
 									<ItemContent>
-										<ItemTitle>DevOps and Tools</ItemTitle>
+										<ItemTitle className="text-muted-foreground text-xs font-semibold tracking-widest uppercase">DevOps</ItemTitle>
 										<ItemDescription className="flex flex-wrap gap-2">
 											<Badge variant="secondary">
 												<BadgeCheck />
@@ -325,11 +321,20 @@ function App() {
 											</Badge>
 											<Badge variant="secondary">
 												<BadgeCheck />
-												Git
+												CI/CD
 											</Badge>
+										</ItemDescription>
+									</ItemContent>
+								</Item>
+							</CardContent>
+							<CardContent>
+								<Item className="p-0">
+									<ItemContent>
+										<ItemTitle className="text-muted-foreground text-xs font-semibold tracking-widest uppercase">Tools</ItemTitle>
+										<ItemDescription className="flex flex-wrap gap-2">
 											<Badge variant="secondary">
 												<BadgeCheck />
-												CI/CD
+												Git
 											</Badge>
 											<Badge variant="secondary">
 												<BadgeCheck />
