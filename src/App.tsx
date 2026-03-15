@@ -10,6 +10,7 @@ import {
 	Waypoints,
 	ToolCase,
 	GraduationCap,
+	Lock,
 } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
@@ -93,10 +94,9 @@ function App() {
 					</div>
 				</div>
 
-				<div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-					{/* Left column */}
-					<div className="flex flex-col gap-4">
-						<Card className="border-2 border-[#8EC5FF]">
+				<div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+					<div className="contents md:flex md:flex-col md:gap-4">
+						<Card className="order-1 border-2 border-[#8EC5FF] md:order-none">
 							<CardHeader>
 								<CardTitle>Profile</CardTitle>
 								<CardDescription>
@@ -116,6 +116,7 @@ function App() {
 										size="icon"
 										variant="secondary"
 										asChild
+										className="transition-all duration-200 hover:-translate-y-0.5 hover:scale-105 hover:text-[#8EC5FF]"
 									>
 										<a
 											href="https://github.com/otsosaarinen"
@@ -129,6 +130,7 @@ function App() {
 										size="icon"
 										variant="secondary"
 										asChild
+										className="transition-all duration-200 hover:-translate-y-0.5 hover:scale-105 hover:text-[#8EC5FF]"
 									>
 										<a
 											href="https://www.linkedin.com/in/otsosaarinen/"
@@ -142,6 +144,7 @@ function App() {
 										size="icon"
 										variant="secondary"
 										asChild
+										className="transition-all duration-200 hover:-translate-y-0.5 hover:scale-105 hover:text-[#8EC5FF]"
 									>
 										<a
 											href="mailto:saarinenotso@gmail.com"
@@ -155,7 +158,7 @@ function App() {
 							</CardContent>
 						</Card>
 
-						<Card className="border-2 border-[#B5EAD7]">
+						<Card className="order-3 border-2 border-[#B5EAD7] md:order-none">
 							<CardHeader>
 								<CardTitle>Education</CardTitle>
 								<CardAction>
@@ -168,54 +171,39 @@ function App() {
 								<Item className="gap-0 p-0">
 									<ItemHeader>
 										<ItemTitle>
-											Bachelor of Engineering, ICT
+											Turku University of Applied Sciences
 										</ItemTitle>
-										<ItemDescription>
+										<ItemDescription className="shrink-0 self-start whitespace-nowrap">
 											8/2021 - 4/2025
 										</ItemDescription>
 									</ItemHeader>
 									<ItemContent>
-										<ItemDescription>
-											Turku University of Applied Sciences
+										<ItemDescription className="text-xs font-semibold tracking-widest uppercase">
+											Bachelor of Engineering, ICT
 										</ItemDescription>
 									</ItemContent>
-									<ItemFooter className="mt-1">
-										<ItemDescription className="line-clamp-none">
-											Bachelor of Engineering at
-											Information and Communications
-											Technology
-										</ItemDescription>
-									</ItemFooter>
 								</Item>
 							</CardContent>
 							<CardContent>
 								<Item className="gap-0 p-0">
 									<ItemHeader>
 										<ItemTitle>
-											Student exchange program
+											NIT Hachinohe (八戸高専)
 										</ItemTitle>
-										<ItemDescription>
+										<ItemDescription className="shrink-0 self-start whitespace-nowrap">
 											4/2024 - 7/2024
 										</ItemDescription>
 									</ItemHeader>
 									<ItemContent>
-										<ItemDescription>
-											NIT Hachinohe (八戸高専)
+										<ItemDescription className="text-xs font-semibold tracking-widest uppercase">
+											Medical Engineering Research Exchange
 										</ItemDescription>
 									</ItemContent>
-									<ItemFooter className="mt-1">
-										<ItemDescription className="line-clamp-none">
-											Completed student exchange in
-											Hachinohe, Japan, where I researched
-											radiofrequency ablation cancer
-											treatment technology
-										</ItemDescription>
-									</ItemFooter>
 								</Item>
 							</CardContent>
 						</Card>
 
-						<Card className="border-2 border-[#C3B1E1]">
+						<Card className="order-4 border-2 border-[#C3B1E1] md:order-none">
 							<CardHeader>
 								<CardTitle>Skills</CardTitle>
 								<CardAction>
@@ -227,7 +215,7 @@ function App() {
 							<CardContent>
 								<Item className="p-0">
 									<ItemContent>
-										<ItemTitle>Languages</ItemTitle>
+										<ItemTitle className="text-muted-foreground text-xs font-semibold tracking-widest uppercase">Languages</ItemTitle>
 										<ItemDescription className="flex flex-wrap gap-2">
 											<Badge variant="secondary">
 												<BadgeCheck />
@@ -245,10 +233,6 @@ function App() {
 												<BadgeCheck />
 												PowerShell
 											</Badge>
-											<Badge variant="secondary">
-												<BadgeCheck />
-												C#
-											</Badge>
 										</ItemDescription>
 									</ItemContent>
 								</Item>
@@ -256,7 +240,7 @@ function App() {
 							<CardContent>
 								<Item className="p-0">
 									<ItemContent>
-										<ItemTitle>Frontend</ItemTitle>
+										<ItemTitle className="text-muted-foreground text-xs font-semibold tracking-widest uppercase">Frontend</ItemTitle>
 										<ItemDescription className="flex flex-wrap gap-2">
 											<Badge variant="secondary">
 												<BadgeCheck />
@@ -277,7 +261,7 @@ function App() {
 							<CardContent>
 								<Item className="p-0">
 									<ItemContent>
-										<ItemTitle>Backend</ItemTitle>
+										<ItemTitle className="text-muted-foreground text-xs font-semibold tracking-widest uppercase">Backend</ItemTitle>
 										<ItemDescription className="flex flex-wrap gap-2">
 											<Badge variant="secondary">
 												<BadgeCheck />
@@ -297,7 +281,7 @@ function App() {
 											</Badge>
 											<Badge variant="secondary">
 												<BadgeCheck />
-												.NET
+												FastAPI
 											</Badge>
 										</ItemDescription>
 									</ItemContent>
@@ -306,7 +290,7 @@ function App() {
 							<CardContent>
 								<Item className="p-0">
 									<ItemContent>
-										<ItemTitle>Databases</ItemTitle>
+										<ItemTitle className="text-muted-foreground text-xs font-semibold tracking-widest uppercase">Databases</ItemTitle>
 										<ItemDescription className="flex flex-wrap gap-2">
 											<Badge variant="secondary">
 												<BadgeCheck />
@@ -327,7 +311,7 @@ function App() {
 							<CardContent>
 								<Item className="p-0">
 									<ItemContent>
-										<ItemTitle>DevOps and Tools</ItemTitle>
+										<ItemTitle className="text-muted-foreground text-xs font-semibold tracking-widest uppercase">DevOps</ItemTitle>
 										<ItemDescription className="flex flex-wrap gap-2">
 											<Badge variant="secondary">
 												<BadgeCheck />
@@ -339,11 +323,20 @@ function App() {
 											</Badge>
 											<Badge variant="secondary">
 												<BadgeCheck />
-												Git
+												CI/CD
 											</Badge>
+										</ItemDescription>
+									</ItemContent>
+								</Item>
+							</CardContent>
+							<CardContent>
+								<Item className="p-0">
+									<ItemContent>
+										<ItemTitle className="text-muted-foreground text-xs font-semibold tracking-widest uppercase">Tools</ItemTitle>
+										<ItemDescription className="flex flex-wrap gap-2">
 											<Badge variant="secondary">
 												<BadgeCheck />
-												CI/CD
+												Git
 											</Badge>
 											<Badge variant="secondary">
 												<BadgeCheck />
@@ -363,10 +356,8 @@ function App() {
 							</CardContent>
 						</Card>
 					</div>
-
-					{/* Right column */}
-					<div className="flex flex-col gap-4">
-						<Card className="border-2 border-[#FFB86A]">
+					<div className="contents md:flex md:flex-col md:gap-4">
+						<Card className="order-2 border-2 border-[#FFB86A] md:order-none">
 							<CardHeader>
 								<CardTitle>Experience</CardTitle>
 								<CardAction>
@@ -379,12 +370,12 @@ function App() {
 								<Item className="gap-0 p-0">
 									<ItemHeader>
 										<ItemTitle>Software Engineer</ItemTitle>
-										<ItemDescription>
+										<ItemDescription className="shrink-0 self-start whitespace-nowrap">
 											3/2026 - Present
 										</ItemDescription>
 									</ItemHeader>
 									<ItemContent>
-										<ItemDescription>
+										<ItemDescription className="text-xs font-semibold tracking-widest uppercase">
 											Since AI
 										</ItemDescription>
 									</ItemContent>
@@ -401,12 +392,12 @@ function App() {
 								<Item className="gap-0 p-0">
 									<ItemHeader>
 										<ItemTitle>System Specialist</ItemTitle>
-										<ItemDescription>
+										<ItemDescription className="shrink-0 self-start whitespace-nowrap">
 											1/2026 - Present
 										</ItemDescription>
 									</ItemHeader>
 									<ItemContent>
-										<ItemDescription>
+										<ItemDescription className="text-xs font-semibold tracking-widest uppercase">
 											University of Turku
 										</ItemDescription>
 									</ItemContent>
@@ -427,12 +418,12 @@ function App() {
 										<ItemTitle>
 											Integration Analyst
 										</ItemTitle>
-										<ItemDescription>
+										<ItemDescription className="shrink-0 self-start whitespace-nowrap">
 											7/2025 - 1/2026
 										</ItemDescription>
 									</ItemHeader>
 									<ItemContent>
-										<ItemDescription>
+										<ItemDescription className="text-xs font-semibold tracking-widest uppercase">
 											Lowell Suomi Oy
 										</ItemDescription>
 									</ItemContent>
@@ -454,12 +445,12 @@ function App() {
 										<ItemTitle>
 											Application Specialist
 										</ItemTitle>
-										<ItemDescription>
+										<ItemDescription className="shrink-0 self-start whitespace-nowrap">
 											11/2023 - 4/2024
 										</ItemDescription>
 									</ItemHeader>
 									<ItemContent>
-										<ItemDescription>
+										<ItemDescription className="text-xs font-semibold tracking-widest uppercase">
 											2M-IT Oy
 										</ItemDescription>
 									</ItemContent>
@@ -467,16 +458,17 @@ function App() {
 										<ItemDescription className="line-clamp-none">
 											Internship at 2M-IT's Service Desk.
 											Solved IT issues for employees in
-											Southwest Finland and Kanta-Häme
-											using Active Directory, Azure,
-											Intune, Entra ID and Lifecare.
+											VARHA and Oma Häme wellbeing
+											services counties using Active
+											Directory, Azure, Intune, Entra ID
+											and Lifecare.
 										</ItemDescription>
 									</ItemFooter>
 								</Item>
 							</CardContent>
 						</Card>
 
-						<Card className="border-2 border-[#FFA2A2]">
+						<Card className="order-5 border-2 border-[#FFA2A2] md:order-none">
 							<CardHeader>
 								<CardTitle>Projects</CardTitle>
 								<CardAction>
@@ -488,99 +480,21 @@ function App() {
 							<CardContent>
 								<Item className="gap-0 p-0">
 									<ItemHeader>
-										<ItemTitle>
-											<a
-												href="https://github.com/otsosaarinen/spotify-web-controller"
-												target="_blank"
-												rel="noopener noreferrer"
-											>
-												Spotify Web Controller
-											</a>
-										</ItemTitle>
+										<ItemTitle>AIDA</ItemTitle>
 									</ItemHeader>
 									<ItemContent>
 										<ItemDescription>
-											Web application for controlling
-											Spotify music playback
+											AI-powered job lead sourcing from
+											company career pages
 										</ItemDescription>
 										<div className="flex flex-wrap gap-2">
-											<Badge variant="secondary">
-												<BadgeCheck />
-												TypeScript
-											</Badge>
 											<Badge variant="secondary">
 												<BadgeCheck />
 												React
 											</Badge>
 											<Badge variant="secondary">
 												<BadgeCheck />
-												Tailwind CSS
-											</Badge>
-											<Badge variant="secondary">
-												<BadgeCheck />
-												REST API
-											</Badge>
-										</div>
-									</ItemContent>
-								</Item>
-							</CardContent>
-							<CardContent>
-								<Item className="gap-0 p-0">
-									<ItemHeader>
-										<ItemTitle>
-											<a
-												href="https://github.com/otsosaarinen/pathway"
-												target="_blank"
-												rel="noopener noreferrer"
-											>
-												Pathway
-											</a>
-										</ItemTitle>
-									</ItemHeader>
-									<ItemContent>
-										<ItemDescription>
-											.NET WPF application for managing
-											file transfers
-										</ItemDescription>
-										<div className="flex flex-wrap gap-2">
-											<Badge variant="secondary">
-												<BadgeCheck />
-												.NET
-											</Badge>
-											<Badge variant="secondary">
-												<BadgeCheck />
-												C#
-											</Badge>
-										</div>
-									</ItemContent>
-								</Item>
-							</CardContent>
-							<CardContent>
-								<Item className="gap-0 p-0">
-									<ItemHeader>
-										<ItemTitle>
-											<a
-												href="https://github.com/otsosaarinen/klemmari"
-												target="_blank"
-												rel="noopener noreferrer"
-											>
-												Klemmari
-											</a>
-										</ItemTitle>
-									</ItemHeader>
-									<ItemContent>
-										<ItemDescription>
-											AI chatbot built using RAG
-											architecture
-										</ItemDescription>
-										<div className="flex flex-wrap gap-2">
-											<Badge variant="secondary">
-												<BadgeCheck />
-												Azure
-											</Badge>
-											<Badge variant="secondary">
-												<BadgeCheck />
-												Artificial Intelligence
+												TypeScript
 											</Badge>
 											<Badge variant="secondary">
 												<BadgeCheck />
@@ -588,9 +502,113 @@ function App() {
 											</Badge>
 											<Badge variant="secondary">
 												<BadgeCheck />
-												React
+												FastAPI
+											</Badge>
+											<Badge variant="secondary">
+												<BadgeCheck />
+												LangChain
+											</Badge>
+											<Badge variant="secondary">
+												<BadgeCheck />
+												Llama 3
+											</Badge>
+											<Badge variant="secondary">
+												<BadgeCheck />
+												n8n
 											</Badge>
 										</div>
+										<div className="text-muted-foreground mt-2 flex items-center gap-1.5 text-xs">
+											<Lock className="h-3 w-3" />
+											Private repository
+										</div>
+									</ItemContent>
+								</Item>
+							</CardContent>
+							<CardContent>
+								<Item className="gap-0 p-0">
+									<ItemHeader>
+										<ItemTitle>
+											Bachelor's Thesis
+										</ItemTitle>
+									</ItemHeader>
+									<ItemContent>
+										<ItemDescription>
+											Real-time patient data collection
+											and analysis using Apache Kafka
+										</ItemDescription>
+										<div className="flex flex-wrap gap-2">
+											<Badge variant="secondary">
+												<BadgeCheck />
+												Apache Kafka
+											</Badge>
+											<Badge variant="secondary">
+												<BadgeCheck />
+												Python
+											</Badge>
+											<Badge variant="secondary">
+												<BadgeCheck />
+												InfluxDB
+											</Badge>
+											<Badge variant="secondary">
+												<BadgeCheck />
+												Grafana
+											</Badge>
+										</div>
+										<a
+											href="https://github.com/otsosaarinen/thesis"
+											target="_blank"
+											rel="noopener noreferrer"
+											className="text-muted-foreground hover:text-foreground mt-2 flex items-center gap-1.5 text-xs"
+										>
+											<Github className="h-3 w-3" />
+											View on GitHub
+										</a>
+									</ItemContent>
+								</Item>
+							</CardContent>
+							<CardContent>
+								<Item className="gap-0 p-0">
+									<ItemHeader>
+										<ItemTitle>
+											Klemmari
+										</ItemTitle>
+									</ItemHeader>
+									<ItemContent>
+										<ItemDescription>
+											AI-powered chatbot using RAG
+											architecture
+										</ItemDescription>
+										<div className="flex flex-wrap gap-2">
+											<Badge variant="secondary">
+												<BadgeCheck />
+												React
+											</Badge>
+											<Badge variant="secondary">
+												<BadgeCheck />
+												Python
+											</Badge>
+											<Badge variant="secondary">
+												<BadgeCheck />
+												Azure
+											</Badge>
+											<Badge variant="secondary">
+												<BadgeCheck />
+												GPT-4o
+											</Badge>
+											<Badge variant="secondary">
+												<BadgeCheck />
+												RAG
+											</Badge>
+										</div>
+										<a
+											href="https://github.com/otsosaarinen/klemmari"
+											target="_blank"
+											rel="noopener noreferrer"
+											className="text-muted-foreground hover:text-foreground mt-2 flex items-center gap-1.5 text-xs"
+										>
+											<Github className="h-3 w-3" />
+											View on GitHub
+										</a>
 									</ItemContent>
 								</Item>
 							</CardContent>

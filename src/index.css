@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&family=Noto+Sans+JP:wght@100..900&display=swap");
 @import "tailwindcss";
 @import "tw-animate-css";
 
@@ -127,7 +127,7 @@
 }
 
 @theme {
-	--font-sans: var(--font-geist-mono);
+	--font-sans: var(--font-geist-mono), "Noto Sans JP", sans-serif;
 
 	--animate-loading-block: loading-block 1.4s ease-in-out forwards;
 	--animate-loading-bar: loading-bar 1.4s ease-in-out forwards;
