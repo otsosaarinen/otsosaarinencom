@@ -116,6 +116,7 @@ function App() {
 										size="icon"
 										variant="secondary"
 										asChild
+										className="transition-all duration-200 hover:-translate-y-0.5 hover:scale-105 hover:text-[#8EC5FF]"
 									>
 										<a
 											href="https://github.com/otsosaarinen"
@@ -129,6 +130,7 @@ function App() {
 										size="icon"
 										variant="secondary"
 										asChild
+										className="transition-all duration-200 hover:-translate-y-0.5 hover:scale-105 hover:text-[#8EC5FF]"
 									>
 										<a
 											href="https://www.linkedin.com/in/otsosaarinen/"
@@ -142,6 +144,7 @@ function App() {
 										size="icon"
 										variant="secondary"
 										asChild
+										className="transition-all duration-200 hover:-translate-y-0.5 hover:scale-105 hover:text-[#8EC5FF]"
 									>
 										<a
 											href="mailto:saarinenotso@gmail.com"
