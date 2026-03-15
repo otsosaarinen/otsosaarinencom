@@ -168,31 +168,24 @@ function App() {
 								<Item className="gap-0 p-0">
 									<ItemHeader>
 										<ItemTitle>
-											Bachelor of Engineering, ICT
+											Turku University of Applied Sciences
 										</ItemTitle>
-										<ItemDescription>
+										<ItemDescription className="shrink-0 whitespace-nowrap self-start">
 											8/2021 - 4/2025
 										</ItemDescription>
 									</ItemHeader>
 									<ItemContent>
 										<ItemDescription>
-											Turku University of Applied Sciences
+											Bachelor of Engineering, ICT
 										</ItemDescription>
 									</ItemContent>
-									<ItemFooter className="mt-1">
-										<ItemDescription className="line-clamp-none">
-											Bachelor of Engineering at
-											Information and Communications
-											Technology
-										</ItemDescription>
-									</ItemFooter>
 								</Item>
 							</CardContent>
 							<CardContent>
 								<Item className="gap-0 p-0">
 									<ItemHeader>
 										<ItemTitle>
-											Student exchange program
+											NIT Hachinohe (八戸高専)
 										</ItemTitle>
 										<ItemDescription>
 											4/2024 - 7/2024
@@ -200,17 +193,9 @@ function App() {
 									</ItemHeader>
 									<ItemContent>
 										<ItemDescription>
-											NIT Hachinohe (八戸高専)
+											Student exchange program
 										</ItemDescription>
 									</ItemContent>
-									<ItemFooter className="mt-1">
-										<ItemDescription className="line-clamp-none">
-											Completed student exchange in
-											Hachinohe, Japan, where I researched
-											radiofrequency ablation cancer
-											treatment technology
-										</ItemDescription>
-									</ItemFooter>
 								</Item>
 							</CardContent>
 						</Card>
