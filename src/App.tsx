@@ -196,7 +196,8 @@ function App() {
 									</ItemHeader>
 									<ItemContent>
 										<ItemDescription className="text-xs font-semibold tracking-widest uppercase">
-											Medical Engineering Research Exchange
+											Medical Engineering Research
+											Exchange
 										</ItemDescription>
 									</ItemContent>
 								</Item>
@@ -215,7 +216,9 @@ function App() {
 							<CardContent>
 								<Item className="p-0">
 									<ItemContent>
-										<ItemTitle className="text-muted-foreground text-xs font-semibold tracking-widest uppercase">Languages</ItemTitle>
+										<ItemTitle className="text-muted-foreground text-xs font-semibold tracking-widest uppercase">
+											Languages
+										</ItemTitle>
 										<ItemDescription className="flex flex-wrap gap-2">
 											<Badge variant="secondary">
 												<BadgeCheck />
@@ -240,7 +243,9 @@ function App() {
 							<CardContent>
 								<Item className="p-0">
 									<ItemContent>
-										<ItemTitle className="text-muted-foreground text-xs font-semibold tracking-widest uppercase">Frontend</ItemTitle>
+										<ItemTitle className="text-muted-foreground text-xs font-semibold tracking-widest uppercase">
+											Frontend
+										</ItemTitle>
 										<ItemDescription className="flex flex-wrap gap-2">
 											<Badge variant="secondary">
 												<BadgeCheck />
@@ -261,7 +266,9 @@ function App() {
 							<CardContent>
 								<Item className="p-0">
 									<ItemContent>
-										<ItemTitle className="text-muted-foreground text-xs font-semibold tracking-widest uppercase">Backend</ItemTitle>
+										<ItemTitle className="text-muted-foreground text-xs font-semibold tracking-widest uppercase">
+											Backend
+										</ItemTitle>
 										<ItemDescription className="flex flex-wrap gap-2">
 											<Badge variant="secondary">
 												<BadgeCheck />
@@ -290,7 +297,9 @@ function App() {
 							<CardContent>
 								<Item className="p-0">
 									<ItemContent>
-										<ItemTitle className="text-muted-foreground text-xs font-semibold tracking-widest uppercase">Databases</ItemTitle>
+										<ItemTitle className="text-muted-foreground text-xs font-semibold tracking-widest uppercase">
+											Databases
+										</ItemTitle>
 										<ItemDescription className="flex flex-wrap gap-2">
 											<Badge variant="secondary">
 												<BadgeCheck />
@@ -311,7 +320,9 @@ function App() {
 							<CardContent>
 								<Item className="p-0">
 									<ItemContent>
-										<ItemTitle className="text-muted-foreground text-xs font-semibold tracking-widest uppercase">DevOps</ItemTitle>
+										<ItemTitle className="text-muted-foreground text-xs font-semibold tracking-widest uppercase">
+											DevOps
+										</ItemTitle>
 										<ItemDescription className="flex flex-wrap gap-2">
 											<Badge variant="secondary">
 												<BadgeCheck />
@@ -332,7 +343,9 @@ function App() {
 							<CardContent>
 								<Item className="p-0">
 									<ItemContent>
-										<ItemTitle className="text-muted-foreground text-xs font-semibold tracking-widest uppercase">Tools</ItemTitle>
+										<ItemTitle className="text-muted-foreground text-xs font-semibold tracking-widest uppercase">
+											Tools
+										</ItemTitle>
 										<ItemDescription className="flex flex-wrap gap-2">
 											<Badge variant="secondary">
 												<BadgeCheck />
@@ -381,9 +394,9 @@ function App() {
 									</ItemContent>
 									<ItemFooter className="mt-1">
 										<ItemDescription className="line-clamp-none">
-											Volunteer work developing a
-											registration and voting system for
-											the Since AI hackathon.
+											Developed a registration and voting
+											system for the Since AI hackathon as
+											a volunteer.
 										</ItemDescription>
 									</ItemFooter>
 								</Item>
@@ -502,10 +515,6 @@ function App() {
 											</Badge>
 											<Badge variant="secondary">
 												<BadgeCheck />
-												FastAPI
-											</Badge>
-											<Badge variant="secondary">
-												<BadgeCheck />
 												LangChain
 											</Badge>
 											<Badge variant="secondary">
@@ -527,9 +536,7 @@ function App() {
 							<CardContent>
 								<Item className="gap-0 p-0">
 									<ItemHeader>
-										<ItemTitle>
-											Bachelor's Thesis
-										</ItemTitle>
+										<ItemTitle>Bachelor's Thesis</ItemTitle>
 									</ItemHeader>
 									<ItemContent>
 										<ItemDescription>
@@ -569,9 +576,7 @@ function App() {
 							<CardContent>
 								<Item className="gap-0 p-0">
 									<ItemHeader>
-										<ItemTitle>
-											Klemmari
-										</ItemTitle>
+										<ItemTitle>Klemmari</ItemTitle>
 									</ItemHeader>
 									<ItemContent>
 										<ItemDescription>
