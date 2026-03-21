@@ -286,10 +286,6 @@ function App() {
 												<BadgeCheck />
 												REST API
 											</Badge>
-											<Badge variant="secondary">
-												<BadgeCheck />
-												FastAPI
-											</Badge>
 										</ItemDescription>
 									</ItemContent>
 								</Item>
@@ -512,6 +508,10 @@ function App() {
 											<Badge variant="secondary">
 												<BadgeCheck />
 												Python
+											</Badge>
+											<Badge variant="secondary">
+												<BadgeCheck />
+												FastAPI
 											</Badge>
 											<Badge variant="secondary">
 												<BadgeCheck />
