@@ -12,24 +12,18 @@ const skillGroups = [
 
 export default function Skills() {
 	return (
-		<section>
-			<h2 className="mb-6 border-b border-gray-100 pb-3 text-xs font-semibold uppercase tracking-widest text-gray-400">
-				Skills
-			</h2>
-			<div className="flex flex-col gap-4">
+		<section className="mb-14">
+			<div className="mb-8 flex items-center gap-6">
+				<h2 className="shrink-0 text-xs font-semibold uppercase tracking-widest text-gray-400">
+					Skills
+				</h2>
+				<div className="h-px flex-1 bg-gray-200" />
+			</div>
+			<div className="flex flex-col gap-3">
 				{skillGroups.map(({ label, tags }) => (
-					<div key={label} className="flex flex-col gap-2">
-						<p className="text-xs font-medium text-gray-400">{label}</p>
-						<div className="flex flex-wrap gap-1.5">
-							{tags.map((tag) => (
-								<span
-									key={tag}
-									className="rounded-full bg-gray-100 px-2.5 py-0.5 text-xs text-gray-600"
-								>
-									{tag}
-								</span>
-							))}
-						</div>
+					<div key={label} className="flex gap-8">
+						<p className="w-24 shrink-0 text-xs text-gray-400">{label}</p>
+						<p className="text-sm text-gray-600">{tags.join(", ")}</p>
 					</div>
 				))}
 			</div>

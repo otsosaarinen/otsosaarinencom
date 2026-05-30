@@ -5,7 +5,7 @@ interface Project {
 	name: string;
 	description: string;
 	tags: string[];
-	link?: { label: string; href: string };
+	link?: { href: string };
 	isPrivate?: boolean;
 }
 
@@ -21,35 +21,29 @@ const projects: Project[] = [
 		description:
 			"Real-time patient data collection and analysis using Apache Kafka",
 		tags: ["Apache Kafka", "Python", "InfluxDB", "Grafana"],
-		link: {
-			label: "View on GitHub",
-			href: "https://github.com/otsosaarinen/thesis",
-		},
+		link: { href: "https://github.com/otsosaarinen/thesis" },
 	},
 	{
 		name: "Klemmari",
 		description: "AI-powered chatbot using RAG architecture",
 		tags: ["React", "Python", "Azure", "RAG"],
-		link: {
-			label: "View on GitHub",
-			href: "https://github.com/otsosaarinen/klemmari",
-		},
+		link: { href: "https://github.com/otsosaarinen/klemmari" },
 	},
 ];
 
 export default function Projects() {
 	return (
-		<section>
-			<h2 className="mb-6 border-b border-gray-100 pb-3 text-xs font-semibold uppercase tracking-widest text-gray-400">
-				Projects
-			</h2>
-			<div className="flex flex-col gap-4">
+		<section className="mb-14">
+			<div className="mb-8 flex items-center gap-6">
+				<h2 className="shrink-0 text-xs font-semibold uppercase tracking-widest text-gray-400">
+					Projects
+				</h2>
+				<div className="h-px flex-1 bg-gray-200" />
+			</div>
+			<div className="flex flex-col gap-6">
 				{projects.map((project) => (
-					<div
-						key={project.name}
-						className="flex flex-col gap-3 rounded-lg border border-gray-100 p-4"
-					>
-						<div className="flex items-start justify-between gap-4">
+					<div key={project.name}>
+						<div className="flex items-baseline justify-between gap-4">
 							<p className="text-sm font-semibold text-gray-900">
 								{project.name}
 							</p>
@@ -66,21 +60,12 @@ export default function Projects() {
 									className="flex items-center gap-1 text-xs text-gray-400 transition-colors hover:text-gray-700"
 								>
 									<GitHubIcon className="h-3 w-3" />
-									{project.link.label}
+									GitHub
 								</a>
 							) : null}
 						</div>
-						<p className="text-sm text-gray-600">{project.description}</p>
-						<div className="flex flex-wrap gap-1.5">
-							{project.tags.map((tag) => (
-								<span
-									key={tag}
-									className="rounded-full bg-gray-100 px-2.5 py-0.5 text-xs text-gray-600"
-								>
-									{tag}
-								</span>
-							))}
-						</div>
+						<p className="mt-0.5 text-sm text-gray-600">{project.description}</p>
+						<p className="mt-1 text-xs text-gray-400">{project.tags.join(", ")}</p>
 					</div>
 				))}
 			</div>
