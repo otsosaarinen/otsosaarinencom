@@ -45,11 +45,14 @@ otsosaarinencom/
 │   ├── FadeIn.tsx        # Scroll-triggered fade-in wrapper
 │   └── icons.tsx         # GitHub and LinkedIn SVG icons
 ├── public/
-│   └── profile.jpg       # Profile photo
+│   ├── profile.jpg       # Profile photo
+│   └── _headers          # Cloudflare static asset cache rules
 ├── .github/
 │   └── workflows/
 │       └── ci.yaml       # CI: install, lint, build
 ├── next.config.ts
+├── open-next.config.ts   # OpenNext Cloudflare adapter config
+├── wrangler.jsonc        # Cloudflare Workers deployment config
 ├── postcss.config.mjs
 └── tsconfig.json
 ```
@@ -59,6 +62,6 @@ otsosaarinencom/
 All content lives in data arrays at the top of each component file. To update:
 
 - **Experience** — edit the `jobs` array in `components/Experience.tsx`
-- **Education** — edit directly in `components/Education.tsx`
+- **Education** — edit the `degrees` array in `components/Education.tsx`
 - **Projects** — edit the `projects` array in `components/Projects.tsx`
 - **Skills** — edit the `skillGroups` array in `components/Skills.tsx`
