@@ -7,6 +7,7 @@ interface Project {
 	tags: string[];
 	link?: { href: string };
 	isPrivate?: boolean;
+	award?: string;
 }
 
 const projects: Project[] = [
@@ -15,12 +16,13 @@ const projects: Project[] = [
 		description: "AI-powered job lead sourcing from company career pages",
 		tags: ["React", "TypeScript", "Python", "FastAPI", "LangChain", "n8n"],
 		isPrivate: true,
+		award: "Since AI Hackathon 2025 — 1st Place",
 	},
 	{
 		name: "Bachelor's Thesis",
 		description:
 			"Real-time patient data collection and analysis using Apache Kafka",
-		tags: ["Apache Kafka", "Python", "InfluxDB", "Grafana"],
+		tags: ["Kafka", "Python", "InfluxDB", "Grafana"],
 		link: { href: "https://github.com/otsosaarinen/thesis" },
 	},
 	{
@@ -64,6 +66,11 @@ export default function Projects() {
 								</a>
 							) : null}
 						</div>
+						{project.award && (
+							<p className="mt-0.5 text-xs font-medium text-amber-600">
+								{project.award}
+							</p>
+						)}
 						<p className="mt-0.5 text-sm text-gray-600">{project.description}</p>
 						<p className="mt-1 text-xs text-gray-400">{project.tags.join(", ")}</p>
 					</div>

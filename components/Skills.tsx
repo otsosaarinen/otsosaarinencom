@@ -1,13 +1,10 @@
 const skillGroups = [
 	{ label: "Languages", tags: ["TypeScript", "JavaScript", "Python", "PowerShell"] },
 	{ label: "Frontend", tags: ["React", "Next.js", "Tailwind CSS"] },
-	{
-		label: "Backend",
-		tags: ["Node.js", "NestJS", "Express.js", "Apache Kafka", "REST API"],
-	},
-	{ label: "Databases", tags: ["SQL", "PostgreSQL", "InfluxDB"] },
-	{ label: "DevOps", tags: ["Azure", "Docker", "CI/CD", "GitHub Actions"] },
-	{ label: "Tools", tags: ["Git", "Jira", "Grafana", "SFTP"] },
+	{ label: "Backend", tags: ["Node.js", "NestJS", "Express.js", "Better Auth"] },
+	{ label: "Data", tags: ["Kafka", "SQL", "PostgreSQL", "InfluxDB", "Prisma", "Grafana"] },
+	{ label: "Cloud & Infra", tags: ["Azure", "Hetzner", "Docker", "GitHub Actions"] },
+	{ label: "Tools", tags: ["Git", "Jira"] },
 ];
 
 export default function Skills() {

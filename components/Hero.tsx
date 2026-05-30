@@ -27,9 +27,9 @@ export default function Hero() {
 				/>
 			</div>
 			<p className="mb-6 max-w-lg text-sm leading-relaxed text-gray-600">
-				System Specialist at the University of Turku, working with Azure,
-				Microsoft 365, Entra ID, and PowerShell. Interested in artificial
-				intelligence, cloud infrastructure, and health technology.
+				Working at the University of Turku with Azure, Microsoft 365, Entra ID,
+				and PowerShell. Interested in artificial intelligence, cloud
+				infrastructure, and health technology.
 			</p>
 			<div className="mb-3 flex flex-wrap items-center gap-5">
 				<a
@@ -58,9 +58,6 @@ export default function Hero() {
 					saarinenotso@proton.me
 				</a>
 			</div>
-			<p className="text-xs font-medium text-amber-600">
-				Since AI Hackathon 2025 — 1st Place
-			</p>
 		</header>
 	);
 }

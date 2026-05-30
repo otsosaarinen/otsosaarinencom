@@ -7,16 +7,22 @@ export default function Education() {
 				</h2>
 				<div className="h-px flex-1 bg-indigo-100" />
 			</div>
-			<div className="flex gap-8">
-				<p className="w-10 shrink-0 pt-0.5 text-xs text-indigo-400">2025</p>
-				<div className="flex flex-col gap-1">
+			<div className="flex gap-4">
+				<p className="w-10 shrink-0 pt-1 text-right text-xs text-indigo-400">
+					2025
+				</p>
+				<div className="flex shrink-0 flex-col items-center">
+					<div className="mt-1.5 h-2 w-2 rounded-full bg-indigo-400 ring-2 ring-white" />
+				</div>
+				<div className="flex-1">
 					<p className="text-sm font-semibold text-gray-900">
-						Turku University of Applied Sciences
-					</p>
-					<p className="text-xs font-medium uppercase tracking-wider text-gray-400">
 						Bachelor of Engineering, ICT
 					</p>
-					<p className="mt-0.5 text-xs text-gray-400">2021 – 2025</p>
+					<p className="text-xs font-medium uppercase tracking-wider text-gray-400">
+						Turku University of Applied Sciences
+					</p>
+					<p className="text-xs text-gray-400">Specialisation: Health Technology</p>
+					<p className="mt-0.5 text-xs text-gray-400">GPA 4.1 / 5</p>
 				</div>
 			</div>
 		</section>
