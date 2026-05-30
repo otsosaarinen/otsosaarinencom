@@ -9,8 +9,8 @@ Personal portfolio website.
 
 ## Stack
 
-| | |
-|---|---|
+| Area | |
+|:---|:---|
 | Framework | Next.js 15 (App Router) |
 | Language | TypeScript |
 | Styling | Tailwind CSS v4 |
