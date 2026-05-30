@@ -5,32 +5,41 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ## Commands
 
 ```bash
-npm run dev       # Start dev server (Vite)
-npm run build     # Type-check with tsc, then build with Vite
-npm run lint      # Run ESLint
-npm run preview   # Preview the production build locally
+npm run dev       # Start dev server (Next.js)
+npm run build     # Build for production
+npm run start     # Start production server
+npm run lint      # Run ESLint via next lint
 ```
 
 There are no tests in this project.
 
 ## Architecture
 
-This is a single-page personal portfolio website — a React + TypeScript + Vite app with no routing. All content lives in `src/App.tsx`.
+This is a single-page personal portfolio website built with Next.js 15 App Router, TypeScript, and Tailwind CSS v4. All content is static — no API routes, no dynamic data fetching.
 
 **Stack:**
-- React 19, TypeScript, Vite
-- Tailwind CSS v4 (configured via `@tailwindcss/vite` plugin, no `tailwind.config.js`)
-- shadcn/ui components (style: `new-york`, base color: `neutral`)
-- Lucide React for icons
-- Radix UI primitives under shadcn components
+- Next.js 15, React 19, TypeScript
+- Tailwind CSS v4 (configured via `@tailwindcss/postcss`, no `tailwind.config.js`)
+- Lucide React v1 for icons
+- Inter font via `next/font/google`
 
-**Key structural points:**
-- `src/App.tsx` — the entire page: profile, experience, education, skills, projects sections
-- `src/components/ui/` — shadcn/ui components. `item.tsx` is a custom component (not from shadcn registry) used for list-style content rows
-- `src/components/theme-provider.tsx` + `src/components/mode-toggle.tsx` — dark/light/system theme toggle stored in `localStorage` under key `vite-ui-theme`
-- `src/index.css` — Tailwind imports, CSS custom properties for theming (oklch color values), custom keyframe animations (`loading-block`, `show-content`)
-- Path alias `@` maps to `src/`
+**Project structure:**
+- `app/layout.tsx` — root layout with metadata and font
+- `app/page.tsx` — main page, assembles all section components
+- `app/globals.css` — Tailwind import and global `animate-fade-in` keyframe
+- `components/Hero.tsx` — profile photo, name, summary, social links, hackathon badge
+- `components/Experience.tsx` — work history (data array, no external deps)
+- `components/Education.tsx` — education entries
+- `components/Skills.tsx` — skill groups with pill tags
+- `components/Projects.tsx` — project cards with tech tags and GitHub links
+- `components/Certifications.tsx` — certifications list
+- `public/` — static assets (profile photo, favicon)
 
-**Page load sequence:** A loading spinner (`Item` with `Spinner`) is shown for 2s via CSS animation, then hidden; the main content fades in at 2.1s. Both are controlled by `useState`/`useEffect` in `App`.
+**Design:**
+- White background, Inter font, no dark mode
+- Section labels: `text-xs font-semibold uppercase tracking-widest text-gray-400`
+- Tags: `rounded-full bg-gray-100 px-2.5 py-0.5 text-xs text-gray-600`
+- Project cards: `rounded-lg border border-gray-100 p-4`
+- All components are React Server Components (no `"use client"` needed)
 
-**Adding shadcn components:** Use `npx shadcn@latest add <component>` — config is in `components.json`.
+**Adding content:** Edit the data arrays at the top of each component file — they're typed with interfaces so TypeScript will catch mistakes.
