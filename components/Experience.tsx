@@ -32,20 +32,20 @@ const jobs: Job[] = [
 			"Managed data transfers between Lowell and client companies. Maintained SFTP servers, configured file transfers with MOVEit and BizTalk, and resolved API integration issues.",
 	},
 	{
-		title: "Application Specialist Intern",
-		company: "2M-IT",
-		year: "2024",
-		period: "Nov 2023 – Apr 2024",
-		description:
-			"Solved IT issues for employees in the wellbeing services counties of Southwest Finland and Kanta-Häme using Active Directory, Azure, Intune, and Entra ID.",
-	},
-	{
 		title: "Medical Engineering Research Intern",
 		company: "NIT Hachinohe (八戸高専)",
 		year: "2024",
 		period: "Apr 2024 – Jul 2024",
 		description:
 			"Researched radiofrequency ablation (RFA) and its thermal effects on human tissue.",
+	},
+	{
+		title: "Application Specialist Intern",
+		company: "2M-IT",
+		year: "2024",
+		period: "Nov 2023 – Apr 2024",
+		description:
+			"Solved IT issues for employees in the wellbeing services counties of Southwest Finland and Kanta-Häme using Active Directory, Azure, Intune, and Entra ID.",
 	},
 ];
 
