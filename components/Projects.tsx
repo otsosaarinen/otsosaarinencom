@@ -13,7 +13,7 @@ const projects: Project[] = [
 	{
 		name: "AIDA",
 		description: "AI-powered job lead sourcing from company career pages",
-		tags: ["React", "TypeScript", "Python", "FastAPI", "LangChain", "Llama 3", "n8n"],
+		tags: ["React", "TypeScript", "Python", "FastAPI", "LangChain", "n8n"],
 		isPrivate: true,
 	},
 	{
@@ -29,7 +29,7 @@ const projects: Project[] = [
 	{
 		name: "Klemmari",
 		description: "AI-powered chatbot using RAG architecture",
-		tags: ["React", "Python", "Azure", "GPT-4o", "RAG"],
+		tags: ["React", "Python", "Azure", "RAG"],
 		link: {
 			label: "View on GitHub",
 			href: "https://github.com/otsosaarinen/klemmari",
