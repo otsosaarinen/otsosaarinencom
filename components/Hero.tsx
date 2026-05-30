@@ -36,7 +36,7 @@ export default function Hero() {
 					href="https://github.com/otsosaarinen"
 					target="_blank"
 					rel="noopener noreferrer"
-					className="flex items-center gap-1.5 text-sm text-gray-500 transition-colors hover:text-gray-900"
+					className="flex items-center gap-1.5 text-sm text-indigo-600 transition-colors hover:text-indigo-800"
 				>
 					<GitHubIcon className="h-3.5 w-3.5" />
 					GitHub
@@ -45,14 +45,14 @@ export default function Hero() {
 					href="https://www.linkedin.com/in/otsosaarinen/"
 					target="_blank"
 					rel="noopener noreferrer"
-					className="flex items-center gap-1.5 text-sm text-gray-500 transition-colors hover:text-gray-900"
+					className="flex items-center gap-1.5 text-sm text-indigo-600 transition-colors hover:text-indigo-800"
 				>
 					<LinkedInIcon className="h-3.5 w-3.5" />
 					LinkedIn
 				</a>
 				<a
 					href="mailto:saarinenotso@proton.me"
-					className="flex items-center gap-1.5 text-sm text-gray-500 transition-colors hover:text-gray-900"
+					className="flex items-center gap-1.5 text-sm text-indigo-600 transition-colors hover:text-indigo-800"
 				>
 					<Mail className="h-3.5 w-3.5" />
 					saarinenotso@proton.me

@@ -35,10 +35,10 @@ export default function Projects() {
 	return (
 		<section className="mb-14">
 			<div className="mb-8 flex items-center gap-6">
-				<h2 className="shrink-0 text-xs font-semibold uppercase tracking-widest text-gray-400">
+				<h2 className="shrink-0 text-xs font-semibold uppercase tracking-widest text-indigo-600">
 					Projects
 				</h2>
-				<div className="h-px flex-1 bg-gray-200" />
+				<div className="h-px flex-1 bg-indigo-100" />
 			</div>
 			<div className="flex flex-col gap-6">
 				{projects.map((project) => (
