@@ -10,10 +10,10 @@ export default function Page() {
 		<div className="min-h-screen bg-white">
 			<div className="mx-auto max-w-2xl px-8 py-16 sm:py-20">
 				<FadeIn><Hero /></FadeIn>
-				<FadeIn><Experience /></FadeIn>
-				<FadeIn><Education /></FadeIn>
-				<FadeIn><Projects /></FadeIn>
-				<FadeIn><Skills /></FadeIn>
+				<Experience />
+				<Education />
+				<Projects />
+				<Skills />
 				<FadeIn>
 					<footer className="mt-16 border-t border-gray-100 pt-6 text-center">
 						<p className="text-xs text-gray-400">© 2026 Otso Saarinen</p>

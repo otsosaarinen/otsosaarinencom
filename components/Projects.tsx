@@ -1,3 +1,4 @@
+import FadeIn from "@/components/FadeIn";
 import { Lock } from "lucide-react";
 import { GitHubIcon } from "@/components/icons";
 
@@ -36,44 +37,48 @@ const projects: Project[] = [
 export default function Projects() {
 	return (
 		<section className="mb-14">
-			<div className="mb-8 flex items-center gap-6">
-				<h2 className="shrink-0 text-xs font-semibold uppercase tracking-widest text-indigo-600">
-					Projects
-				</h2>
-				<div className="h-px flex-1 bg-indigo-100" />
-			</div>
+			<FadeIn>
+				<div className="mb-8 flex items-center gap-6">
+					<h2 className="shrink-0 text-xs font-semibold uppercase tracking-widest text-indigo-600">
+						Projects
+					</h2>
+					<div className="h-px flex-1 bg-indigo-100" />
+				</div>
+			</FadeIn>
 			<div className="flex flex-col gap-6">
 				{projects.map((project) => (
-					<div key={project.name}>
-						<div className="flex items-baseline justify-between gap-4">
-							<p className="text-sm font-semibold text-gray-900">
-								{project.name}
-							</p>
-							{project.isPrivate ? (
-								<span className="flex items-center gap-1 text-xs text-gray-400">
-									<Lock className="h-3 w-3" />
-									Private
-								</span>
-							) : project.link ? (
-								<a
-									href={project.link.href}
-									target="_blank"
-									rel="noopener noreferrer"
-									className="flex items-center gap-1 text-xs text-gray-400 transition-colors hover:text-gray-700"
-								>
-									<GitHubIcon className="h-3 w-3" />
-									GitHub
-								</a>
-							) : null}
+					<FadeIn key={project.name}>
+						<div>
+							<div className="flex items-baseline justify-between gap-4">
+								<p className="text-sm font-semibold text-gray-900">
+									{project.name}
+								</p>
+								{project.isPrivate ? (
+									<span className="flex items-center gap-1 text-xs text-gray-400">
+										<Lock className="h-3 w-3" />
+										Private
+									</span>
+								) : project.link ? (
+									<a
+										href={project.link.href}
+										target="_blank"
+										rel="noopener noreferrer"
+										className="flex items-center gap-1 text-xs text-gray-400 transition-colors hover:text-gray-700"
+									>
+										<GitHubIcon className="h-3 w-3" />
+										GitHub
+									</a>
+								) : null}
+							</div>
+							{project.award && (
+								<p className="mt-0.5 text-xs font-medium text-amber-600">
+									{project.award}
+								</p>
+							)}
+							<p className="mt-0.5 text-sm text-gray-600">{project.description}</p>
+							<p className="mt-1 text-xs text-gray-400">{project.tags.join(", ")}</p>
 						</div>
-						{project.award && (
-							<p className="mt-0.5 text-xs font-medium text-amber-600">
-								{project.award}
-							</p>
-						)}
-						<p className="mt-0.5 text-sm text-gray-600">{project.description}</p>
-						<p className="mt-1 text-xs text-gray-400">{project.tags.join(", ")}</p>
-					</div>
+					</FadeIn>
 				))}
 			</div>
 		</section>

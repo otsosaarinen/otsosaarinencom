@@ -1,3 +1,5 @@
+import FadeIn from "./FadeIn";
+
 interface Job {
 	title: string;
 	company: string;
@@ -52,18 +54,21 @@ const jobs: Job[] = [
 export default function Experience() {
 	return (
 		<section className="mb-14">
-			<div className="mb-8 flex items-center gap-6">
-				<h2 className="shrink-0 text-xs font-semibold uppercase tracking-widest text-indigo-600">
-					Experience
-				</h2>
-				<div className="h-px flex-1 bg-indigo-100" />
-			</div>
+			<FadeIn>
+				<div className="mb-8 flex items-center gap-6">
+					<h2 className="shrink-0 text-xs font-semibold uppercase tracking-widest text-indigo-600">
+						Experience
+					</h2>
+					<div className="h-px flex-1 bg-indigo-100" />
+				</div>
+			</FadeIn>
 			<div className="flex flex-col">
 				{jobs.map((job, index) => {
 					const showYear = index === 0 || jobs[index - 1].year !== job.year;
 					const isLast = index === jobs.length - 1;
 					return (
-						<div key={`${job.company}-${job.title}`} className="flex gap-4">
+						<FadeIn key={`${job.company}-${job.title}`}>
+						<div className="flex gap-4">
 							<p className="w-10 shrink-0 pt-1 text-right text-xs text-indigo-400">
 								{showYear ? job.year : ""}
 							</p>
@@ -88,6 +93,7 @@ export default function Experience() {
 								</p>
 							</div>
 						</div>
+					</FadeIn>
 					);
 				})}
 			</div>
