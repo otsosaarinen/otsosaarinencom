@@ -21,7 +21,7 @@ const jobs: Job[] = [
 		title: "Software Engineer",
 		company: "Since AI",
 		year: "2026",
-		period: "Mar 2026 – May 2026",
+		period: "Mar 2026 – Jun 2026",
 		description:
 			"Built a hackathon platform using TypeScript, Next.js, and NestJS. Implemented authentication with Better Auth, role-based access, team management, ELO-based voting, and judging workflows. Containerized with Docker, deployed on Hetzner, and set up CI/CD pipelines with GitHub Actions.",
 	},
